@@ -9,25 +9,11 @@
       "sha256": "d5814f28b2c31acca0e805ca35458d16411d855e1c73bbced54c4891e572cbf4"
     },
     {
-      "id": "cli",
-      "file": "mirasim-darwin-arm64.tar.xz",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.151/mirasim-darwin-arm64.tar.xz",
-      "size": 55993160,
-      "sha256": "b9cdec0f9fae88d9ba1efaa86c29755356b1c5aa255b4f2ffd19542d20ece9aa"
-    },
-    {
       "id": "apk",
       "file": "mirasim-0.0.151.apk",
       "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.151/mirasim-0.0.151.apk",
       "size": 35995579,
       "sha256": "d39641e64e269ac2807fe3235fad8e78957e1536d46763f3661d092871386315"
-    },
-    {
-      "id": "vsix",
-      "file": "mirasim-0.0.151.vsix",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.151/mirasim-0.0.151.vsix",
-      "size": null,
-      "sha256": null
     },
     {
       "id": "sums",
@@ -58,5 +44,5 @@
     }
   ],
   "source": "https://mirasim.ai",
-  "fetchedAt": "2026-08-09T16:13:07.771Z"
+  "fetchedAt": "2026-08-09T16:53:59.738Z"
 }
