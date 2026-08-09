@@ -325,6 +325,61 @@
   .faq details[open] summary::after { content: "\2212"; }
   .faq details > p { margin: 0 !important; padding: 0 0 14px; font-size: 14px; color: var(--ink-soft); }
 
+  /* ---------- 站内导航 ---------- */
+  .sitenav { display: flex; gap: 2px; flex-wrap: wrap; }
+  .sitenav a {
+    font-size: 13.5px; color: var(--ink-soft); padding: 5px 10px; border-radius: 3px; white-space: nowrap;
+  }
+  .sitenav a:hover { color: var(--ink); background: var(--code-bg); text-decoration: none; }
+  .sitenav a[aria-current="page"] { color: var(--teal); font-weight: 600; background: var(--teal-wash); }
+
+  /* ---------- 面包屑 ---------- */
+  .crumbs { font-size: 12.5px; color: var(--ink-soft); padding: 22px 0 0; margin: 0; }
+  .crumbs a { color: var(--ink-soft); }
+  .crumbs a:hover { color: var(--teal); }
+  .crumbs .sep { padding: 0 6px; opacity: .6; }
+
+  /* ---------- 风险提示（第三方内容专用，比 callout 更强） ---------- */
+  .risk {
+    border: 1px solid var(--amber-line); border-left: 4px solid var(--amber);
+    background: var(--amber-wash); border-radius: 0 5px 5px 0;
+    padding: 16px 18px; margin: 20px 0 0;
+  }
+  .risk h3 {
+    margin: 0 0 8px; font-size: 15px; font-weight: 700; color: var(--amber-deep);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .risk p { margin: 0 0 8px !important; font-size: 14px; color: var(--ink); }
+  .risk p:last-child { margin-bottom: 0 !important; }
+  .risk ul { margin: 8px 0 0; padding-inline-start: 22px; font-size: 14px; color: var(--ink); }
+  .risk li { margin-bottom: 5px; }
+  .risk li:last-child { margin-bottom: 0; }
+  .risk b { color: var(--amber-deep); }
+
+  /* ---------- 事实清单（是什么 / 不是什么） ---------- */
+  .factlist { display: grid; gap: 12px; margin-top: 4px; }
+  .fact {
+    display: flex; gap: 12px; align-items: flex-start;
+    background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 14px 16px;
+  }
+  .fact .f-mark { flex: none; font-size: 15px; line-height: 1.5; font-weight: 700; width: 18px; text-align: center; }
+  .fact.yes .f-mark { color: var(--teal); }
+  .fact.no .f-mark { color: var(--amber); }
+  .fact p { margin: 0 !important; font-size: 14px; }
+  .fact p b { display: block; margin-bottom: 2px; font-size: 14.5px; color: var(--ink); }
+  .fact p span { color: var(--ink-soft); }
+
+  /* ---------- 下一步卡片（页面间互链，兼顾 SEO 内链） ---------- */
+  .nextgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 14px; margin-top: 6px; }
+  .nextcard {
+    display: block; background: var(--card); border: 1px solid var(--line);
+    border-radius: 4px; padding: 16px 18px;
+  }
+  .nextcard:hover { border-color: var(--teal); text-decoration: none; }
+  .nextcard b { display: block; font-size: 15px; color: var(--ink); margin-bottom: 4px; }
+  .nextcard span { font-size: 13.5px; color: var(--ink-soft); }
+  .nextcard .arrow { color: var(--teal); }
+
   /* ---------- 页脚 ---------- */
   footer { border-top: 1px solid var(--line); margin-top: 56px; }
   .foot-in { max-width: 1080px; margin: 0 auto; padding: 28px 24px 40px; font-size: 13px; color: var(--ink-soft); }
@@ -346,6 +401,7 @@
     .grid2, .reward-grid { grid-template-columns: 1fr; }
     .ticket::before, .ticket::after { display: none; }
     .top-official { display: none; }
+    .sitenav { order: 3; width: 100%; overflow-x: auto; padding-top: 4px; }
     .lang-menu { grid-template-columns: repeat(2, minmax(118px, 1fr)); }
   }
   @media (max-width: 560px) {
@@ -353,6 +409,12 @@
     .offer-in .o-cond { width: 100%; }
   }
 </style>
+<!-- Privacy-friendly analytics by Plausible（自托管实例） -->
+<script async src="https://jk.zxx.im/js/pa--7KEwqr0CqiWfMWm-M9ds.js"></script>
+<script>
+  window.plausible=window.plausible||function(){(plausible.q=plausible.q||[]).push(arguments)},plausible.init=plausible.init||function(i){plausible.o=i||{}};
+  plausible.init()
+</script>
 </head>
 <body>
 <a class="skip" href="#main">{{T_SKIP}}</a>
@@ -373,6 +435,7 @@
       <img class="b-mark" src="{{ASSETS}}icon-mark.svg" alt="" width="24" height="24">
       MIRASIM <em>WIKI</em>
     </a>
+    <nav class="sitenav" aria-label="{{T_NAV_LABEL}}">{{SITE_NAV}}</nav>
     <span class="spacer"></span>
     <span class="top-official">{{T_OFFICIAL_SITE}} <a href="https://mirasim.ai/" target="_blank" rel="noopener nofollow">mirasim.ai</a></span>
     <details class="langsel">
@@ -385,119 +448,7 @@
   </div>
 </header>
 
-<div class="shell" id="top">
-  <nav class="toc" aria-label="{{T_TOC_TITLE}}">
-    <p class="toc-title">{{T_TOC_TITLE}}</p>
-    <ol>{{TOC_ITEMS}}</ol>
-    <p class="toc-invite"><a href="#invite-code">🎟 {{T_TOC_INVITE}}</a></p>
-  </nav>
-
-  <main id="main">
-    <!-- HERO -->
-    <section class="hero" id="hero">
-      <p class="eyebrow mono">{{T_HERO_EYEBROW}}</p>
-      <h1>{{T_HERO_H1}}</h1>
-      <p class="lede">{{T_HERO_LEDE}}</p>
-
-      <div class="ticket" id="invite-code">
-        <div class="ticket-head">
-          <span class="t-label mono">{{T_TICKET_LABEL}}</span>
-          <span class="t-tip">{{T_TICKET_TIP}}</span>
-        </div>
-        <div class="ticket-row">
-          <strong class="ticket-code mono" id="codeText">{{INVITE_CODE}}</strong>
-          <button class="btn-copy" type="button" data-copy="{{INVITE_CODE}}" data-ok="{{T_COPIED}}">{{T_COPY}}</button>
-        </div>
-        <p class="ticket-foot">{{T_TICKET_FOOT}}</p>
-      </div>
-
-      <div class="hero-cta">
-        <a class="btn btn-solid" href="{{HERO_DMG_URL}}">⬇ {{T_CTA_DOWNLOAD}}</a>
-        <a class="btn btn-ghost" href="#download">{{T_CTA_OTHER}}</a>
-        <span class="hero-note mono">{{HERO_DMG_SIZE}} · {{T_CTA_NOTE}}</span>
-      </div>
-    </section>
-
-    <!-- 01 -->
-    <section id="intro">
-      <div class="sec-head"><span class="no mono">01</span><h2>{{T_INTRO_TITLE}}</h2></div>
-      <p class="sec-sub">{{T_INTRO_SUB}}</p>
-      <p>{{T_INTRO_BODY}}</p>
-      <div class="grid2" style="margin-top:18px">{{INTRO_CARDS}}</div>
-      <p class="callout">{{T_INTRO_CALLOUT}}</p>
-    </section>
-
-    <!-- 02 -->
-    <section id="download">
-      <div class="sec-head"><span class="no mono">02</span><h2>{{T_DL_TITLE}}</h2></div>
-      <p class="sec-sub stamp">{{T_DL_SUB}}</p>
-      <div class="tablewrap">
-        <table>
-          <thead><tr><th>{{T_DL_TH_PKG}}</th><th>{{T_DL_TH_FILE}}</th><th class="num">{{T_DL_TH_SIZE}}</th><th>{{T_DL_TH_SHA}}</th><th></th></tr></thead>
-          <tbody>{{DOWNLOAD_ROWS}}</tbody>
-        </table>
-      </div>
-      <p class="callout">{{T_DL_VERIFY}}</p>
-      <pre class="code">shasum -a 256 -c SHA256SUMS --ignore-missing</pre>
-      <p class="callout warn">{{T_DL_PLATFORMS}}</p>
-    </section>
-
-    <!-- 03 -->
-    <section id="start">
-      <div class="sec-head"><span class="no mono">03</span><h2>{{T_START_TITLE}}</h2></div>
-      <p class="sec-sub">{{T_START_SUB}}</p>
-      <div class="steps">{{START_STEPS}}</div>
-    </section>
-
-    <!-- 04 -->
-    <section id="models">
-      <div class="sec-head"><span class="no mono">04</span><h2>{{T_MODELS_TITLE}}</h2></div>
-      <p class="sec-sub">{{T_MODELS_SUB}}</p>
-      <p>{{T_MODELS_P1}}</p>
-      <p>{{T_MODELS_P2}}</p>
-      <div class="chips">{{MODEL_CHIPS}}</div>
-      <p class="callout">{{T_MODELS_CALLOUT1}}</p>
-      <p class="callout warn">{{T_MODELS_CALLOUT2}}</p>
-    </section>
-
-    <!-- 05 -->
-    <section id="invite">
-      <div class="sec-head"><span class="no mono">05</span><h2>{{T_INVITE_TITLE}}</h2></div>
-      <p class="sec-sub">{{T_INVITE_SUB}}</p>
-      <div class="reward-grid">{{REWARDS}}</div>
-      <p style="margin-top:18px">{{T_INVITE_BODY}}</p>
-      <p class="callout">{{T_INVITE_CALLOUT}}</p>
-    </section>
-
-    <!-- 06 -->
-    <section id="pricing">
-      <div class="sec-head"><span class="no mono">06</span><h2>{{T_PRICING_TITLE}}</h2></div>
-      <p class="sec-sub">{{T_PRICING_SUB}}</p>
-      <div class="tablewrap">
-        <table>
-          <thead><tr><th>{{T_PR_TH_PLAN}}</th><th>{{T_PR_TH_PRICE}}</th><th>{{T_PR_TH_CREDITS}}</th><th>{{T_PR_TH_USAGE}}</th><th>{{T_PR_TH_INVITE}}</th></tr></thead>
-          <tbody>{{PRICING_ROWS}}</tbody>
-        </table>
-      </div>
-      <p class="callout">{{T_PRICING_CALLOUT}}</p>
-    </section>
-
-    <!-- 07 -->
-    <section id="news">
-      <div class="sec-head"><span class="no mono">07</span><h2>{{T_NEWS_TITLE}}</h2></div>
-      <p class="sec-sub stamp">{{T_NEWS_SUB}}</p>
-      <div class="news-list">{{NEWS_ITEMS}}</div>
-      <p class="callout">{{T_NEWS_CALLOUT}}</p>
-    </section>
-
-    <!-- 08 -->
-    <section id="faq" class="faq">
-      <div class="sec-head"><span class="no mono">08</span><h2>{{T_FAQ_TITLE}}</h2></div>
-      <p class="sec-sub">{{T_FAQ_SUB}}</p>
-      {{FAQ_ITEMS}}
-    </section>
-  </main>
-</div>
+{{BODY}}
 
 <footer>
   <div class="foot-in">

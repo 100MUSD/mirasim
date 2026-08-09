@@ -1,11 +1,256 @@
 {
   "htmlLang": "fr",
   "meta": {
-    "title": "Mirasim : code d'invitation, téléchargement, Pro offert",
-    "description": "Code d'invitation Mirasim MIRA-EC9V-64BF-BC07 : entrez gratuitement dans l'Agent IDE, téléchargez Mirasim v{version} pour macOS et obtenez un mois de Pro offert.",
-    "keywords": "Mirasim, code d'invitation Mirasim, télécharger Mirasim, Mirasim wiki, Mirasim gratuit, Mirasim Pro, Agent IDE, One Agent IDE, agent de codage IA, utilisateurs simulés, Claude Code, Codex, IDE macOS",
     "ogSub": "Code d'invitation · Téléchargement · Un mois de Pro offert",
     "offerFree": "Le code d'invitation ne coûte rien et Mirasim tourne sur les abonnements de modèles et les clés API que vous payez déjà."
+  },
+  "pages": {
+    "home": {
+      "title": "Mirasim : code d'invitation, téléchargement, Pro offert",
+      "description": "Code d'invitation Mirasim MIRA-EC9V-64BF-BC07 : entrez gratuitement dans l'Agent IDE, téléchargez Mirasim v{version} pour macOS et obtenez un mois de Pro offert.",
+      "keywords": "Mirasim, code d'invitation Mirasim, télécharger Mirasim, Mirasim wiki, Mirasim gratuit, Mirasim Pro, Agent IDE, One Agent IDE, agent de codage IA, utilisateurs simulés, Claude Code, Codex, IDE macOS"
+    },
+    "download": {
+      "title": "Télécharger Mirasim v{version} — macOS, Android, CLI",
+      "description": "Téléchargez Mirasim v{version} : DMG macOS pour Apple Silicon, version CLI, APK Android et extension VS Code, avec le SHA-256 de chaque fichier.",
+      "keywords": "télécharger Mirasim, Mirasim download, Mirasim dmg, Mirasim macOS, Mirasim apk, Mirasim CLI, Mirasim vsix, Mirasim v{version}, installeur Mirasim",
+      "eyebrow": "Téléchargement",
+      "h1": "Télécharger Mirasim <em>v{version}</em>",
+      "lede": "Tous les paquets publiés par Mirasim, avec leur taille et leur SHA-256, récupérés automatiquement depuis le site officiel. Les liens pointent directement vers le CDN officiel : <b>ce wiki n'héberge aucun fichier</b>.",
+      "tableTitle": "Tous les paquets",
+      "verifyTitle": "Vérifier le téléchargement",
+      "verifySub": "Deux minutes pour écarter un fichier altéré.",
+      "verifyBody": "Les empreintes du tableau proviennent du <code>SHA256SUMS</code> officiel de la v{version}, récupéré en même temps que les liens. Si une valeur ne correspond pas, n'ouvrez pas le fichier : reprenez-le sur <a href=\"https://mirasim.ai/download\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/download</a> et vérifiez à nouveau.",
+      "installTitle": "Installer et activer",
+      "reqTitle": "Configuration requise",
+      "reqCards": [
+        {
+          "k": "MACOS",
+          "h": "macOS 13 ou ultérieur",
+          "p": "Apple Silicon uniquement (M1 et plus). Le DMG et la version CLI sont en arm64 ; il n'existe pas de build Intel Mac."
+        },
+        {
+          "k": "ANDROID",
+          "h": "Android, installation manuelle",
+          "p": "L'APK n'est pas sur Google Play : vous l'installez vous-même et autorisez les sources inconnues."
+        },
+        {
+          "k": "VS CODE",
+          "h": "Extension VS Code (VSIX)",
+          "p": "Installation manuelle depuis le fichier VSIX. Le site officiel ne documente pas ce qu'elle fait sans l'application de bureau : considérez-le comme non vérifié."
+        },
+        {
+          "k": "PAS ENCORE",
+          "h": "Windows, Intel Mac, Linux",
+          "p": "Aucun build officiel pour les trois. iOS n'existe que sur TestFlight, invitations publiques toujours fermées."
+        }
+      ],
+      "winLink": "Sous Windows ? Avant de chercher un installeur, lisez <a href=\"{PAGE_WINDOWS}\">ce qui fonctionne réellement</a> : il n'y en a pas d'officiel, et les copies qui circulent ne viennent pas de Mirasim.",
+      "faq": [
+        {
+          "q": "Quel fichier me faut-il ?",
+          "a": "Sur un Mac Apple Silicon, le DMG. Prenez la version CLI (tar.xz) seulement si vous vivez dans le terminal et voulez Mirasim là. L'APK est pour les téléphones Android, le VSIX est une extension VS Code."
+        },
+        {
+          "q": "Existe-t-il un téléchargement Windows ou Intel Mac ?",
+          "a": "Non. Mirasim publie des builds macOS arm64, un APK Android et une extension VS Code. Rien d'autre n'est officiel."
+        },
+        {
+          "q": "Ce wiki héberge-t-il les fichiers ?",
+          "a": "Non. Tous les liens pointent vers cdn-assets.mirasim.ai, le CDN officiel. Ce wiki lit seulement le numéro de version, les tailles et les empreintes sur le site officiel et les affiche ici."
+        }
+      ]
+    },
+    "windows": {
+      "title": "Mirasim sous Windows : ce qui marche vraiment",
+      "description": "Il n'existe pas de build officiel de Mirasim pour Windows. Ce que Mirasim publie, ce que fait vraiment l'updater communautaire, et les options sûres.",
+      "keywords": "Mirasim Windows, Mirasim win, télécharger Mirasim Windows, Mirasim exe, version Windows de Mirasim, Mirasim win64, installeur Mirasim Windows",
+      "eyebrow": "Windows",
+      "h1": "Mirasim sous <em>Windows</em>",
+      "lede": "Réponse courte : <b>il n'y a pas de build officiel pour Windows.</b> Mirasim publie des paquets macOS arm64, un APK Android et une extension VS Code — rien pour Windows. Cette page explique ce que cela implique et quelles sont vos options réelles.",
+      "statusTitle": "Ce que Mirasim publie",
+      "statusSub": "D'après la page de téléchargement officielle de la v{version}, actualisée automatiquement.",
+      "statusBody": "La release officielle de la v{version} contient un DMG macOS arm64, une archive CLI macOS arm64, un APK Android, une extension VS Code et un fichier d'empreintes. Pas de <code>.exe</code>, pas de <code>.msi</code>, pas d'archive Windows. Tout ce qui est présenté comme un installeur officiel « Mirasim pour Windows » ne vient pas de Mirasim.",
+      "osTh": {
+        "os": "Plateforme",
+        "state": "Statut officiel",
+        "note": "Remarques"
+      },
+      "osRows": [
+        {
+          "os": "macOS (Apple Silicon)",
+          "state": "<b>Pris en charge</b>",
+          "note": "DMG et CLI, macOS 13+, arm64 uniquement"
+        },
+        {
+          "os": "Android",
+          "state": "<b>Pris en charge</b>",
+          "note": "APK, installation manuelle"
+        },
+        {
+          "os": "VS Code",
+          "state": "<b>Extension publiée</b>",
+          "note": "VSIX ; comportement sans l'app non documenté"
+        },
+        {
+          "os": "iOS",
+          "state": "TestFlight seulement",
+          "note": "Invitations publiques fermées"
+        },
+        {
+          "os": "Windows",
+          "state": "<b>Aucun build officiel</b>",
+          "note": "Un portage communautaire existe, voir plus bas"
+        },
+        {
+          "os": "Intel Mac · Linux",
+          "state": "<b>Aucun build officiel</b>",
+          "note": "Aucun plan annoncé"
+        }
+      ],
+      "updaterTitle": "L'updater Windows communautaire",
+      "updaterSub": "Un vrai projet open source — mais sachez ce que c'est avant de le télécharger.",
+      "updaterBody": "Un développeur sous le pseudonyme <b>{winAuthor}</b> publie <code>mirasim-win-updater</code>, un outil sous licence MIT qui met à jour une copie Windows de Mirasim <b>déjà installée</b>. Cela fonctionne parce que Mirasim est un shell Electron plus un payload JavaScript indépendant de la plateforme : l'outil récupère le payload officiel ou extrait le nouveau shell du DMG officiel, puis ne réécrit que les fichiers réellement modifiés. Il vérifie le SHA-256 de tout ce qu'il télécharge et contrôle la signature ed25519 du payload avec la clé publique extraite du shell.",
+      "facts": [
+        {
+          "ok": true,
+          "h": "Open source, MIT, auditable",
+          "p": "L'outil tient dans un fichier JavaScript lisible, et vous pouvez compiler l'exe vous-même en deux commandes plutôt que faire confiance à un binaire."
+        },
+        {
+          "ok": true,
+          "h": "Vérifie ce qu'il télécharge",
+          "p": "SHA-256 sur le DMG et le payload, plus vérification de signature ed25519 sur le payload — le même contrôle que fait l'application elle-même."
+        },
+        {
+          "ok": true,
+          "h": "Sauvegarde et revient en arrière",
+          "p": "Les fichiers modifiés et supprimés sont sauvegardés d'abord, et <code>--rollback</code> restaure entièrement la version précédente."
+        },
+        {
+          "ok": false,
+          "h": "C'est un updater, pas un installeur",
+          "p": "Sa documentation le dit clairement : il ne peut pas produire une installation Windows à partir de rien, car le runtime Electron et les modules natifs Windows doivent venir d'une installation existante. Si vous n'avez jamais eu Mirasim sous Windows, cet outil ne vous donne rien d'exécutable."
+        },
+        {
+          "ok": false,
+          "h": "L'exe n'est pas signé",
+          "p": "L'injection du payload SEA invalide la signature de Node : le binaire est donc distribué non signé et SmartScreen avertira au premier lancement."
+        },
+        {
+          "ok": false,
+          "h": "Sans lien avec Mirasim",
+          "p": "L'auteur indique clairement qu'il s'agit d'un outil personnel sans rapport avec Mirasim. Personne chez Mirasim ne le relit, ne le signe ni ne le soutient."
+        }
+      ],
+      "riskTitle": "Avant de télécharger quoi que ce soit appelé « Mirasim pour Windows »",
+      "riskIntro": "Une compilation non officielle d'un outil de développement s'exécute avec vos droits, vos fichiers et vos clés API à portée. Considérez tout fichier de ce genre comme non fiable tant que vous ne l'avez pas vérifié.",
+      "riskPoints": [
+        "Les seuls fichiers que Mirasim publie viennent de <code>cdn-assets.mirasim.ai</code>. Tout autre origine — même si la page paraît crédible — est la compilation de quelqu'un d'autre.",
+        "Plutôt que de lancer un exe précompilé et non signé, lisez le code et compilez-le vous-même. Le projet explique comment, et rien n'a besoin d'être installé au préalable.",
+        "Si vous exécutez malgré tout un binaire tiers, faites-le sur une machine sans identifiants qui comptent, et n'y collez jamais de clé API.",
+        "<b>Le risque est pour vous.</b> Ce wiki cite ce projet parce qu'il est ouvert et franc sur ses limites : ce n'est ni un audit de sécurité ni une recommandation."
+      ],
+      "updaterLinks": "Code et releases : <a href=\"{winRepo}\" target=\"_blank\" rel=\"noopener nofollow\">{winRepo}</a> · <a href=\"{winReleases}\" target=\"_blank\" rel=\"noopener nofollow\">dernière release</a>. Lisez d'abord le README et les notes de portage : ils sont francs sur ce que l'outil ne peut pas faire.",
+      "optionsTitle": "Ce qu'un utilisateur Windows peut faire aujourd'hui",
+      "optionsSub": "Du moins risqué au plus risqué.",
+      "options": [
+        {
+          "k": "LOUER UN MAC",
+          "h": "Un Mac distant ou dans le cloud",
+          "p": "Mirasim exige Apple Silicon et macOS 13+. Une instance Mac mini louée, ou un Mac série M accessible à distance, fait tourner le build officiel sans aucune modification."
+        },
+        {
+          "k": "ATTENDRE",
+          "h": "Guetter un build officiel",
+          "p": "Ce wiki relit la page de téléchargement officielle toutes les 30 minutes. Dès qu'un paquet Windows apparaît dans la release officielle, il s'affiche dans le tableau ici."
+        },
+        {
+          "k": "AUDITER",
+          "h": "Lire le portage communautaire, puis décider",
+          "p": "Si vous faites déjà tourner Mirasim sous Windows, l'updater ci-dessus est la voie maintenue pour changer de version. Lisez le code, compilez-le vous-même, gardez ses sauvegardes."
+        },
+        {
+          "k": "ANDROID",
+          "h": "L'application Android, sur un téléphone",
+          "p": "L'APK est officiel et fonctionne sur un téléphone Android ordinaire : une vraie façon d'utiliser Mirasim sans Mac — mais pas sur votre bureau Windows."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Existe-t-il une version Windows officielle de Mirasim ?",
+          "a": "Non. À la v{version}, la release officielle contient des builds macOS arm64, un APK Android et une extension VS Code. Ni exe, ni msi, ni archive Windows."
+        },
+        {
+          "q": "L'updater Windows communautaire est-il sûr ?",
+          "a": "Il est open source sous MIT, vérifie le SHA-256 et une signature ed25519 de ce qu'il télécharge, et sait revenir en arrière — plus de soin que la plupart des outils non officiels. Il est aussi non signé, sans lien avec Mirasim et non relu par eux. Lisez le code ou compilez-le vous-même, et exécutez-le sur une machine où une erreur ne coûterait pas d'identifiants."
+        },
+        {
+          "q": "Cet updater peut-il installer Mirasim sous Windows ?",
+          "a": "Non, et sa documentation le dit : il ne peut mettre à jour qu'une installation Windows déjà présente, car le runtime Electron et les modules natifs doivent en être extraits. À partir de zéro, il ne produit rien d'exécutable."
+        },
+        {
+          "q": "Windows sera-t-il pris en charge plus tard ?",
+          "a": "Rien n'a été annoncé. L'application est en Alpha et privilégie macOS. Cette page et le tableau de téléchargement se mettent à jour automatiquement : si cela change, vous le verrez ici."
+        }
+      ]
+    },
+    "invite": {
+      "title": "Code d'invitation Mirasim — MIRA-EC9V-64BF-BC07",
+      "description": "Un code d'invitation Mirasim qui fonctionne : MIRA-EC9V-64BF-BC07. Saisissez-le après l'inscription pour activer votre compte gratuitement.",
+      "keywords": "code d'invitation Mirasim, Mirasim invite code, code Mirasim, s'inscrire à Mirasim, Mirasim gratuit, accès beta Mirasim, code MIRA",
+      "eyebrow": "Code d'invitation",
+      "h1": "Un <em>code d'invitation</em> Mirasim qui fonctionne",
+      "lede": "L'inscription à Mirasim se fait sur invitation : sans code, aucun accès. En voici un utilisable tout de suite, gratuitement, avec ce qu'il donne et le fonctionnement du mois de Pro offert.",
+      "useTitle": "Comment l'utiliser",
+      "useSub": "Moins d'une minute, et cela ne coûte rien.",
+      "useSteps": [
+        {
+          "h": "Créer le compte",
+          "p": "Connectez-vous avec GitHub, Google ou e-mail sur <a href=\"https://mirasim.ai/\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai</a>. Les trois marchent."
+        },
+        {
+          "h": "Coller le code",
+          "p": "Quand l'écran d'activation demande une invitation, collez <code>{code}</code>. Le bouton en haut de cette page le copie."
+        },
+        {
+          "h": "Brancher votre compte de modèles",
+          "p": "Apportez l'abonnement Claude Code ou Codex que vous payez déjà, ou une clé API. C'est là-dessus que Mirasim tourne, et il ne facture rien par-dessus."
+        }
+      ],
+      "freeTitle": "Ce que le code donne réellement",
+      "freeSub": "Un accès gratuit, sur vos propres comptes de modèles.",
+      "faq": [
+        {
+          "q": "Ce code d'invitation est-il payant ?",
+          "a": "Non. Les codes sont gratuits, et utiliser Mirasim avec un code l'est aussi : il tourne sur des comptes de modèles que vous avez déjà. Seuls computer use et les utilisateurs simulés consomment des credits payants."
+        },
+        {
+          "q": "Et si le code est épuisé ?",
+          "a": "Les codes ont un nombre d'utilisations limité. Si celui-ci est épuisé, demandez-en un sur le Discord officiel : ils en distribuent. Cette page affiche le code dont dispose actuellement la personne qui tient le site."
+        },
+        {
+          "q": "Comment obtenir le mois de Pro offert ?",
+          "a": "Les 1 000 premiers inscrits reçoivent un mois de Pro sans frais. Par ailleurs, de façon permanente, inviter des gens qui utilisent vraiment Mirasim rapporte des mois payants : 3 personnes pour Basic, 5 pour Pro, 10 pour Max. Là, les simples inscriptions ne comptent pas : les personnes invitées doivent réellement travailler dedans."
+        },
+        {
+          "q": "Où trouver mon propre code ?",
+          "a": "Une fois inscrit, dans Settings → Account. Partagez-le et les récompenses de parrainage commencent à compter."
+        }
+      ]
+    }
+  },
+  "nav": {
+    "home": "Accueil",
+    "download": "Téléchargement",
+    "windows": "Windows",
+    "invite": "Code"
+  },
+  "navDesc": {
+    "home": "Présentation, modèles et récompenses de parrainage",
+    "download": "Tous les paquets et leurs SHA-256",
+    "windows": "Pas de version officielle : ce qui marche",
+    "invite": "Un code valide et comment obtenir Pro"
   },
   "ui": {
     "skip": "Aller au contenu",
@@ -16,12 +261,14 @@
     "copy": "Copier le code",
     "copied": "Copié ✓",
     "copiedShort": "Copié ✓",
-    "download": "Télécharger"
+    "download": "Télécharger",
+    "navLabel": "Sections du site",
+    "keepReading": "À lire ensuite"
   },
   "offer": {
-    "title": "Un mois de Pro offert — 89 $",
-    "cond": "Inscrivez-vous avec un code d'invitation, puis invitez 5 développeurs qui utilisent vraiment Mirasim.",
-    "link": "Voir les conditions →"
+    "title": "Les 1 000 premiers inscrits reçoivent un mois de Pro offert — 89 $",
+    "cond": "Inscrivez-vous avec un code d'invitation pour être compté.",
+    "link": "Comment l'obtenir →"
   },
   "hero": {
     "eyebrow": "Mirasim Wiki · from build to eval",
@@ -49,36 +296,90 @@
     "sub": "One Agent IDE : l'agent qui écrit votre code et l'utilisateur simulé qui le teste, dans le même atelier.",
     "body": "D'ordinaire, on écrit du code dans un outil, puis on ouvre la page soi-même pour vérifier. Mirasim relie ces deux bouts : les agents de codage travaillent en parallèle dans l'atelier et, dès qu'un build est prêt, des <b>utilisateurs simulés</b> se servent réellement de votre produit dans un vrai Chrome ou un vrai émulateur mobile et rapportent le retour de première main. Voici les capacités listées sur le site officiel :",
     "cards": [
-      { "k": "WORKBENCH", "h": "Atelier multi-projets", "p": "Plusieurs projets côte à côte, chacun avec ses sessions, ses agents et sa configuration de modèle. Rien ne se mélange." },
-      { "k": "SESSIONS", "h": "Sessions parallèles et éditeur intégré", "p": "Plusieurs sessions d'agent en même temps, avec un éditeur à la VS&nbsp;Code pour corriger au vol. Fonctionne aussi depuis un mobile." },
-      { "k": "TUI ⇄ GUI", "h": "Terminal et interface graphique à une touche", "p": "Le même flux de travail des deux façons : au clavier dans la TUI, en pointant et parcourant dans la GUI." },
-      { "k": "BROWSER", "h": "Une automatisation qui lit la structure, pas des captures", "p": "L'agent lit les pages comme une structure de texte : environ 184&nbsp;o contre 60&nbsp;ko pour une capture, soit à peu près 330 fois moins de données, tout en pilotant un vrai Chrome avec un vrai profil utilisateur." },
-      { "k": "MOBILE / MAC", "h": "Applications Mac et émulateurs mobiles", "p": "Les applications Mac, le simulateur iOS et l'émulateur Android répondent de la même manière : les produits mobiles sont donc testés aussi par des utilisateurs simulés." },
-      { "k": "ONE TOOL", "h": "Une seule entrée d'outils, du contexte économisé", "p": "Le chiffre officiel : environ 1k tokens de surcoût par tour, contre à peu près 53k pour trente schémas d'outils. Le contexte reste pour le travail." }
+      {
+        "k": "WORKBENCH",
+        "h": "Atelier multi-projets",
+        "p": "Plusieurs projets côte à côte, chacun avec ses sessions, ses agents et sa configuration de modèle. Rien ne se mélange."
+      },
+      {
+        "k": "SESSIONS",
+        "h": "Sessions parallèles et éditeur intégré",
+        "p": "Plusieurs sessions d'agent en même temps, avec un éditeur à la VS&nbsp;Code pour corriger au vol. Fonctionne aussi depuis un mobile."
+      },
+      {
+        "k": "TUI ⇄ GUI",
+        "h": "Terminal et interface graphique à une touche",
+        "p": "Le même flux de travail des deux façons : au clavier dans la TUI, en pointant et parcourant dans la GUI."
+      },
+      {
+        "k": "BROWSER",
+        "h": "Une automatisation qui lit la structure, pas des captures",
+        "p": "L'agent lit les pages comme une structure de texte : environ 184&nbsp;o contre 60&nbsp;ko pour une capture, soit à peu près 330 fois moins de données, tout en pilotant un vrai Chrome avec un vrai profil utilisateur."
+      },
+      {
+        "k": "MOBILE / MAC",
+        "h": "Applications Mac et émulateurs mobiles",
+        "p": "Les applications Mac, le simulateur iOS et l'émulateur Android répondent de la même manière : les produits mobiles sont donc testés aussi par des utilisateurs simulés."
+      },
+      {
+        "k": "ONE TOOL",
+        "h": "Une seule entrée d'outils, du contexte économisé",
+        "p": "Le chiffre officiel : environ 1k tokens de surcoût par tour, contre à peu près 53k pour trente schémas d'outils. Le contexte reste pour le travail."
+      }
     ],
     "callout": "Mirasim est en <b>Alpha</b> ; le site officiel le dit franchement : « attendez-vous à des aspérités ». Une fois installée, l'application se met à jour toute seule."
   },
   "download": {
     "title": "Télécharger Mirasim",
     "sub": "Dernière version <b>v{version}</b> · récupérée automatiquement depuis le site officiel, mise à jour le {updated} · tous les liens pointent vers le CDN officiel",
-    "th": { "pkg": "Paquet", "file": "Fichier", "size": "Taille", "sha": "SHA-256" },
+    "th": {
+      "pkg": "Paquet",
+      "file": "Fichier",
+      "size": "Taille",
+      "sha": "SHA-256"
+    },
     "pkgs": {
-      "dmg":  { "label": "Application macOS", "req": "macOS 13+ · Apple Silicon" },
-      "cli":  { "label": "Ligne de commande (CLI)", "req": "macOS · Apple Silicon" },
-      "apk":  { "label": "Application Android", "req": "Android · installation manuelle" },
-      "vsix": { "label": "Extension VS Code", "req": "Installation manuelle dans VS Code" },
-      "sums": { "label": "Empreintes", "req": "Pour vérifier l'intégrité" }
+      "dmg": {
+        "label": "Application macOS",
+        "req": "macOS 13+ · Apple Silicon"
+      },
+      "cli": {
+        "label": "Ligne de commande (CLI)",
+        "req": "macOS · Apple Silicon"
+      },
+      "apk": {
+        "label": "Application Android",
+        "req": "Android · installation manuelle"
+      },
+      "vsix": {
+        "label": "Extension VS Code",
+        "req": "Installation manuelle dans VS Code"
+      },
+      "sums": {
+        "label": "Empreintes",
+        "req": "Pour vérifier l'intégrité"
+      }
     },
     "verify": "<b>Vérifiez votre téléchargement :</b> placez <code>SHA256SUMS</code> dans le même dossier que le paquet et lancez la commande ci-dessous. Un clic sur une valeur SHA-256 du tableau la copie en entier.",
-    "platforms": "<b>iOS</b> n'existe que sur TestFlight ; les invitations publiques ne sont pas encore ouvertes. L'<b>APK Android</b> doit être installé à la main. La version bureau exige un Mac Apple Silicon et macOS 13 ou ultérieur : il n'y a ni build Intel Mac ni build Windows."
+    "platforms": "<b>iOS</b> n'existe que sur TestFlight ; les invitations publiques ne sont pas encore ouvertes. L'<b>APK Android</b> doit être installé à la main. La version bureau exige un Mac Apple Silicon et macOS 13 ou ultérieur : il n'y a ni build Intel Mac ni build Windows.",
+    "moreLink": "Configuration requise, empreintes, situation sous Windows : tout est sur la <a href=\"{PAGE_DOWNLOAD}\">page de téléchargement</a>."
   },
   "start": {
     "title": "Premiers pas",
     "sub": "Trois étapes : installer, se connecter, activer avec un code d'invitation.",
     "steps": [
-      { "h": "Télécharger et installer", "p": "Prenez le paquet macOS dans le <a href=\"#download\">tableau de téléchargement</a> et glissez-le dans Applications. Si vous vivez dans le terminal, prenez plutôt la version CLI." },
-      { "h": "Se connecter", "p": "GitHub, Google ou e-mail : les trois fonctionnent." },
-      { "h": "Activer avec le code", "p": "Mirasim est sur invitation : il faut donc valider un code avant de s'en servir. Utilisez <code>{code}</code> (<a href=\"#invite-code\">à copier ici</a>), puis branchez votre propre compte de modèles et mettez-vous au travail." }
+      {
+        "h": "Télécharger et installer",
+        "p": "Prenez le paquet macOS dans le <a href=\"#download\">tableau de téléchargement</a> et glissez-le dans Applications. Si vous vivez dans le terminal, prenez plutôt la version CLI."
+      },
+      {
+        "h": "Se connecter",
+        "p": "GitHub, Google ou e-mail : les trois fonctionnent."
+      },
+      {
+        "h": "Activer avec le code",
+        "p": "Mirasim est sur invitation : il faut donc valider un code avant de s'en servir. Utilisez <code>{code}</code> (<a href=\"#invite-code\">à copier ici</a>), puis branchez votre propre compte de modèles et mettez-vous au travail."
+      }
     ]
   },
   "models": {
@@ -94,9 +395,18 @@
     "sub": "Invitez des gens qui se servent vraiment de Mirasim et l'équipe vous couvre un mois complet d'une offre payante.",
     "unit": "personnes",
     "rewards": {
-      "basic": { "plan": "Un mois de Basic", "worth": "valeur 29 $" },
-      "pro":   { "plan": "Un mois de Pro", "worth": "valeur 89 $" },
-      "max":   { "plan": "Un mois de Max", "worth": "valeur 199 $" }
+      "basic": {
+        "plan": "Un mois de Basic",
+        "worth": "valeur 29 $"
+      },
+      "pro": {
+        "plan": "Un mois de Pro",
+        "worth": "valeur 89 $"
+      },
+      "max": {
+        "plan": "Un mois de Max",
+        "worth": "valeur 199 $"
+      }
     },
     "body": "La règle qui compte : <b>les simples inscriptions ne comptent pas</b>. Les personnes invitées doivent réellement utiliser Mirasim — se connecter, ouvrir des sessions, faire du vrai travail — et l'équipe vérifie. Une fois inscrit, votre code d'invitation se trouve dans <code>Settings → Account</code> ; s'il n'en reste plus, le Discord officiel en distribue.",
     "callout": "Vous pouvez commencer aujourd'hui : activez votre compte avec le code de ce wiki <b>{code}</b> (<a href=\"#invite-code\">à copier en haut</a>), puis partagez celui qu'on vous donnera. Cinq utilisateurs réels, et le mois de Pro est offert — ces 89 $, c'est l'équipe qui les paie."
@@ -104,11 +414,26 @@
   "pricing": {
     "title": "Les offres payantes en bref",
     "sub": "Les credits paient les appels aux modèles du cloud officiel, y compris computer use et les utilisateurs simulés. Épuisés, vous repassez sur votre compte et continuez à travailler.",
-    "th": { "plan": "Offre", "price": "Par mois", "credits": "Credits", "usage": "Environ", "invite": "Ou invitez" },
+    "th": {
+      "plan": "Offre",
+      "price": "Par mois",
+      "credits": "Credits",
+      "usage": "Environ",
+      "invite": "Ou invitez"
+    },
     "rows": {
-      "basic": { "usage": "≈50M tokens · 200–400 messages", "invite": "3 personnes = un mois" },
-      "pro":   { "usage": "≈250M tokens · 1 000–2 000 messages", "invite": "5 personnes = un mois" },
-      "max":   { "usage": "≈1 000M tokens · 4 000–8 000 messages", "invite": "10 personnes = un mois" }
+      "basic": {
+        "usage": "≈50M tokens · 200–400 messages",
+        "invite": "3 personnes = un mois"
+      },
+      "pro": {
+        "usage": "≈250M tokens · 1 000–2 000 messages",
+        "invite": "5 personnes = un mois"
+      },
+      "max": {
+        "usage": "≈1 000M tokens · 4 000–8 000 messages",
+        "invite": "10 personnes = un mois"
+      }
     },
     "callout": "La comparaison officielle : le même usage coûte de 40 à 400 $ par mois ailleurs (un abonnement Claude Code et un abonnement Codex). Les tarifs en credits par modèle sont publiés. Tous les détails sur <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>."
   },
@@ -122,12 +447,30 @@
     "title": "Questions fréquentes",
     "sub": "Ce qu'on nous demande le plus souvent.",
     "items": [
-      { "q": "Mirasim est-il gratuit ?", "a": "Oui : avec un code d'invitation, cela ne coûte rien, puisque le logiciel tourne sur vos propres comptes de modèles (un abonnement Claude Code ou Codex, ou une clé API). Seuls computer use et les utilisateurs simulés demandent des credits payants ou une clé à vous." },
-      { "q": "Peut-on s'inscrire sans code d'invitation ?", "a": "Non, Mirasim est pour l'instant réservé aux invités. Utilisez le code de ce wiki <code>{code}</code> pour activer votre compte. Une fois entré, vous aurez votre propre code, et le Discord officiel en distribue d'autres au besoin." },
-      { "q": "Quelles plateformes sont prises en charge ?", "a": "Bureau macOS (Apple Silicon, macOS 13+), une version en ligne de commande pour macOS, un APK Android à installer à la main et une extension VS Code. iOS est sur TestFlight, sans invitations publiques. Il n'y a pas de build Intel Mac ni Windows." },
-      { "q": "Comment obtient-on réellement le mois de Pro offert ?", "a": "En invitant 5 développeurs qui se servent vraiment de Mirasim. Les simples inscriptions ne comptent pas : il faut qu'ils se connectent, ouvrent des sessions et travaillent pour de bon, et l'équipe vérifie avant d'accorder le mois. Le même dispositif donne un mois de Basic pour 3 personnes et un mois de Max pour 10." },
-      { "q": "Comment vérifier que le téléchargement n'a pas été altéré ?", "a": "Le SHA-256 de chaque fichier figure dans le tableau de téléchargement (cliquez pour le copier), ou récupérez le SHA256SUMS officiel et lancez shasum -a 256 -c SHA256SUMS --ignore-missing. Tous les liens pointent vers le CDN officiel (cdn-assets.mirasim.ai) ; ce wiki n'héberge aucun paquet." },
-      { "q": "Est-ce le site officiel de Mirasim ?", "a": "Non. C'est un wiki communautaire, sans lien avec Mirasim. Les numéros de version, les liens de téléchargement et les notes sont récupérés automatiquement depuis le site officiel ; mirasim.ai fait toujours foi. Le code d'invitation de cette page appartient à la personne qui tient le wiki." }
+      {
+        "q": "Mirasim est-il gratuit ?",
+        "a": "Oui : avec un code d'invitation, cela ne coûte rien, puisque le logiciel tourne sur vos propres comptes de modèles (un abonnement Claude Code ou Codex, ou une clé API). Seuls computer use et les utilisateurs simulés demandent des credits payants ou une clé à vous."
+      },
+      {
+        "q": "Peut-on s'inscrire sans code d'invitation ?",
+        "a": "Non, Mirasim est pour l'instant réservé aux invités. Utilisez le code de ce wiki <code>{code}</code> pour activer votre compte. Une fois entré, vous aurez votre propre code, et le Discord officiel en distribue d'autres au besoin."
+      },
+      {
+        "q": "Quelles plateformes sont prises en charge ?",
+        "a": "Bureau macOS (Apple Silicon, macOS 13+), une version en ligne de commande pour macOS, un APK Android à installer à la main et une extension VS Code. iOS est sur TestFlight, sans invitations publiques. Il n'y a pas de build Intel Mac ni Windows."
+      },
+      {
+        "q": "Comment obtient-on réellement le mois de Pro offert ?",
+        "a": "En invitant 5 développeurs qui se servent vraiment de Mirasim. Les simples inscriptions ne comptent pas : il faut qu'ils se connectent, ouvrent des sessions et travaillent pour de bon, et l'équipe vérifie avant d'accorder le mois. Le même dispositif donne un mois de Basic pour 3 personnes et un mois de Max pour 10."
+      },
+      {
+        "q": "Comment vérifier que le téléchargement n'a pas été altéré ?",
+        "a": "Le SHA-256 de chaque fichier figure dans le tableau de téléchargement (cliquez pour le copier), ou récupérez le SHA256SUMS officiel et lancez shasum -a 256 -c SHA256SUMS --ignore-missing. Tous les liens pointent vers le CDN officiel (cdn-assets.mirasim.ai) ; ce wiki n'héberge aucun paquet."
+      },
+      {
+        "q": "Est-ce le site officiel de Mirasim ?",
+        "a": "Non. C'est un wiki communautaire, sans lien avec Mirasim. Les numéros de version, les liens de téléchargement et les notes sont récupérés automatiquement depuis le site officiel ; mirasim.ai fait toujours foi. Le code d'invitation de cette page appartient à la personne qui tient le wiki."
+      }
     ]
   },
   "footer": {

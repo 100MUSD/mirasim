@@ -1,11 +1,256 @@
 {
   "htmlLang": "ja",
   "meta": {
-    "title": "Mirasim 招待コードとダウンロード — Pro 1か月無料",
-    "description": "Mirasim 招待コード MIRA-EC9V-64BF-BC07。招待制の Agent IDE に無料で参加し、Mirasim v{version} の macOS / Android 版をダウンロード。$89 相当の Pro を1か月無料で受け取れます。",
-    "keywords": "Mirasim, Mirasim 招待コード, Mirasim ダウンロード, Mirasim wiki, Mirasim 無料, Mirasim Pro, Agent IDE, One Agent IDE, AI コーディングエージェント, シミュレートユーザー, Claude Code, Codex, macOS Agent IDE",
     "ogSub": "招待コード · ダウンロード · Pro 1か月無料",
     "offerFree": "招待コードは無料で、Mirasim はすでに課金しているモデルのサブスクや API キーの上で動きます。"
+  },
+  "pages": {
+    "home": {
+      "title": "Mirasim 招待コードとダウンロード — Pro 1か月無料",
+      "description": "Mirasim 招待コード MIRA-EC9V-64BF-BC07。招待制の Agent IDE に無料で参加し、Mirasim v{version} の macOS / Android 版をダウンロード。$89 相当の Pro を1か月無料で受け取れます。",
+      "keywords": "Mirasim, Mirasim 招待コード, Mirasim ダウンロード, Mirasim wiki, Mirasim 無料, Mirasim Pro, Agent IDE, One Agent IDE, AI コーディングエージェント, シミュレートユーザー, Claude Code, Codex, macOS Agent IDE"
+    },
+    "download": {
+      "title": "Mirasim v{version} ダウンロード — macOS / Android / CLI",
+      "description": "Mirasim v{version} のダウンロード：Apple Silicon 向け macOS DMG、CLI 版、Android APK、VS Code 拡張。すべて公式 CDN 直リンクで、各ファイルの SHA-256 付き。",
+      "keywords": "Mirasim ダウンロード, Mirasim dmg, Mirasim macOS, Mirasim apk, Mirasim CLI, Mirasim vsix, Mirasim v{version}, Mirasim インストーラー",
+      "eyebrow": "ダウンロード",
+      "h1": "Mirasim <em>v{version}</em> をダウンロード",
+      "lede": "Mirasim が公開している全パッケージを、サイズと SHA-256 付きで掲載しています（公式サイトから自動取得）。リンクはすべて公式 CDN 直結で、<b>この Wiki はファイルを一切ホストしていません</b>。",
+      "tableTitle": "全パッケージ",
+      "verifyTitle": "ダウンロードを検証する",
+      "verifySub": "改変されていないことを 2 分で確かめられます。",
+      "verifyBody": "表のチェックサムは公式 v{version} の <code>SHA256SUMS</code> から、ダウンロードリンクと同時に取得したものです。一致しない場合はそのファイルを開かず、<a href=\"https://mirasim.ai/download\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/download</a> から取り直してもう一度確認してください。",
+      "installTitle": "インストールと有効化",
+      "reqTitle": "動作環境",
+      "reqCards": [
+        {
+          "k": "MACOS",
+          "h": "macOS 13 以降",
+          "p": "Apple Silicon 専用（M1 以降）。DMG も CLI 版も arm64 で、Intel Mac 版はありません。"
+        },
+        {
+          "k": "ANDROID",
+          "h": "Android（サイドロード）",
+          "p": "APK は Google Play にないため、自分でインストールし提供元不明のアプリを許可する必要があります。"
+        },
+        {
+          "k": "VS CODE",
+          "h": "VS Code 拡張（VSIX）",
+          "p": "VSIX ファイルから手動でインストールします。デスクトップ版なしで何ができるかは公式に記載がないため、未検証として扱ってください。"
+        },
+        {
+          "k": "未対応",
+          "h": "Windows・Intel Mac・Linux",
+          "p": "いずれも公式ビルドはありません。iOS は TestFlight のみで、一般招待は未開放です。"
+        }
+      ],
+      "winLink": "Windows をお使いですか？インストーラーを探す前に<a href=\"{PAGE_WINDOWS}\">実際の状況</a>をご覧ください。公式版は存在せず、出回っているものは Mirasim 配布ではありません。",
+      "faq": [
+        {
+          "q": "どのファイルを選べばいい？",
+          "a": "Apple Silicon の Mac なら DMG です。ターミナル中心で作業し Mirasim もそこで使いたい場合だけ CLI 版（tar.xz）を。APK は Android 用、VSIX は VS Code 拡張です。"
+        },
+        {
+          "q": "Windows や Intel Mac 版はある？",
+          "a": "ありません。公式は macOS arm64 ビルド、Android APK、VS Code 拡張のみです。"
+        },
+        {
+          "q": "ファイルはこの Wiki がホストしている？",
+          "a": "いいえ。すべてのリンクは公式 CDN（cdn-assets.mirasim.ai）を指しています。この Wiki は公式サイトからバージョン番号・サイズ・チェックサムを読み取って表示しているだけです。"
+        }
+      ]
+    },
+    "windows": {
+      "title": "Mirasim の Windows 対応 — 実際にできること",
+      "description": "Mirasim に公式 Windows ビルドはありません。公式が何を配布しているか、コミュニティ製 Windows 更新ツールができること・できないこと、そして Windows ユーザーの現実的な選択肢を整理します。",
+      "keywords": "Mirasim Windows, Mirasim win, Mirasim Windows ダウンロード, Mirasim exe, Mirasim Windows 版, Mirasim win64, Mirasim Windows インストーラー",
+      "eyebrow": "Windows",
+      "h1": "<em>Windows</em> での Mirasim",
+      "lede": "結論から：<b>公式 Windows ビルドはありません。</b>Mirasim が配布しているのは macOS arm64 パッケージ、Android APK、VS Code 拡張で、Windows 向けは一つもありません。その意味と、実際の選択肢をまとめます。",
+      "statusTitle": "公式が配布しているもの",
+      "statusSub": "公式 v{version} ダウンロードページより自動同期。",
+      "statusBody": "v{version} の公式リリースに含まれるのは、macOS arm64 の DMG、macOS arm64 の CLI アーカイブ、Android APK、VS Code 拡張、そしてチェックサムファイルです。<code>.exe</code> も <code>.msi</code> も Windows 用アーカイブもありません。「公式 Mirasim Windows 版インストーラー」と称するものは Mirasim 配布ではありません。",
+      "osTh": {
+        "os": "プラットフォーム",
+        "state": "公式の状況",
+        "note": "備考"
+      },
+      "osRows": [
+        {
+          "os": "macOS（Apple Silicon）",
+          "state": "<b>対応</b>",
+          "note": "DMG と CLI、macOS 13+、arm64 のみ"
+        },
+        {
+          "os": "Android",
+          "state": "<b>対応</b>",
+          "note": "APK、サイドロードが必要"
+        },
+        {
+          "os": "VS Code",
+          "state": "<b>拡張を公開</b>",
+          "note": "VSIX。デスクトップ版なしの挙動は未記載"
+        },
+        {
+          "os": "iOS",
+          "state": "TestFlight のみ",
+          "note": "一般招待は未開放"
+        },
+        {
+          "os": "Windows",
+          "state": "<b>公式ビルドなし</b>",
+          "note": "コミュニティ移植あり（下記）"
+        },
+        {
+          "os": "Intel Mac · Linux",
+          "state": "<b>公式ビルドなし</b>",
+          "note": "予定の発表なし"
+        }
+      ],
+      "updaterTitle": "コミュニティ製 Windows 更新ツール",
+      "updaterSub": "実在する真面目な OSS ですが、ダウンロード前に何であるかを把握してください。",
+      "updaterBody": "<b>{winAuthor}</b> という開発者が <code>mirasim-win-updater</code> を公開しています。MIT ライセンスで、<b>すでに存在する</b> Windows 版 Mirasim を更新するためのツールです。Mirasim が「Electron シェル + プラットフォーム非依存の JavaScript payload」構成であるため成立しており、公式 payload を取得するか公式 DMG から新しいシェルを取り出し、実際に変化したファイルのみを書き換えます。ダウンロードしたものは SHA-256 で検証し、payload はシェルから取り出した公開鍵で ed25519 署名も確認します。",
+      "facts": [
+        {
+          "ok": true,
+          "h": "OSS・MIT・監査可能",
+          "p": "本体は読める JavaScript 1 ファイルで、他人のバイナリを信用せず 2 コマンドで自分でも exe を作れます。"
+        },
+        {
+          "ok": true,
+          "h": "ダウンロード物を検証する",
+          "p": "DMG と payload に SHA-256、payload には ed25519 署名検証 — アプリ自身と同じ確認です。"
+        },
+        {
+          "ok": true,
+          "h": "バックアップと巻き戻し",
+          "p": "変更・削除されるファイルは先にバックアップされ、<code>--rollback</code> で前のバージョンに完全に戻せます。"
+        },
+        {
+          "ok": false,
+          "h": "更新ツールであり、インストーラーではない",
+          "p": "ドキュメントに明記されています。Electron ランタイムと Windows ネイティブモジュールを既存インストールから取る必要があるため、ゼロから Windows 版を作ることはできません。Windows 版を持っていない人には、実行できるものが何も得られません。"
+        },
+        {
+          "ok": false,
+          "h": "exe は未署名",
+          "p": "SEA リソースの注入で Node の署名が無効になるため未署名で配布され、初回実行時に SmartScreen が警告します。"
+        },
+        {
+          "ok": false,
+          "h": "Mirasim 公式とは無関係",
+          "p": "作者自身が「個人用ツールで公式とは無関係」と明記しています。Mirasim 側の審査・署名・サポートはありません。"
+        }
+      ],
+      "riskTitle": "「Mirasim Windows 版」を名乗るものをダウンロードする前に",
+      "riskIntro": "非公式の開発者ツールは、あなたの権限・ファイル・API キーに手が届く場所で動きます。自分で確認するまでは信用しないでください。",
+      "riskPoints": [
+        "Mirasim 自身が配布するファイルは <code>cdn-assets.mirasim.ai</code> のみから来ます。それ以外は、ページがどれだけ本物めいて見えても他人のビルドです。",
+        "ビルド済みの未署名 exe をそのまま実行するより、ソースを読んで自分でビルドするほうを選んでください。この専案は手順を書いており、事前のツールチェーンも不要です。",
+        "どうしてもサードパーティのバイナリを動かすなら、失っても困らない資格情報しかない環境で行い、API キーは貼り付けないこと。",
+        "<b>リスクは自分で負うことになります。</b>この Wiki が紹介するのは、公開されていて限界を正直に書いているからです。セキュリティ監査ではなく、推奨でもありません。"
+      ],
+      "updaterLinks": "ソースとリリース：<a href=\"{winRepo}\" target=\"_blank\" rel=\"noopener nofollow\">{winRepo}</a> · <a href=\"{winReleases}\" target=\"_blank\" rel=\"noopener nofollow\">最新リリース</a>。まず README と移植ノートを読んでください — できないことがはっきり書かれています。",
+      "optionsTitle": "Windows ユーザーが今できること",
+      "optionsSub": "失敗しにくい順です。",
+      "options": [
+        {
+          "k": "MAC を借りる",
+          "h": "クラウド／リモートの Mac",
+          "p": "Mirasim は Apple Silicon と macOS 13+ が必要です。Mac mini インスタンスを借りる、あるいはリモートで M シリーズ Mac に入れば、公式ビルドを一切改変せずに動かせます。"
+        },
+        {
+          "k": "待つ",
+          "h": "公式ビルドを待つ",
+          "p": "この Wiki は 30 分ごとに公式ダウンロードページを読み直します。公式リリースに Windows パッケージが出た瞬間、ここの表に現れるので手で確認する必要はありません。"
+        },
+        {
+          "k": "監査",
+          "h": "コミュニティ移植を読んでから決める",
+          "p": "すでに Windows で Mirasim を動かしているなら、上記の更新ツールが現状メンテされている更新手段です。ソースを読み、自分でビルドし、作られるバックアップは残しておきましょう。"
+        },
+        {
+          "k": "ANDROID",
+          "h": "スマホの Android 版",
+          "p": "APK は公式で、普通の Android スマホで動きます。Mac なしで Mirasim を使う現実的な道です — Windows デスクトップ上ではありませんが。"
+        }
+      ],
+      "faq": [
+        {
+          "q": "公式の Mirasim Windows 版はありますか？",
+          "a": "ありません。v{version} 時点の公式リリースは macOS arm64 ビルド、Android APK、VS Code 拡張のみで、exe も msi も Windows アーカイブもありません。"
+        },
+        {
+          "q": "コミュニティの Windows 更新ツールは安全ですか？",
+          "a": "MIT の OSS で、ダウンロード物に SHA-256 と ed25519 署名の検証を行い、巻き戻しもできます — 多くの非公式ツールより丁寧です。同時に未署名で、Mirasim 公式とは無関係、公式の審査も受けていません。ソースを読むか自分でビルドし、失敗しても資格情報を失わない環境で実行してください。"
+        },
+        {
+          "q": "その更新ツールで Windows に Mirasim をインストールできますか？",
+          "a": "できません。ドキュメントにそう書かれています。Electron ランタイムと Windows ネイティブモジュールを既存インストールから取るため、既存の Windows インストールの更新しかできず、ゼロからは実行可能なものを作れません。"
+        },
+        {
+          "q": "今後 Windows に対応しますか？",
+          "a": "発表はありません。アプリは Alpha 段階で macOS 優先です。このページとダウンロード表は自動更新されるので、変化があればここに現れます。"
+        }
+      ]
+    },
+    "invite": {
+      "title": "Mirasim 招待コード MIRA-EC9V-64BF-BC07（無料）",
+      "description": "使える Mirasim 招待コード：MIRA-EC9V-64BF-BC07。Mirasim は招待制です。登録後にこのコードを入力すればアカウントを無料で有効化でき、Pro 1か月無料も受け取れます。",
+      "keywords": "Mirasim 招待コード, Mirasim 招待, Mirasim 登録, Mirasim 無料, Mirasim ベータ, Mirasim invite code, MIRA 招待コード",
+      "eyebrow": "招待コード",
+      "h1": "使える Mirasim <em>招待コード</em>",
+      "lede": "Mirasim の登録は招待制で、コードがなければ入れません。すぐ使えるコードを無料で置いています。何が得られるか、Pro 1か月無料の仕組みも下にまとめました。",
+      "useTitle": "コードの使い方",
+      "useSub": "1 分もかからず、費用もかかりません。",
+      "useSteps": [
+        {
+          "h": "アカウントを作る",
+          "p": "<a href=\"https://mirasim.ai/\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai</a> で GitHub、Google、メールのいずれかでサインインします。"
+        },
+        {
+          "h": "コードを貼る",
+          "p": "有効化画面で招待コードを求められたら <code>{code}</code> を貼り付けてください。このページ上部のボタンでコピーできます。"
+        },
+        {
+          "h": "自分のモデルアカウントをつなぐ",
+          "p": "すでに課金している Claude Code や Codex のサブスク、または API キーを接続します。Mirasim はその上で動き、追加課金はしません。"
+        }
+      ],
+      "freeTitle": "このコードで実際に得られるもの",
+      "freeSub": "自分のモデルアカウントの上で、無料で使えます。",
+      "faq": [
+        {
+          "q": "この招待コードは有料ですか？",
+          "a": "無料です。コード自体も、それで Mirasim を使うことも無料で、すでに持っているモデルアカウントの上で動きます。有料クレジットを使うのは computer use とシミュレートユーザーだけです。"
+        },
+        {
+          "q": "コードが使い切られていたら？",
+          "a": "コードには使用回数の上限があります。使い切られていた場合は公式 Discord で新しいものをもらえます。このページには運営者が現在持っているコードを掲載しています。"
+        },
+        {
+          "q": "Pro 1か月無料はどう受け取りますか？",
+          "a": "先着 1,000 名は Pro 1か月が無料になります。これとは別に恒常の招待特典があり、実際に Mirasim を使う人を招待すると 3 人で Basic、5 人で Pro、10 人で Max が 1か月分もらえます。後者は「登録だけ」では数に入らず、招待した人が実際に作業する必要があります。"
+        },
+        {
+          "q": "自分の招待コードはどこにありますか？",
+          "a": "登録後、Settings → Account にあります。共有すれば上記の招待特典のカウントが始まります。"
+        }
+      ]
+    }
+  },
+  "nav": {
+    "home": "ホーム",
+    "download": "ダウンロード",
+    "windows": "Windows",
+    "invite": "招待コード"
+  },
+  "navDesc": {
+    "home": "製品概要・使えるモデル・招待特典",
+    "download": "全パッケージと SHA-256",
+    "windows": "公式版はない。では何ができるか",
+    "invite": "使えるコードと Pro の受け取り方"
   },
   "ui": {
     "skip": "本文へスキップ",
@@ -16,12 +261,14 @@
     "copy": "招待コードをコピー",
     "copied": "コピーしました ✓",
     "copiedShort": "コピー ✓",
-    "download": "ダウンロード"
+    "download": "ダウンロード",
+    "navLabel": "サイト内セクション",
+    "keepReading": "続けて読む"
   },
   "offer": {
-    "title": "Pro を1か月無料で — $89 相当",
-    "cond": "招待コードで登録し、実際に Mirasim を使う開発者を5人招待すれば交換できます。",
-    "link": "条件を見る →"
+    "title": "先着 1,000 名に Pro 1か月無料 — $89 相当",
+    "cond": "招待コードで登録すれば対象になります。",
+    "link": "受け取り方 →"
   },
   "hero": {
     "eyebrow": "Mirasim Wiki · from build to eval",
@@ -49,36 +296,90 @@
     "sub": "One Agent IDE —— コードを書くエージェントと、それをテストするシミュレートユーザーが同じワークベンチに入っています。",
     "body": "ふつうの流れでは、あるツールでコードを書き、自分でページを開いて確認します。Mirasim はこの両端をつなぎます。コーディングエージェントがワークベンチ内で並行して働き、ビルドができたら<b>シミュレートユーザー</b>が実際の Chrome や実機相当のモバイルエミュレータであなたのプロダクトを使い、一次情報としてのフィードバックを持ち帰ります。公式サイトに挙げられている主な機能は次のとおりです。",
     "cards": [
-      { "k": "WORKBENCH", "h": "複数プロジェクトのワークベンチ", "p": "複数のプロジェクトを並べて開き、それぞれが独立したセッション・エージェント・モデル設定を持ちます。混ざりません。" },
-      { "k": "SESSIONS", "h": "並行セッションと内蔵エディタ", "p": "複数のエージェントセッションを同時に走らせ、VS&nbsp;Code 風のエディタでその場で修正。モバイルからも続けられます。" },
-      { "k": "TUI ⇄ GUI", "h": "ターミナルと GUI をワンキーで切替", "p": "同じワークフローを、TUI ではキーボード中心に、GUI では見て選ぶ操作で扱えます。" },
-      { "k": "BROWSER", "h": "スクリーンショットではなく構造を読む自動化", "p": "エージェントはページをテキスト構造として読みます（公式の数字で約 184&nbsp;B 対 スクリーンショット 60&nbsp;KB、転送量で約 330 倍の差）。実際の Chrome と実ユーザープロファイルを動かします。" },
-      { "k": "MOBILE / MAC", "h": "Mac アプリとモバイルエミュレータ", "p": "Mac アプリ、iOS シミュレータ、Android エミュレータも同じ方式で扱えるので、モバイル製品もシミュレートユーザーがテストできます。" },
-      { "k": "ONE TOOL", "h": "入口を1つにしてコンテキストを節約", "p": "公式の数字では1ターンあたりのツール分は約 1k tokens。30 個のツールスキーマなら約 53k です。コンテキストは仕事のために残ります。" }
+      {
+        "k": "WORKBENCH",
+        "h": "複数プロジェクトのワークベンチ",
+        "p": "複数のプロジェクトを並べて開き、それぞれが独立したセッション・エージェント・モデル設定を持ちます。混ざりません。"
+      },
+      {
+        "k": "SESSIONS",
+        "h": "並行セッションと内蔵エディタ",
+        "p": "複数のエージェントセッションを同時に走らせ、VS&nbsp;Code 風のエディタでその場で修正。モバイルからも続けられます。"
+      },
+      {
+        "k": "TUI ⇄ GUI",
+        "h": "ターミナルと GUI をワンキーで切替",
+        "p": "同じワークフローを、TUI ではキーボード中心に、GUI では見て選ぶ操作で扱えます。"
+      },
+      {
+        "k": "BROWSER",
+        "h": "スクリーンショットではなく構造を読む自動化",
+        "p": "エージェントはページをテキスト構造として読みます（公式の数字で約 184&nbsp;B 対 スクリーンショット 60&nbsp;KB、転送量で約 330 倍の差）。実際の Chrome と実ユーザープロファイルを動かします。"
+      },
+      {
+        "k": "MOBILE / MAC",
+        "h": "Mac アプリとモバイルエミュレータ",
+        "p": "Mac アプリ、iOS シミュレータ、Android エミュレータも同じ方式で扱えるので、モバイル製品もシミュレートユーザーがテストできます。"
+      },
+      {
+        "k": "ONE TOOL",
+        "h": "入口を1つにしてコンテキストを節約",
+        "p": "公式の数字では1ターンあたりのツール分は約 1k tokens。30 個のツールスキーマなら約 53k です。コンテキストは仕事のために残ります。"
+      }
     ],
     "callout": "Mirasim は <b>Alpha 段階</b>で、公式も「粗いところがある」と明言しています。インストール後はアプリが自動で最新に保たれます。"
   },
   "download": {
     "title": "Mirasim をダウンロード",
     "sub": "最新バージョン <b>v{version}</b> · 公式サイトから自動取得、{updated} 更新 · すべてのリンクは公式 CDN に直結",
-    "th": { "pkg": "パッケージ", "file": "ファイル", "size": "サイズ", "sha": "SHA-256" },
+    "th": {
+      "pkg": "パッケージ",
+      "file": "ファイル",
+      "size": "サイズ",
+      "sha": "SHA-256"
+    },
     "pkgs": {
-      "dmg":  { "label": "macOS デスクトップアプリ", "req": "macOS 13+ · Apple Silicon" },
-      "cli":  { "label": "コマンドライン版 (CLI)", "req": "macOS · Apple Silicon" },
-      "apk":  { "label": "Android アプリ", "req": "Android · 手動でサイドロード" },
-      "vsix": { "label": "VS Code 拡張", "req": "VS Code に手動でインストール" },
-      "sums": { "label": "チェックサム", "req": "ダウンロードの完全性を確認" }
+      "dmg": {
+        "label": "macOS デスクトップアプリ",
+        "req": "macOS 13+ · Apple Silicon"
+      },
+      "cli": {
+        "label": "コマンドライン版 (CLI)",
+        "req": "macOS · Apple Silicon"
+      },
+      "apk": {
+        "label": "Android アプリ",
+        "req": "Android · 手動でサイドロード"
+      },
+      "vsix": {
+        "label": "VS Code 拡張",
+        "req": "VS Code に手動でインストール"
+      },
+      "sums": {
+        "label": "チェックサム",
+        "req": "ダウンロードの完全性を確認"
+      }
     },
     "verify": "<b>ダウンロードの検証：</b><code>SHA256SUMS</code> をパッケージと同じフォルダに置き、下のコマンドを実行してください。表の SHA-256 をクリックすると全文をコピーできます。",
-    "platforms": "<b>iOS</b> は TestFlight のみで、一般招待はまだ開いていません。<b>Android APK</b> は自分でサイドロードする必要があります。デスクトップ版は Apple Silicon と macOS 13 以降が必要で、Intel Mac 版と Windows 版はありません。"
+    "platforms": "<b>iOS</b> は TestFlight のみで、一般招待はまだ開いていません。<b>Android APK</b> は自分でサイドロードする必要があります。デスクトップ版は Apple Silicon と macOS 13 以降が必要で、Intel Mac 版と Windows 版はありません。",
+    "moreLink": "動作環境、チェックサム、Windows の事情は<a href=\"{PAGE_DOWNLOAD}\">ダウンロードページ</a>にまとめてあります。"
   },
   "start": {
     "title": "はじめかた",
     "sub": "3ステップ：インストール → サインイン → 招待コードで有効化。",
     "steps": [
-      { "h": "ダウンロードしてインストール", "p": "<a href=\"#download\">上のダウンロード表</a>から macOS 版を取得し、「アプリケーション」にドラッグします。ターミナル派なら CLI 版をどうぞ。" },
-      { "h": "サインイン", "p": "GitHub、Google、メールのいずれでも使えます。" },
-      { "h": "招待コードで有効化", "p": "Mirasim は招待制なので、使う前にコードを引き換える必要があります。<code>{code}</code> をお使いください（<a href=\"#invite-code\">ここでコピー</a>）。有効化したら自分のモデルアカウントをつないで作業開始です。" }
+      {
+        "h": "ダウンロードしてインストール",
+        "p": "<a href=\"#download\">上のダウンロード表</a>から macOS 版を取得し、「アプリケーション」にドラッグします。ターミナル派なら CLI 版をどうぞ。"
+      },
+      {
+        "h": "サインイン",
+        "p": "GitHub、Google、メールのいずれでも使えます。"
+      },
+      {
+        "h": "招待コードで有効化",
+        "p": "Mirasim は招待制なので、使う前にコードを引き換える必要があります。<code>{code}</code> をお使いください（<a href=\"#invite-code\">ここでコピー</a>）。有効化したら自分のモデルアカウントをつないで作業開始です。"
+      }
     ]
   },
   "models": {
@@ -94,9 +395,18 @@
     "sub": "本当に Mirasim を使う人を招待すれば、有料プラン1か月分を公式が負担します。",
     "unit": "人",
     "rewards": {
-      "basic": { "plan": "Basic 1か月", "worth": "$29 相当" },
-      "pro":   { "plan": "Pro 1か月", "worth": "$89 相当" },
-      "max":   { "plan": "Max 1か月", "worth": "$199 相当" }
+      "basic": {
+        "plan": "Basic 1か月",
+        "worth": "$29 相当"
+      },
+      "pro": {
+        "plan": "Pro 1か月",
+        "worth": "$89 相当"
+      },
+      "max": {
+        "plan": "Max 1か月",
+        "worth": "$199 相当"
+      }
     },
     "body": "肝心なルール：<b>登録だけでは数に入りません</b>。招待した人が実際に Mirasim を使うこと——サインインし、セッションを開き、本当の作業をすること——が条件で、公式が確認します。登録後は自分の招待コードが <code>Settings → Account</code> にあります。使い切ったら公式 Discord でもらえます。",
     "callout": "今日から始められます：この Wiki のコード <b>{code}</b>（<a href=\"#invite-code\">上でコピー</a>）でアカウントを有効化し、手に入った自分のコードを共有してください。実際に使う5人で Pro が1か月無料——その $89 は公式が払います。"
@@ -104,11 +414,26 @@
   "pricing": {
     "title": "有料プランの概要",
     "sub": "credits は公式クラウドのモデル呼び出しに使われ、computer use とシミュレートユーザーもここから消費します。使い切っても自分のアカウントに切り替えて作業を続けられます。",
-    "th": { "plan": "プラン", "price": "月額", "credits": "クレジット", "usage": "目安", "invite": "招待で交換" },
+    "th": {
+      "plan": "プラン",
+      "price": "月額",
+      "credits": "クレジット",
+      "usage": "目安",
+      "invite": "招待で交換"
+    },
     "rows": {
-      "basic": { "usage": "約 5,000万 tokens · 200〜400 メッセージ", "invite": "3人 = 1か月" },
-      "pro":   { "usage": "約 2.5億 tokens · 1,000〜2,000 メッセージ", "invite": "5人 = 1か月" },
-      "max":   { "usage": "約 10億 tokens · 4,000〜8,000 メッセージ", "invite": "10人 = 1か月" }
+      "basic": {
+        "usage": "約 5,000万 tokens · 200〜400 メッセージ",
+        "invite": "3人 = 1か月"
+      },
+      "pro": {
+        "usage": "約 2.5億 tokens · 1,000〜2,000 メッセージ",
+        "invite": "5人 = 1か月"
+      },
+      "max": {
+        "usage": "約 10億 tokens · 4,000〜8,000 メッセージ",
+        "invite": "10人 = 1か月"
+      }
     },
     "callout": "公式の比較では、同じ使用量は他社だと月 $40〜$400 ほど（Claude Code と Codex を別々に契約した場合）。モデルごとの credits レートは公開されています。詳細は <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>。"
   },
@@ -122,12 +447,30 @@
     "title": "よくある質問",
     "sub": "いちばん多く聞かれることです。",
     "items": [
-      { "q": "Mirasim は無料ですか？", "a": "はい。招待コードがあれば費用はかかりません。自分のモデルアカウント（Claude Code や Codex のサブスク、API キー）の上で動くからです。有料の credits か自分のキーが必要なのは computer use とシミュレートユーザーだけです。" },
-      { "q": "招待コードなしで登録できますか？", "a": "できません。現在は招待制です。この Wiki のコード <code>{code}</code> で有効化してください。登録すると自分のコードが手に入り、足りなくなれば公式 Discord でもらえます。" },
-      { "q": "対応プラットフォームは？", "a": "macOS デスクトップ（Apple Silicon、macOS 13 以降）、macOS のコマンドライン版、サイドロード用 Android APK、VS Code 拡張です。iOS は TestFlight のみで一般招待は未開放。Intel Mac 版と Windows 版はありません。" },
-      { "q": "Pro 1か月無料は実際どうすれば貰えますか？", "a": "本当に Mirasim を使う開発者を5人招待します。公式は「登録だけでは数に入らない」と明言しており、サインイン・セッション作成・実作業が必要で、確認のうえ付与されます。同じ仕組みで3人なら Basic 1か月、10人なら Max 1か月です。" },
-      { "q": "ダウンロードが改変されていないか確認する方法は？", "a": "各ファイルの SHA-256 をダウンロード表に載せています（クリックでコピー）。公式の SHA256SUMS を取得して shasum -a 256 -c SHA256SUMS --ignore-missing を実行する方法でも確認できます。リンクはすべて公式 CDN（cdn-assets.mirasim.ai）に直結し、この Wiki はパッケージを一切ホストしていません。" },
-      { "q": "これは Mirasim の公式サイトですか？", "a": "いいえ。コミュニティが運営する非公式 Wiki で、Mirasim とは無関係です。バージョン番号・ダウンロードリンク・ノートは公式サイトから自動取得しており、正はいつでも mirasim.ai です。このページの招待コードは Wiki 運営者のものです。" }
+      {
+        "q": "Mirasim は無料ですか？",
+        "a": "はい。招待コードがあれば費用はかかりません。自分のモデルアカウント（Claude Code や Codex のサブスク、API キー）の上で動くからです。有料の credits か自分のキーが必要なのは computer use とシミュレートユーザーだけです。"
+      },
+      {
+        "q": "招待コードなしで登録できますか？",
+        "a": "できません。現在は招待制です。この Wiki のコード <code>{code}</code> で有効化してください。登録すると自分のコードが手に入り、足りなくなれば公式 Discord でもらえます。"
+      },
+      {
+        "q": "対応プラットフォームは？",
+        "a": "macOS デスクトップ（Apple Silicon、macOS 13 以降）、macOS のコマンドライン版、サイドロード用 Android APK、VS Code 拡張です。iOS は TestFlight のみで一般招待は未開放。Intel Mac 版と Windows 版はありません。"
+      },
+      {
+        "q": "Pro 1か月無料は実際どうすれば貰えますか？",
+        "a": "本当に Mirasim を使う開発者を5人招待します。公式は「登録だけでは数に入らない」と明言しており、サインイン・セッション作成・実作業が必要で、確認のうえ付与されます。同じ仕組みで3人なら Basic 1か月、10人なら Max 1か月です。"
+      },
+      {
+        "q": "ダウンロードが改変されていないか確認する方法は？",
+        "a": "各ファイルの SHA-256 をダウンロード表に載せています（クリックでコピー）。公式の SHA256SUMS を取得して shasum -a 256 -c SHA256SUMS --ignore-missing を実行する方法でも確認できます。リンクはすべて公式 CDN（cdn-assets.mirasim.ai）に直結し、この Wiki はパッケージを一切ホストしていません。"
+      },
+      {
+        "q": "これは Mirasim の公式サイトですか？",
+        "a": "いいえ。コミュニティが運営する非公式 Wiki で、Mirasim とは無関係です。バージョン番号・ダウンロードリンク・ノートは公式サイトから自動取得しており、正はいつでも mirasim.ai です。このページの招待コードは Wiki 運営者のものです。"
+      }
     ]
   },
   "footer": {

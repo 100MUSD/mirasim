@@ -1,11 +1,256 @@
 {
   "htmlLang": "zh-Hant",
   "meta": {
-    "title": "Mirasim 邀請碼與下載 — 免費領一個月 Pro",
-    "description": "Mirasim 邀請碼 MIRA-EC9V-64BF-BC07：免費加入邀請制 Agent IDE，下載 Mirasim v{version} macOS 與 Android 安裝檔，並免費領取價值 $89 的一個月 Pro 會員。",
-    "keywords": "Mirasim, Mirasim 邀請碼, Mirasim 下載, Mirasim wiki, Mirasim 免費, Mirasim Pro 會員, Agent IDE, One Agent IDE, AI 編程 agent, 模擬使用者測試, Claude Code, Codex, macOS Agent IDE",
     "ogSub": "邀請碼 · 安裝檔下載 · 免費一個月 Pro",
     "offerFree": "憑邀請碼免費進入，Mirasim 跑在你已經付費的模型訂閱或 API key 上。"
+  },
+  "pages": {
+    "home": {
+      "title": "Mirasim 邀請碼與下載 — 免費領一個月 Pro",
+      "description": "Mirasim 邀請碼 MIRA-EC9V-64BF-BC07：免費加入邀請制 Agent IDE，下載 Mirasim v{version} macOS 與 Android 安裝檔，並免費領取價值 $89 的一個月 Pro 會員。",
+      "keywords": "Mirasim, Mirasim 邀請碼, Mirasim 下載, Mirasim wiki, Mirasim 免費, Mirasim Pro 會員, Agent IDE, One Agent IDE, AI 編程 agent, 模擬使用者測試, Claude Code, Codex, macOS Agent IDE"
+    },
+    "download": {
+      "title": "下載 Mirasim v{version} — macOS / Android / CLI",
+      "description": "下載 Mirasim v{version}：Apple Silicon 版 macOS DMG、命令列版、Android APK 與 VS Code 擴充功能，全部直連官方 CDN，每個檔案都附 SHA-256 校驗值。",
+      "keywords": "Mirasim 下載, 下載 Mirasim, Mirasim dmg, Mirasim macOS 下載, Mirasim apk, Mirasim 命令列, Mirasim vsix, Mirasim v{version}, Mirasim 安裝檔",
+      "eyebrow": "下載",
+      "h1": "下載 Mirasim <em>v{version}</em>",
+      "lede": "Mirasim 發布的每一個安裝檔，附檔案大小與 SHA-256，自動抓取自官網。所有連結直連官方 CDN——<b>本站不託管任何檔案</b>。",
+      "tableTitle": "全部安裝檔",
+      "verifyTitle": "校驗下載的檔案",
+      "verifySub": "兩分鐘排除被篡改的可能。",
+      "verifyBody": "表格裡的校驗值取自官方 v{version} 的 <code>SHA256SUMS</code>，與下載連結同時抓取。如果對不上，別開啟這個檔案——去 <a href=\"https://mirasim.ai/download\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/download</a> 重新下載再校驗一次。",
+      "installTitle": "安裝並啟用",
+      "reqTitle": "系統要求",
+      "reqCards": [
+        {
+          "k": "MACOS",
+          "h": "macOS 13 及以上",
+          "p": "僅支援 Apple Silicon（M1 起）。DMG 和命令列版都是 arm64，沒有 Intel Mac 版本。"
+        },
+        {
+          "k": "ANDROID",
+          "h": "Android，需側載",
+          "p": "APK 不在 Google Play 上，要自己安裝並允許來自未知來源的應用。"
+        },
+        {
+          "k": "VS CODE",
+          "h": "VS Code 擴充功能（VSIX）",
+          "p": "從 VSIX 檔案手動安裝。官方未說明它在沒有桌面端時能做什麼，這點請當作未經驗證。"
+        },
+        {
+          "k": "暫無",
+          "h": "Windows、Intel Mac、Linux",
+          "p": "三者都沒有官方版本。iOS 僅在 TestFlight，公開邀請尚未開放。"
+        }
+      ],
+      "winLink": "用 Windows？在去找安裝檔之前，先看<a href=\"{PAGE_WINDOWS}\">這頁說清楚的情況</a>——官方沒有 Windows 版，網路上流傳的都不是 Mirasim 發布的。",
+      "faq": [
+        {
+          "q": "我該下哪個檔案？",
+          "a": "Apple Silicon 的 Mac 下 DMG。只有你習慣在終端機裡工作、想在終端機用 Mirasim，才需要命令列版（tar.xz）。APK 是給 Android 手機的，VSIX 是 VS Code 擴充功能。"
+        },
+        {
+          "q": "有 Windows 或 Intel Mac 版下載嗎？",
+          "a": "沒有。Mirasim 發布的是 macOS arm64 版本、Android APK 和 VS Code 擴充功能，除此之外都不是官方的。"
+        },
+        {
+          "q": "安裝檔是本站託管的嗎？",
+          "a": "不是。所有下載連結都指向官方 CDN（cdn-assets.mirasim.ai）。本站只是從官網讀取版本號、檔案大小和校驗值並顯示出來。"
+        }
+      ]
+    },
+    "windows": {
+      "title": "Mirasim Windows 版：實際情況與可行做法",
+      "description": "Mirasim 沒有官方 Windows 版。這裡說清楚官方到底發布了什麼、社群的 Windows 更新器能做和不能做什麼，以及 Windows 使用者實際有哪些安全的選擇。",
+      "keywords": "Mirasim Windows, Mirasim win, Mirasim Windows 下載, Mirasim exe, Mirasim Windows 版, Mirasim win64, Mirasim Windows 安裝檔, Mirasim 沒有 Windows 版",
+      "eyebrow": "Windows",
+      "h1": "在 <em>Windows</em> 上用 Mirasim",
+      "lede": "先給結論：<b>官方沒有 Windows 版。</b>Mirasim 發布的是 macOS arm64 安裝檔、Android APK 和 VS Code 擴充功能，沒有任何 Windows 包。這一頁說清楚這意味著什麼，以及你實際有哪些選擇。",
+      "statusTitle": "官方到底發布了什麼",
+      "statusSub": "取自官方 v{version} 下載頁，自動同步。",
+      "statusBody": "v{version} 的官方發布包含：macOS arm64 的 DMG、macOS arm64 的命令列壓縮檔、Android APK、VS Code 擴充功能，以及一個校驗檔案。沒有 <code>.exe</code>，沒有 <code>.msi</code>，也沒有 Windows 壓縮檔。任何號稱「官方 Mirasim Windows 安裝檔」的東西都不是 Mirasim 發布的。",
+      "osTh": {
+        "os": "平台",
+        "state": "官方狀態",
+        "note": "說明"
+      },
+      "osRows": [
+        {
+          "os": "macOS（Apple Silicon）",
+          "state": "<b>支援</b>",
+          "note": "DMG 與命令列版，macOS 13+，僅 arm64"
+        },
+        {
+          "os": "Android",
+          "state": "<b>支援</b>",
+          "note": "APK，需自行側載"
+        },
+        {
+          "os": "VS Code",
+          "state": "<b>已發布擴充功能</b>",
+          "note": "VSIX；脫離桌面端的行為官方未說明"
+        },
+        {
+          "os": "iOS",
+          "state": "僅 TestFlight",
+          "note": "公開邀請未開放"
+        },
+        {
+          "os": "Windows",
+          "state": "<b>無官方版本</b>",
+          "note": "有社群移植，見下文"
+        },
+        {
+          "os": "Intel Mac · Linux",
+          "state": "<b>無官方版本</b>",
+          "note": "官方未公布計畫"
+        }
+      ],
+      "updaterTitle": "社群的 Windows 更新器",
+      "updaterSub": "確實是個正經的開源專案——但下載前先弄清它是什麼。",
+      "updaterBody": "一位 ID 為 <b>{winAuthor}</b> 的開發者維護 <code>mirasim-win-updater</code>，MIT 授權，用來給<b>已經存在的</b> Windows 版 Mirasim 做更新。它之所以可行，是因為 Mirasim 的結構是「Electron 外殼 + 平台中立的 JavaScript payload」：工具會拉官方 payload，或從官方 DMG 裡取出新外殼，然後只重寫內容真正變化的檔案。它對下載的東西做 SHA-256 校驗，並用從外殼裡取出的公鑰驗證 payload 的 ed25519 簽章。",
+      "facts": [
+        {
+          "ok": true,
+          "h": "開源、MIT、可稽核",
+          "p": "工具本體是一個可讀的 JavaScript 檔案，你也可以用兩條命令自己建置 exe，而不必信任別人給的二進位檔。"
+        },
+        {
+          "ok": true,
+          "h": "會校驗下載內容",
+          "p": "對 DMG 和 payload 做 SHA-256，並對 payload 做 ed25519 簽章驗證——和應用本身的校驗邏輯一致。"
+        },
+        {
+          "ok": true,
+          "h": "先備份，可回退",
+          "p": "被改動和刪除的檔案會先備份，<code>--rollback</code> 能完整退回上一個版本。"
+        },
+        {
+          "ok": false,
+          "h": "它是更新器，不是安裝檔",
+          "p": "專案文件寫得很明確：它沒法從零裝出一份 Windows 版，因為 Electron 執行環境和 Windows 原生模組必須從你已有的安裝裡取。如果你從來沒有過 Windows 版 Mirasim，這個工具給不了你任何能執行的東西。"
+        },
+        {
+          "ok": false,
+          "h": "exe 未簽章",
+          "p": "注入 SEA 資源會讓 Node 自帶的簽章失效，所以產物是未簽章的執行檔，SmartScreen 首次執行會擋一下。"
+        },
+        {
+          "ok": false,
+          "h": "與 Mirasim 官方無關",
+          "p": "作者本人明確寫了這是自用工具、與官方無關。Mirasim 那邊沒有審核、簽署或支援它。"
+        }
+      ],
+      "riskTitle": "在下載任何叫做「Mirasim Windows 版」的東西之前",
+      "riskIntro": "一個非官方的開發者工具，執行時握有你的權限、你的檔案，也夠得到你的 API key。在你親自檢查過之前，把這類檔案都當作不可信。",
+      "riskPoints": [
+        "Mirasim 自己發布的檔案只來自 <code>cdn-assets.mirasim.ai</code>。其他任何來源——頁面做得再像——都是別人的建置。",
+        "優先讀原始碼後自己建置，而不是直接跑一個別人編譯好的未簽章 exe。這個專案寫了建置方法，而且不需要預裝工具鏈。",
+        "如果確實要跑第三方二進位檔，請在一台沒有你在意的憑證的機器上跑，也別把 API key 貼進去。",
+        "<b>風險由你自己承擔。</b>本站收錄這個專案，是因為它開源、並且誠實交代了自己的限制——這不等於安全稽核，也不是推薦。"
+      ],
+      "updaterLinks": "原始碼與發布：<a href=\"{winRepo}\" target=\"_blank\" rel=\"noopener nofollow\">{winRepo}</a> · <a href=\"{winReleases}\" target=\"_blank\" rel=\"noopener nofollow\">最新 release</a>。先讀 README 和移植記錄——裡面對「做不到什麼」講得很清楚。",
+      "optionsTitle": "Windows 使用者今天實際能做什麼",
+      "optionsSub": "按出錯可能性從低到高排。",
+      "options": [
+        {
+          "k": "租一台 MAC",
+          "h": "雲端或遠端的 Mac",
+          "p": "Mirasim 需要 Apple Silicon 與 macOS 13+。租一台 Mac mini 實例，或者遠端連一台 M 系列 Mac，就能跑完全未經改動的官方版本。"
+        },
+        {
+          "k": "等",
+          "h": "等官方發布",
+          "p": "本站每 30 分鐘重讀一次官方下載頁。官方發布裡一旦出現 Windows 包，這裡的下載表就會顯示出來，不用你手動盯。"
+        },
+        {
+          "k": "稽核",
+          "h": "讀完社群移植再決定",
+          "p": "如果你本來就在 Windows 上跑著 Mirasim，上面那個更新器是目前有人維護的升級方式。讀原始碼、自己建置、保留它做的備份。"
+        },
+        {
+          "k": "ANDROID",
+          "h": "手機上的 Android 版",
+          "p": "APK 是官方的，在普通 Android 手機上就能用。這是不靠 Mac 也能用上 Mirasim 的真實途徑——只是不在你的 Windows 桌面上。"
+        }
+      ],
+      "faq": [
+        {
+          "q": "有官方的 Mirasim Windows 版嗎？",
+          "a": "沒有。截至 v{version}，官方發布包含 macOS arm64 版本、Android APK 和 VS Code 擴充功能，沒有 exe、msi 或 Windows 壓縮檔。"
+        },
+        {
+          "q": "社群那個 Windows 更新器安全嗎？",
+          "a": "它是 MIT 開源，會對下載內容做 SHA-256 與 ed25519 簽章校驗，還能回退——比多數非官方工具講究。但它同時也是未簽章的、與 Mirasim 官方無關、官方也沒審核過。建議讀原始碼或自己建置，並在一台出錯也不會損失憑證的機器上執行。"
+        },
+        {
+          "q": "那個更新器能替我在 Windows 上裝好 Mirasim 嗎？",
+          "a": "不能，它的文件自己就這麼寫：只能更新已經存在的 Windows 安裝，因為 Electron 執行環境和 Windows 原生模組必須從那份安裝裡取。從零開始它產不出任何能執行的東西。"
+        },
+        {
+          "q": "Mirasim 以後會支援 Windows 嗎？",
+          "a": "官方沒有公布任何計畫。產品處於 Alpha 階段，優先做 macOS。這一頁和下載表都會自動更新，所以真有變化你在這裡就能看到。"
+        }
+      ]
+    },
+    "invite": {
+      "title": "Mirasim 邀請碼 MIRA-EC9V-64BF-BC07（免費可用）",
+      "description": "可用的 Mirasim 邀請碼：MIRA-EC9V-64BF-BC07。Mirasim 僅限邀請註冊，註冊後填入此碼即可免費啟用帳號，還能領取免費一個月 Pro。",
+      "keywords": "Mirasim 邀請碼, Mirasim 邀請, Mirasim 註冊, Mirasim 免費使用, Mirasim 內測資格, Mirasim invite code, MIRA 邀請碼",
+      "eyebrow": "邀請碼",
+      "h1": "一個可用的 Mirasim <em>邀請碼</em>",
+      "lede": "Mirasim 目前僅限邀請註冊——沒有碼就進不去。這裡給你一個現在就能用的，免費；下面還寫清楚了它能帶來什麼，以及免費一個月 Pro 是怎麼回事。",
+      "useTitle": "怎麼用這個碼",
+      "useSub": "不到一分鐘，且分文不收。",
+      "useSteps": [
+        {
+          "h": "註冊帳號",
+          "p": "在 <a href=\"https://mirasim.ai/\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai</a> 用 GitHub、Google 或電子郵件登入，三種都行。"
+        },
+        {
+          "h": "填入邀請碼",
+          "p": "啟用頁要求填邀請碼時，貼上 <code>{code}</code>。本頁頂部的按鈕可以一鍵複製。"
+        },
+        {
+          "h": "接上你自己的模型帳號",
+          "p": "把已經付費的 Claude Code、Codex 訂閱或 API key 接進來。Mirasim 就跑在這上面，本身不額外收費。"
+        }
+      ],
+      "freeTitle": "這個碼到底能帶來什麼",
+      "freeSub": "免費使用，跑在你自己的模型帳號上。",
+      "faq": [
+        {
+          "q": "這個邀請碼要錢嗎？",
+          "a": "不要。邀請碼本身免費，用它使用 Mirasim 也免費——它跑在你已有的模型帳號上。只有 computer use 和模擬使用者會消耗付費額度。"
+        },
+        {
+          "q": "如果這個碼用完了怎麼辦？",
+          "a": "邀請碼有使用次數上限。如果這個用完了，可以去官方 Discord 索取，那裡會發新的。本頁放的是站長目前手上的碼。"
+        },
+        {
+          "q": "免費一個月 Pro 怎麼拿？",
+          "a": "前 1000 名使用者可免費獲得一個月 Pro。另外還有一套長期有效的邀請獎勵：邀請真正使用 Mirasim 的人，3 人換 Basic、5 人換 Pro、10 人換 Max。後者不認「只註冊」——被邀請的人必須真的在裡面做事。"
+        },
+        {
+          "q": "我自己的邀請碼在哪看？",
+          "a": "註冊進去以後，在 Settings → Account 裡。把它分享出去，上面的邀請獎勵就開始計數了。"
+        }
+      ]
+    }
+  },
+  "nav": {
+    "home": "首頁",
+    "download": "下載",
+    "windows": "Windows",
+    "invite": "邀請碼"
+  },
+  "navDesc": {
+    "home": "產品介紹、可用模型與邀請獎勵",
+    "download": "全部安裝檔與 SHA-256 校驗值",
+    "windows": "官方沒有 Win 版，那能怎麼辦",
+    "invite": "可用的邀請碼與領 Pro 的方法"
   },
   "ui": {
     "skip": "跳到正文",
@@ -16,12 +261,14 @@
     "copy": "複製邀請碼",
     "copied": "已複製到剪貼簿 ✓",
     "copiedShort": "已複製 ✓",
-    "download": "下載"
+    "download": "下載",
+    "navLabel": "站內欄目",
+    "keepReading": "繼續看"
   },
   "offer": {
-    "title": "免費領取一個月 Pro 會員 · 價值 $89",
-    "cond": "用邀請碼註冊，再邀請 5 位真正使用 Mirasim 的開發者即可兌換。",
-    "link": "查看規則 →"
+    "title": "前 1000 名註冊使用者免費領一個月 Pro · 價值 $89",
+    "cond": "用邀請碼註冊即計入名額。",
+    "link": "怎麼領 →"
   },
   "hero": {
     "eyebrow": "Mirasim Wiki · 從建構到評測",
@@ -49,36 +296,90 @@
     "sub": "One Agent IDE —— 把寫程式的 agent 和替你測試的模擬使用者裝進同一個工作台。",
     "body": "傳統流程裡，你用一個工具寫程式，再自己打開頁面驗證。Mirasim 把這兩端接起來：編程 agent 在工作台裡並行開工，建構完成後由<b>模擬使用者</b>在真實瀏覽器、真實行動模擬器裡實際使用你的產品，把第一手回饋帶回來。以下是官網列出的核心能力：",
     "cards": [
-      { "k": "WORKBENCH", "h": "多專案工作台", "p": "多個專案並列開啟，每個專案擁有獨立的工作階段、agent 與模型設定，互不干擾。" },
-      { "k": "SESSIONS", "h": "多工作階段並行 + 內建編輯器", "p": "同時執行多個 agent 工作階段，配合類 VS&nbsp;Code 編輯器隨手改程式，在手機上也能繼續工作。" },
-      { "k": "TUI ⇄ GUI", "h": "終端機與圖形介面一鍵切換", "p": "同一套工作流程，既可以在 TUI 裡鍵盤流操作，也可以切到 GUI 裡點選瀏覽。" },
-      { "k": "BROWSER", "h": "瀏覽器自動化：讀結構而非截圖", "p": "Agent 以文字結構讀取頁面——官方數據約 184&nbsp;B 對比截圖 60&nbsp;KB，傳輸量差約 330 倍——驅動真實 Chrome 與真實使用者設定檔。" },
-      { "k": "MOBILE / MAC", "h": "Mac 應用與行動模擬器", "p": "Mac 應用、iOS 模擬器和 Android 模擬器都以同樣方式回應，行動端產品也能被模擬使用者測試。" },
-      { "k": "ONE TOOL", "h": "單一工具入口，省脈絡", "p": "官方稱每輪工具開銷約 1k tokens，而掛 30 個工具 schema 約需 53k——把脈絡留給真正的工作。" }
+      {
+        "k": "WORKBENCH",
+        "h": "多專案工作台",
+        "p": "多個專案並列開啟，每個專案擁有獨立的工作階段、agent 與模型設定，互不干擾。"
+      },
+      {
+        "k": "SESSIONS",
+        "h": "多工作階段並行 + 內建編輯器",
+        "p": "同時執行多個 agent 工作階段，配合類 VS&nbsp;Code 編輯器隨手改程式，在手機上也能繼續工作。"
+      },
+      {
+        "k": "TUI ⇄ GUI",
+        "h": "終端機與圖形介面一鍵切換",
+        "p": "同一套工作流程，既可以在 TUI 裡鍵盤流操作，也可以切到 GUI 裡點選瀏覽。"
+      },
+      {
+        "k": "BROWSER",
+        "h": "瀏覽器自動化：讀結構而非截圖",
+        "p": "Agent 以文字結構讀取頁面——官方數據約 184&nbsp;B 對比截圖 60&nbsp;KB，傳輸量差約 330 倍——驅動真實 Chrome 與真實使用者設定檔。"
+      },
+      {
+        "k": "MOBILE / MAC",
+        "h": "Mac 應用與行動模擬器",
+        "p": "Mac 應用、iOS 模擬器和 Android 模擬器都以同樣方式回應，行動端產品也能被模擬使用者測試。"
+      },
+      {
+        "k": "ONE TOOL",
+        "h": "單一工具入口，省脈絡",
+        "p": "官方稱每輪工具開銷約 1k tokens，而掛 30 個工具 schema 約需 53k——把脈絡留給真正的工作。"
+      }
     ],
     "callout": "Mirasim 目前處於 <b>Alpha 階段</b>，官方提示「會有毛邊」。安裝後應用會自動保持更新。"
   },
   "download": {
     "title": "下載 Mirasim",
     "sub": "目前最新版本 <b>v{version}</b> · 自動抓取自官網，更新於 {updated} · 全部連結直連官方 CDN",
-    "th": { "pkg": "安裝檔", "file": "檔案", "size": "大小", "sha": "SHA-256" },
+    "th": {
+      "pkg": "安裝檔",
+      "file": "檔案",
+      "size": "大小",
+      "sha": "SHA-256"
+    },
     "pkgs": {
-      "dmg":  { "label": "macOS 桌面應用", "req": "macOS 13+ · Apple Silicon" },
-      "cli":  { "label": "命令列版 (CLI)", "req": "macOS · Apple Silicon" },
-      "apk":  { "label": "Android 應用", "req": "Android · 需自行側載安裝" },
-      "vsix": { "label": "VS Code 擴充功能", "req": "在 VS Code 中手動安裝" },
-      "sums": { "label": "校驗檔案", "req": "用於核對下載完整性" }
+      "dmg": {
+        "label": "macOS 桌面應用",
+        "req": "macOS 13+ · Apple Silicon"
+      },
+      "cli": {
+        "label": "命令列版 (CLI)",
+        "req": "macOS · Apple Silicon"
+      },
+      "apk": {
+        "label": "Android 應用",
+        "req": "Android · 需自行側載安裝"
+      },
+      "vsix": {
+        "label": "VS Code 擴充功能",
+        "req": "在 VS Code 中手動安裝"
+      },
+      "sums": {
+        "label": "校驗檔案",
+        "req": "用於核對下載完整性"
+      }
     },
     "verify": "<b>校驗下載：</b>把 <code>SHA256SUMS</code> 和安裝檔放在同一目錄，執行下面的指令；點擊表格裡的 SHA-256 可複製完整校驗值。",
-    "platforms": "<b>iOS</b> 目前僅在 TestFlight 內測，公開邀請尚未開放；<b>Android APK</b> 需自行側載。桌面版要求 Apple Silicon 晶片與 macOS 13 及以上——沒有 Intel Mac 與 Windows 版本。"
+    "platforms": "<b>iOS</b> 目前僅在 TestFlight 內測，公開邀請尚未開放；<b>Android APK</b> 需自行側載。桌面版要求 Apple Silicon 晶片與 macOS 13 及以上——沒有 Intel Mac 與 Windows 版本。",
+    "moreLink": "想看系統要求、校驗方式或 Windows 的情況？都在<a href=\"{PAGE_DOWNLOAD}\">完整下載頁</a>。"
   },
   "start": {
     "title": "快速上手",
     "sub": "三步開始：下載安裝 → 登入 → 用邀請碼啟用。",
     "steps": [
-      { "h": "下載並安裝", "p": "從<a href=\"#download\">上方下載表</a>取得 macOS 安裝檔，開啟後拖入「應用程式」即可；習慣命令列的話可以選 CLI 版。" },
-      { "h": "登入帳號", "p": "GitHub、Google 或電子郵件三種方式都可以。" },
-      { "h": "用邀請碼啟用", "p": "Mirasim 是邀請制，登入後需要兌換邀請碼才能使用。直接用 <code>{code}</code>（<a href=\"#invite-code\">點此複製</a>），啟用後接上自己的模型帳號就能開工。" }
+      {
+        "h": "下載並安裝",
+        "p": "從<a href=\"#download\">上方下載表</a>取得 macOS 安裝檔，開啟後拖入「應用程式」即可；習慣命令列的話可以選 CLI 版。"
+      },
+      {
+        "h": "登入帳號",
+        "p": "GitHub、Google 或電子郵件三種方式都可以。"
+      },
+      {
+        "h": "用邀請碼啟用",
+        "p": "Mirasim 是邀請制，登入後需要兌換邀請碼才能使用。直接用 <code>{code}</code>（<a href=\"#invite-code\">點此複製</a>），啟用後接上自己的模型帳號就能開工。"
+      }
     ]
   },
   "models": {
@@ -94,9 +395,18 @@
     "sub": "邀請真正使用 Mirasim 的人，官方就替你付一整個月的付費訂閱。",
     "unit": "人",
     "rewards": {
-      "basic": { "plan": "一個月 Basic", "worth": "價值 $29" },
-      "pro":   { "plan": "一個月 Pro", "worth": "價值 $89" },
-      "max":   { "plan": "一個月 Max", "worth": "價值 $199" }
+      "basic": {
+        "plan": "一個月 Basic",
+        "worth": "價值 $29"
+      },
+      "pro": {
+        "plan": "一個月 Pro",
+        "worth": "價值 $89"
+      },
+      "max": {
+        "plan": "一個月 Max",
+        "worth": "價值 $199"
+      }
     },
     "body": "最關鍵的規則：<b>僅註冊不算數</b>。被邀請的人必須真正用起來——登入、開工作階段、實際做事，官方會核查。你註冊後，自己的邀請碼在 <code>Settings → Account</code> 裡查看；如果碼用完了，可以去官方 Discord 索取。",
     "callout": "現在就能開始：先用本站邀請碼 <b>{code}</b>（<a href=\"#invite-code\">回到頂部複製</a>）啟用帳號，再把你自己的碼分享出去。5 位真實使用者就是免費一個月 Pro——這 $89 由官方替你付。"
@@ -104,11 +414,26 @@
   "pricing": {
     "title": "付費方案速覽",
     "sub": "credits 額度用於呼叫官方雲端模型，含 computer use 與模擬使用者功能。額度用完可以切回自己的帳號繼續工作。",
-    "th": { "plan": "方案", "price": "月費", "credits": "額度", "usage": "約合用量", "invite": "或邀請兌換" },
+    "th": {
+      "plan": "方案",
+      "price": "月費",
+      "credits": "額度",
+      "usage": "約合用量",
+      "invite": "或邀請兌換"
+    },
     "rows": {
-      "basic": { "usage": "約 5,000 萬 tokens · 200–400 條訊息", "invite": "3 人 = 一個月" },
-      "pro":   { "usage": "約 2.5 億 tokens · 1,000–2,000 條訊息", "invite": "5 人 = 一個月" },
-      "max":   { "usage": "約 10 億 tokens · 4,000–8,000 條訊息", "invite": "10 人 = 一個月" }
+      "basic": {
+        "usage": "約 5,000 萬 tokens · 200–400 條訊息",
+        "invite": "3 人 = 一個月"
+      },
+      "pro": {
+        "usage": "約 2.5 億 tokens · 1,000–2,000 條訊息",
+        "invite": "5 人 = 一個月"
+      },
+      "max": {
+        "usage": "約 10 億 tokens · 4,000–8,000 條訊息",
+        "invite": "10 人 = 一個月"
+      }
     },
     "callout": "官方對比口徑：同等用量在別家約需 $40–$400/月（Claude Code 與 Codex 各買一份訂閱）。各模型的 credits 費率公開可查。完整定價見 <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>。"
   },
@@ -122,12 +447,30 @@
     "title": "常見問題",
     "sub": "最常被問到的幾件事。",
     "items": [
-      { "q": "Mirasim 是免費的嗎？", "a": "是。憑邀請碼使用不收費，因為它跑在你自己的模型帳號上（Claude Code、Codex 訂閱或 API key）。只有 computer use 和模擬使用者功能需要付費額度或自備 key。" },
-      { "q": "沒有邀請碼可以註冊嗎？", "a": "不能，目前是邀請制。直接用本站的邀請碼 <code>{code}</code> 啟用即可。註冊後你會得到自己的碼，用完也可以去官方 Discord 索取。" },
-      { "q": "支援哪些平台？", "a": "macOS 桌面版（Apple Silicon，macOS 13+）、macOS 命令列版、需側載的 Android APK、VS Code 擴充功能。iOS 在 TestFlight 內測，公開邀請尚未開放。沒有 Intel Mac 與 Windows 版本。" },
-      { "q": "一個月免費 Pro 具體怎麼拿？", "a": "邀請 5 位真正使用 Mirasim 的開發者。官方明確「僅註冊不算數」——被邀請者必須登入、開工作階段、實際做事，官方核查後才發放。同一機制下，3 人換一個月 Basic，10 人換一個月 Max。" },
-      { "q": "怎麼確認安裝檔沒被篡改？", "a": "下載表裡列出了每個檔案的 SHA-256（點擊可複製），也可以下載官方 SHA256SUMS 後執行 shasum -a 256 -c SHA256SUMS --ignore-missing 校驗。所有連結均直連官方 CDN（cdn-assets.mirasim.ai），本站不託管任何安裝檔。" },
-      { "q": "這是 Mirasim 官方站點嗎？", "a": "不是。這是社群自發維護的 wiki，與 Mirasim 官方沒有隸屬關係。版本號、下載連結與資訊自動抓取自官網，一切以 mirasim.ai 為準。頁面上的邀請碼屬於本站維護者。" }
+      {
+        "q": "Mirasim 是免費的嗎？",
+        "a": "是。憑邀請碼使用不收費，因為它跑在你自己的模型帳號上（Claude Code、Codex 訂閱或 API key）。只有 computer use 和模擬使用者功能需要付費額度或自備 key。"
+      },
+      {
+        "q": "沒有邀請碼可以註冊嗎？",
+        "a": "不能，目前是邀請制。直接用本站的邀請碼 <code>{code}</code> 啟用即可。註冊後你會得到自己的碼，用完也可以去官方 Discord 索取。"
+      },
+      {
+        "q": "支援哪些平台？",
+        "a": "macOS 桌面版（Apple Silicon，macOS 13+）、macOS 命令列版、需側載的 Android APK、VS Code 擴充功能。iOS 在 TestFlight 內測，公開邀請尚未開放。沒有 Intel Mac 與 Windows 版本。"
+      },
+      {
+        "q": "一個月免費 Pro 具體怎麼拿？",
+        "a": "邀請 5 位真正使用 Mirasim 的開發者。官方明確「僅註冊不算數」——被邀請者必須登入、開工作階段、實際做事，官方核查後才發放。同一機制下，3 人換一個月 Basic，10 人換一個月 Max。"
+      },
+      {
+        "q": "怎麼確認安裝檔沒被篡改？",
+        "a": "下載表裡列出了每個檔案的 SHA-256（點擊可複製），也可以下載官方 SHA256SUMS 後執行 shasum -a 256 -c SHA256SUMS --ignore-missing 校驗。所有連結均直連官方 CDN（cdn-assets.mirasim.ai），本站不託管任何安裝檔。"
+      },
+      {
+        "q": "這是 Mirasim 官方站點嗎？",
+        "a": "不是。這是社群自發維護的 wiki，與 Mirasim 官方沒有隸屬關係。版本號、下載連結與資訊自動抓取自官網，一切以 mirasim.ai 為準。頁面上的邀請碼屬於本站維護者。"
+      }
     ]
   },
   "footer": {

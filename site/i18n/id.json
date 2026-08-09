@@ -1,11 +1,256 @@
 {
   "htmlLang": "id",
   "meta": {
-    "title": "Mirasim: kode undangan, unduh, Pro gratis 1 bulan",
-    "description": "Kode undangan Mirasim MIRA-EC9V-64BF-BC07: masuk gratis ke Agent IDE, unduh Mirasim v{version} untuk macOS, dan dapatkan Pro gratis satu bulan ($89).",
-    "keywords": "Mirasim, kode undangan Mirasim, unduh Mirasim, Mirasim wiki, Mirasim gratis, Mirasim Pro, Agent IDE, One Agent IDE, agen coding AI, pengguna simulasi, Claude Code, Codex, IDE untuk macOS",
     "ogSub": "Kode undangan · Unduh · Pro gratis satu bulan",
     "offerFree": "Kode undangan tidak berbiaya, dan Mirasim berjalan di atas langganan model atau API key yang sudah kamu bayar."
+  },
+  "pages": {
+    "home": {
+      "title": "Mirasim: kode undangan, unduh, Pro gratis 1 bulan",
+      "description": "Kode undangan Mirasim MIRA-EC9V-64BF-BC07: masuk gratis ke Agent IDE, unduh Mirasim v{version} untuk macOS, dan dapatkan Pro gratis satu bulan ($89).",
+      "keywords": "Mirasim, kode undangan Mirasim, unduh Mirasim, Mirasim wiki, Mirasim gratis, Mirasim Pro, Agent IDE, One Agent IDE, agen coding AI, pengguna simulasi, Claude Code, Codex, IDE untuk macOS"
+    },
+    "download": {
+      "title": "Unduh Mirasim v{version} — macOS, Android, CLI",
+      "description": "Unduh Mirasim v{version}: macOS DMG untuk Apple Silicon, build CLI, APK Android, dan ekstensi VS Code — langsung dari CDN resmi, setiap berkas dengan SHA-256-nya.",
+      "keywords": "unduh Mirasim, Mirasim download, Mirasim dmg, Mirasim macOS, Mirasim apk, Mirasim CLI, Mirasim vsix, Mirasim v{version}, pemasang Mirasim",
+      "eyebrow": "Unduh",
+      "h1": "Unduh Mirasim <em>v{version}</em>",
+      "lede": "Semua paket yang dirilis Mirasim, lengkap dengan ukuran dan SHA-256, diambil otomatis dari situs resmi. Semua tautan mengarah langsung ke CDN resmi — <b>wiki ini tidak menyimpan berkas apa pun</b>.",
+      "tableTitle": "Semua paket",
+      "verifyTitle": "Verifikasi berkas yang kamu unduh",
+      "verifySub": "Dua menit untuk menyingkirkan kemungkinan berkas diubah.",
+      "verifyBody": "Checksum di tabel berasal dari <code>SHA256SUMS</code> resmi untuk v{version}, diambil bersamaan dengan tautannya. Kalau ada nilai yang tidak cocok, jangan buka berkasnya — ambil lagi dari <a href=\"https://mirasim.ai/download\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/download</a> lalu periksa sekali lagi.",
+      "installTitle": "Pasang dan aktifkan",
+      "reqTitle": "Persyaratan sistem",
+      "reqCards": [
+        {
+          "k": "MACOS",
+          "h": "macOS 13 atau lebih baru",
+          "p": "Hanya Apple Silicon (M1 ke atas). DMG dan build CLI keduanya arm64 — tidak ada build Intel Mac."
+        },
+        {
+          "k": "ANDROID",
+          "h": "Android, pasang sendiri",
+          "p": "APK tidak ada di Google Play, jadi kamu memasangnya sendiri dan harus mengizinkan sumber tak dikenal."
+        },
+        {
+          "k": "VS CODE",
+          "h": "Ekstensi VS Code (VSIX)",
+          "p": "Dipasang manual dari berkas VSIX. Situs resmi tidak menjelaskan apa yang bisa dilakukannya tanpa aplikasi desktop, jadi anggap belum terverifikasi."
+        },
+        {
+          "k": "BELUM ADA",
+          "h": "Windows, Intel Mac, Linux",
+          "p": "Ketiganya belum punya build resmi. iOS hanya ada di TestFlight dan undangan publik masih tertutup."
+        }
+      ],
+      "winLink": "Pakai Windows? Sebelum mencari pemasang, baca <a href=\"{PAGE_WINDOWS}\">apa yang sebenarnya bisa dilakukan</a> — tidak ada yang resmi, dan salinan yang beredar bukan dari Mirasim.",
+      "faq": [
+        {
+          "q": "Berkas mana yang saya butuhkan?",
+          "a": "Di Mac Apple Silicon, ambil DMG. Ambil build CLI (tar.xz) hanya kalau kamu bekerja di terminal dan ingin Mirasim di sana. APK untuk ponsel Android, dan VSIX adalah ekstensi VS Code."
+        },
+        {
+          "q": "Ada unduhan untuk Windows atau Intel Mac?",
+          "a": "Tidak. Mirasim merilis build macOS arm64, APK Android, dan ekstensi VS Code. Selain itu bukan resmi."
+        },
+        {
+          "q": "Apakah wiki ini menyimpan berkasnya?",
+          "a": "Tidak. Semua tautan mengarah ke cdn-assets.mirasim.ai, CDN resmi. Wiki ini hanya membaca nomor versi, ukuran berkas, dan checksum dari situs resmi lalu menampilkannya di sini."
+        }
+      ]
+    },
+    "windows": {
+      "title": "Mirasim di Windows — apa yang benar-benar bisa",
+      "description": "Tidak ada build resmi Mirasim untuk Windows. Apa yang dirilis Mirasim, apa yang sebenarnya dilakukan updater komunitas, dan pilihan yang aman.",
+      "keywords": "Mirasim Windows, Mirasim win, unduh Mirasim Windows, Mirasim exe, Mirasim versi Windows, Mirasim win64, pemasang Mirasim Windows",
+      "eyebrow": "Windows",
+      "h1": "Mirasim di <em>Windows</em>",
+      "lede": "Jawaban singkat: <b>tidak ada build resmi untuk Windows.</b> Mirasim merilis paket macOS arm64, APK Android, dan ekstensi VS Code — tidak ada apa pun untuk Windows. Halaman ini menjelaskan artinya dan pilihan apa yang benar-benar kamu punya.",
+      "statusTitle": "Apa yang dirilis Mirasim",
+      "statusSub": "Diambil dari halaman unduhan resmi v{version}, disegarkan otomatis.",
+      "statusBody": "Rilis resmi v{version} berisi DMG macOS arm64, arsip CLI macOS arm64, APK Android, ekstensi VS Code, dan sebuah berkas checksum. Tidak ada <code>.exe</code>, tidak ada <code>.msi</code>, dan tidak ada arsip untuk Windows. Apa pun yang diiklankan sebagai pemasang resmi \"Mirasim untuk Windows\" bukan berasal dari Mirasim.",
+      "osTh": {
+        "os": "Platform",
+        "state": "Status resmi",
+        "note": "Catatan"
+      },
+      "osRows": [
+        {
+          "os": "macOS (Apple Silicon)",
+          "state": "<b>Didukung</b>",
+          "note": "DMG dan CLI, macOS 13+, hanya arm64"
+        },
+        {
+          "os": "Android",
+          "state": "<b>Didukung</b>",
+          "note": "APK, pasang sendiri"
+        },
+        {
+          "os": "VS Code",
+          "state": "<b>Ekstensi dirilis</b>",
+          "note": "VSIX; perilakunya tanpa aplikasi desktop tidak didokumentasikan"
+        },
+        {
+          "os": "iOS",
+          "state": "Hanya TestFlight",
+          "note": "Undangan publik tertutup"
+        },
+        {
+          "os": "Windows",
+          "state": "<b>Tidak ada build resmi</b>",
+          "note": "Ada port komunitas, lihat di bawah"
+        },
+        {
+          "os": "Intel Mac · Linux",
+          "state": "<b>Tidak ada build resmi</b>",
+          "note": "Belum ada rencana yang diumumkan"
+        }
+      ],
+      "updaterTitle": "Updater Windows buatan komunitas",
+      "updaterSub": "Ini proyek open source yang sungguhan — tapi pahami dulu apa itu sebelum mengunduh.",
+      "updaterBody": "Seorang pengembang dengan nama <b>{winAuthor}</b> merilis <code>mirasim-win-updater</code>, alat berlisensi MIT yang memperbarui salinan Mirasim Windows yang <b>sudah ada</b>. Ini bisa jalan karena Mirasim berstruktur shell Electron plus payload JavaScript yang netral platform: alat itu menarik payload resmi atau mengeluarkan shell baru dari DMG resmi, lalu hanya menulis ulang berkas yang benar-benar berubah. Ia memverifikasi SHA-256 semua yang diunduh dan memeriksa tanda tangan ed25519 payload memakai kunci publik yang diambil dari shell itu sendiri.",
+      "facts": [
+        {
+          "ok": true,
+          "h": "Open source, MIT, bisa diaudit",
+          "p": "Seluruh alatnya satu berkas JavaScript yang bisa dibaca, dan kamu bisa membangun exe-nya sendiri dengan dua perintah alih-alih mempercayai biner orang lain."
+        },
+        {
+          "ok": true,
+          "h": "Memverifikasi apa yang diunduh",
+          "p": "SHA-256 pada DMG dan payload, ditambah verifikasi tanda tangan ed25519 pada payload — pemeriksaan yang sama seperti yang dilakukan aplikasinya sendiri."
+        },
+        {
+          "ok": true,
+          "h": "Mencadangkan dan bisa dibalik",
+          "p": "Berkas yang diubah dan dihapus dicadangkan lebih dulu, dan <code>--rollback</code> memulihkan versi sebelumnya secara utuh."
+        },
+        {
+          "ok": false,
+          "h": "Ini updater, bukan pemasang",
+          "p": "Dokumentasinya menyatakan terang-terangan: ia tidak bisa menghasilkan pemasangan Windows dari nol, karena runtime Electron dan modul native Windows harus diambil dari pemasangan yang sudah ada. Kalau kamu belum pernah punya Mirasim di Windows, alat ini tidak memberi apa pun yang bisa dijalankan."
+        },
+        {
+          "ok": false,
+          "h": "exe-nya tidak ditandatangani",
+          "p": "Menyuntikkan payload SEA membatalkan tanda tangan Node, jadi berkasnya dirilis tanpa tanda tangan dan SmartScreen akan memperingatkan saat pertama dijalankan."
+        },
+        {
+          "ok": false,
+          "h": "Tidak berafiliasi dengan Mirasim",
+          "p": "Penulisnya menyatakan jelas bahwa ini alat pribadi tanpa kaitan dengan Mirasim. Tidak ada pihak Mirasim yang meninjau, menandatangani, atau mendukungnya."
+        }
+      ],
+      "riskTitle": "Sebelum mengunduh apa pun yang bernama \"Mirasim untuk Windows\"",
+      "riskIntro": "Build tidak resmi dari sebuah alat pengembang berjalan dengan izinmu, berkasmu, dan API key-mu dalam jangkauan. Sampai kamu memeriksanya sendiri, anggap setiap berkas seperti itu tidak dapat dipercaya.",
+      "riskPoints": [
+        "Satu-satunya berkas yang dirilis Mirasim sendiri berasal dari <code>cdn-assets.mirasim.ai</code>. Sumber lain apa pun — sepersuasif apa pun tampilan halamannya — adalah build orang lain.",
+        "Lebih baik membaca kodenya lalu membangun sendiri daripada menjalankan exe siap pakai yang tidak ditandatangani. Proyek ini menuliskan caranya dan tidak butuh toolchain terpasang lebih dulu.",
+        "Kalau memang harus menjalankan biner pihak ketiga, lakukan di mesin yang tidak menyimpan kredensial yang kamu pedulikan, dan jangan tempelkan API key di sana.",
+        "<b>Risikonya kamu yang tanggung.</b> Wiki ini menautkan proyek itu karena terbuka dan jujur soal batasannya — itu bukan audit keamanan, dan bukan rekomendasi."
+      ],
+      "updaterLinks": "Sumber dan rilis: <a href=\"{winRepo}\" target=\"_blank\" rel=\"noopener nofollow\">{winRepo}</a> · <a href=\"{winReleases}\" target=\"_blank\" rel=\"noopener nofollow\">rilis terbaru</a>. Baca dulu README dan catatan port-nya — keduanya terus terang soal apa yang tidak bisa dilakukan alat ini.",
+      "optionsTitle": "Yang bisa dilakukan pengguna Windows hari ini",
+      "optionsSub": "Diurutkan dari yang paling kecil kemungkinan salahnya.",
+      "options": [
+        {
+          "k": "SEWA MAC",
+          "h": "Mac di cloud atau jarak jauh",
+          "p": "Mirasim butuh Apple Silicon dan macOS 13+. Instance Mac mini sewaan, atau Mac chip M yang bisa kamu akses jarak jauh, menjalankan build resmi tanpa modifikasi apa pun."
+        },
+        {
+          "k": "TUNGGU",
+          "h": "Pantau build resmi",
+          "p": "Wiki ini membaca ulang halaman unduhan resmi setiap 30 menit. Begitu paket Windows muncul di rilis resmi, tabel unduhan di sini akan menampilkannya."
+        },
+        {
+          "k": "AUDIT",
+          "h": "Baca port komunitasnya, lalu putuskan",
+          "p": "Kalau kamu sudah menjalankan Mirasim di Windows, updater di atas adalah jalur yang masih dirawat untuk berpindah versi. Baca kodenya, bangun sendiri, simpan cadangan yang dibuatnya."
+        },
+        {
+          "k": "ANDROID",
+          "h": "Aplikasi Android di ponsel",
+          "p": "APK-nya resmi dan jalan di ponsel Android biasa — cara nyata memakai Mirasim tanpa Mac, hanya saja bukan di desktop Windows-mu."
+        }
+      ],
+      "faq": [
+        {
+          "q": "Apakah ada versi Mirasim Windows yang resmi?",
+          "a": "Tidak. Sampai v{version}, rilis resmi berisi build macOS arm64, APK Android, dan ekstensi VS Code. Tidak ada exe, msi, atau arsip Windows."
+        },
+        {
+          "q": "Apakah updater Windows komunitas itu aman?",
+          "a": "Ia open source berlisensi MIT, memverifikasi SHA-256 dan tanda tangan ed25519 atas apa yang diunduh, serta bisa membalikkan perubahan — lebih hati-hati daripada sebagian besar alat tidak resmi. Ia juga tidak ditandatangani, tidak berafiliasi dengan Mirasim, dan belum ditinjau mereka. Baca kodenya atau bangun sendiri, dan jalankan di mesin yang kalau salah tidak membuatmu kehilangan kredensial."
+        },
+        {
+          "q": "Bisakah updater itu memasang Mirasim di Windows untuk saya?",
+          "a": "Tidak, dan dokumentasinya sendiri berkata begitu: ia hanya bisa memperbarui pemasangan Windows yang sudah ada, karena runtime Electron dan modul native harus diambil dari pemasangan itu. Dari nol, ia tidak menghasilkan apa pun yang bisa dijalankan."
+        },
+        {
+          "q": "Apakah nanti Windows akan didukung?",
+          "a": "Belum ada yang diumumkan. Aplikasinya masih Alpha dan mengutamakan macOS. Halaman ini dan tabel unduhan diperbarui otomatis, jadi kalau berubah kamu akan melihatnya di sini."
+        }
+      ]
+    },
+    "invite": {
+      "title": "Kode undangan Mirasim — MIRA-EC9V-64BF-BC07",
+      "description": "Kode undangan Mirasim yang berfungsi: MIRA-EC9V-64BF-BC07. Tebus setelah mendaftar untuk mengaktifkan akun secara gratis.",
+      "keywords": "kode undangan Mirasim, Mirasim invite code, kode Mirasim, daftar Mirasim, Mirasim gratis, akses beta Mirasim, kode MIRA",
+      "eyebrow": "Kode undangan",
+      "h1": "<em>Kode undangan</em> Mirasim yang berfungsi",
+      "lede": "Pendaftaran Mirasim hanya lewat undangan — tanpa kode tidak ada jalan masuk. Ini satu kode yang bisa kamu pakai sekarang, gratis, plus apa yang kamu dapat dan bagaimana Pro gratis satu bulan bekerja.",
+      "useTitle": "Cara menebusnya",
+      "useSub": "Kurang dari satu menit dan tidak berbiaya.",
+      "useSteps": [
+        {
+          "h": "Buat akun",
+          "p": "Masuk dengan GitHub, Google, atau email di <a href=\"https://mirasim.ai/\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai</a>. Ketiganya bisa."
+        },
+        {
+          "h": "Tempel kodenya",
+          "p": "Ketika layar aktivasi meminta undangan, tempel <code>{code}</code>. Tombol di bagian atas halaman ini menyalinnya."
+        },
+        {
+          "h": "Sambungkan akun modelmu",
+          "p": "Bawa langganan Claude Code atau Codex yang sudah kamu bayar, atau sebuah API key. Di atas itulah Mirasim berjalan, dan ia tidak menagih apa pun tambahan."
+        }
+      ],
+      "freeTitle": "Apa yang sebenarnya kamu dapat dari kode ini",
+      "freeSub": "Akses gratis, di atas akun modelmu sendiri.",
+      "faq": [
+        {
+          "q": "Apakah kode undangan ini berbiaya?",
+          "a": "Tidak. Kode itu gratis, dan memakai Mirasim dengan kode juga gratis — ia berjalan di atas akun model yang sudah kamu punya. Hanya computer use dan pengguna simulasi yang memakai credits berbayar."
+        },
+        {
+          "q": "Bagaimana kalau kodenya sudah habis?",
+          "a": "Kode punya batas jumlah pemakaian. Kalau yang ini habis, mintalah di Discord resmi — di sana dibagikan lagi. Halaman ini menampilkan kode yang saat ini dipegang pengelola situs."
+        },
+        {
+          "q": "Bagaimana cara mendapat Pro gratis satu bulan?",
+          "a": "1.000 pengguna pertama mendapat Pro satu bulan tanpa biaya. Terpisah dari itu dan berlaku terus, mengajak orang yang benar-benar memakai Mirasim menghasilkan bulan berbayar: 3 orang untuk Basic, 5 untuk Pro, 10 untuk Max. Untuk yang itu pendaftaran saja tidak dihitung — orang yang kamu ajak harus benar-benar bekerja di dalamnya."
+        },
+        {
+          "q": "Di mana kode undangan saya sendiri?",
+          "a": "Setelah masuk, ada di Settings → Account. Bagikan dan hadiah mengajak di atas mulai dihitung."
+        }
+      ]
+    }
+  },
+  "nav": {
+    "home": "Beranda",
+    "download": "Unduh",
+    "windows": "Windows",
+    "invite": "Kode undangan"
+  },
+  "navDesc": {
+    "home": "Apa itu Mirasim, model apa, hadiah mengajak",
+    "download": "Semua paket beserta SHA-256",
+    "windows": "Tidak ada build resmi — lalu apa",
+    "invite": "Kode yang berfungsi dan cara dapat Pro"
   },
   "ui": {
     "skip": "Lompat ke konten",
@@ -16,12 +261,14 @@
     "copy": "Salin kode undangan",
     "copied": "Tersalin ✓",
     "copiedShort": "Tersalin ✓",
-    "download": "Unduh"
+    "download": "Unduh",
+    "navLabel": "Bagian situs",
+    "keepReading": "Lanjut baca"
   },
   "offer": {
-    "title": "Dapatkan Pro gratis satu bulan — senilai $89",
-    "cond": "Daftar dengan kode undangan, lalu ajak 5 pengembang yang benar-benar memakai Mirasim.",
-    "link": "Lihat ketentuan →"
+    "title": "1.000 pengguna pertama dapat Pro gratis satu bulan — senilai $89",
+    "cond": "Daftar dengan kode undangan agar terhitung.",
+    "link": "Cara mendapatkannya →"
   },
   "hero": {
     "eyebrow": "Mirasim Wiki · from build to eval",
@@ -49,36 +296,90 @@
     "sub": "One Agent IDE — agen yang menulis kodemu dan pengguna simulasi yang mengujinya, di meja kerja yang sama.",
     "body": "Alur biasanya begini: kamu menulis kode di satu alat, lalu membuka halamannya sendiri untuk memeriksa. Mirasim menyambung kedua ujung itu: agen coding bekerja paralel di dalam meja kerja, dan begitu satu build siap, <b>pengguna simulasi</b> benar-benar memakai produkmu di Chrome sungguhan atau emulator ponsel sungguhan lalu membawa kembali umpan balik langsung. Berikut kemampuan inti yang dicantumkan situs resmi:",
     "cards": [
-      { "k": "WORKBENCH", "h": "Meja kerja multi-proyek", "p": "Beberapa proyek berdampingan, masing-masing punya sesi, agen, dan konfigurasi model sendiri. Tidak ada yang bocor antar proyek." },
-      { "k": "SESSIONS", "h": "Sesi paralel dan editor bawaan", "p": "Banyak sesi agen sekaligus, ditambah editor bergaya VS&nbsp;Code untuk perbaikan cepat. Dari ponsel pun bisa dilanjutkan." },
-      { "k": "TUI ⇄ GUI", "h": "Terminal dan antarmuka grafis sejarak satu tombol", "p": "Alur kerja yang sama dalam dua bentuk: pakai papan tik di TUI, tunjuk dan telusuri di GUI." },
-      { "k": "BROWSER", "h": "Otomasi yang membaca struktur, bukan tangkapan layar", "p": "Agen membaca halaman sebagai struktur teks: sekitar 184&nbsp;B berbanding 60&nbsp;KB untuk tangkapan layar, kira-kira 330 kali lebih sedikit data — sambil menjalankan Chrome sungguhan dengan profil pengguna sungguhan." },
-      { "k": "MOBILE / MAC", "h": "Aplikasi Mac dan emulator ponsel", "p": "Aplikasi Mac, iOS Simulator, dan emulator Android merespons dengan cara yang sama, jadi produk mobile juga diuji pengguna simulasi." },
-      { "k": "ONE TOOL", "h": "Satu pintu alat menghemat konteks", "p": "Angka resminya sekitar 1k token biaya alat per putaran, berbanding kira-kira 53k untuk tiga puluh skema alat. Konteksnya tersisa untuk pekerjaan." }
+      {
+        "k": "WORKBENCH",
+        "h": "Meja kerja multi-proyek",
+        "p": "Beberapa proyek berdampingan, masing-masing punya sesi, agen, dan konfigurasi model sendiri. Tidak ada yang bocor antar proyek."
+      },
+      {
+        "k": "SESSIONS",
+        "h": "Sesi paralel dan editor bawaan",
+        "p": "Banyak sesi agen sekaligus, ditambah editor bergaya VS&nbsp;Code untuk perbaikan cepat. Dari ponsel pun bisa dilanjutkan."
+      },
+      {
+        "k": "TUI ⇄ GUI",
+        "h": "Terminal dan antarmuka grafis sejarak satu tombol",
+        "p": "Alur kerja yang sama dalam dua bentuk: pakai papan tik di TUI, tunjuk dan telusuri di GUI."
+      },
+      {
+        "k": "BROWSER",
+        "h": "Otomasi yang membaca struktur, bukan tangkapan layar",
+        "p": "Agen membaca halaman sebagai struktur teks: sekitar 184&nbsp;B berbanding 60&nbsp;KB untuk tangkapan layar, kira-kira 330 kali lebih sedikit data — sambil menjalankan Chrome sungguhan dengan profil pengguna sungguhan."
+      },
+      {
+        "k": "MOBILE / MAC",
+        "h": "Aplikasi Mac dan emulator ponsel",
+        "p": "Aplikasi Mac, iOS Simulator, dan emulator Android merespons dengan cara yang sama, jadi produk mobile juga diuji pengguna simulasi."
+      },
+      {
+        "k": "ONE TOOL",
+        "h": "Satu pintu alat menghemat konteks",
+        "p": "Angka resminya sekitar 1k token biaya alat per putaran, berbanding kira-kira 53k untuk tiga puluh skema alat. Konteksnya tersisa untuk pekerjaan."
+      }
     ],
     "callout": "Mirasim masih <b>Alpha</b>; situs resminya menyebut terang-terangan: \"harap maklum masih kasar\". Setelah dipasang, aplikasinya memperbarui diri sendiri."
   },
   "download": {
     "title": "Unduh Mirasim",
     "sub": "Versi terbaru <b>v{version}</b> · diambil otomatis dari situs resmi, diperbarui {updated} · semua tautan mengarah langsung ke CDN resmi",
-    "th": { "pkg": "Paket", "file": "Berkas", "size": "Ukuran", "sha": "SHA-256" },
+    "th": {
+      "pkg": "Paket",
+      "file": "Berkas",
+      "size": "Ukuran",
+      "sha": "SHA-256"
+    },
     "pkgs": {
-      "dmg":  { "label": "Aplikasi desktop macOS", "req": "macOS 13+ · Apple Silicon" },
-      "cli":  { "label": "Baris perintah (CLI)", "req": "macOS · Apple Silicon" },
-      "apk":  { "label": "Aplikasi Android", "req": "Android · pasang sendiri" },
-      "vsix": { "label": "Ekstensi VS Code", "req": "Pasang manual di VS Code" },
-      "sums": { "label": "Checksum", "req": "Untuk memverifikasi keutuhan berkas" }
+      "dmg": {
+        "label": "Aplikasi desktop macOS",
+        "req": "macOS 13+ · Apple Silicon"
+      },
+      "cli": {
+        "label": "Baris perintah (CLI)",
+        "req": "macOS · Apple Silicon"
+      },
+      "apk": {
+        "label": "Aplikasi Android",
+        "req": "Android · pasang sendiri"
+      },
+      "vsix": {
+        "label": "Ekstensi VS Code",
+        "req": "Pasang manual di VS Code"
+      },
+      "sums": {
+        "label": "Checksum",
+        "req": "Untuk memverifikasi keutuhan berkas"
+      }
     },
     "verify": "<b>Verifikasi unduhanmu:</b> letakkan <code>SHA256SUMS</code> di folder yang sama dengan paketnya lalu jalankan perintah di bawah. Mengeklik nilai SHA-256 di tabel akan menyalinnya utuh.",
-    "platforms": "<b>iOS</b> hanya ada di TestFlight; undangan publik belum dibuka. <b>APK Android</b> harus dipasang sendiri. Versi desktop butuh Apple Silicon dan macOS 13 atau lebih baru — tidak ada build untuk Intel Mac maupun Windows."
+    "platforms": "<b>iOS</b> hanya ada di TestFlight; undangan publik belum dibuka. <b>APK Android</b> harus dipasang sendiri. Versi desktop butuh Apple Silicon dan macOS 13 atau lebih baru — tidak ada build untuk Intel Mac maupun Windows.",
+    "moreLink": "Mencari persyaratan sistem, checksum, atau soal Windows? Semuanya ada di <a href=\"{PAGE_DOWNLOAD}\">halaman unduhan</a>."
   },
   "start": {
     "title": "Mulai",
     "sub": "Tiga langkah: pasang, masuk, aktifkan dengan kode undangan.",
     "steps": [
-      { "h": "Unduh dan pasang", "p": "Ambil paket macOS dari <a href=\"#download\">tabel unduhan</a> lalu seret ke folder Applications. Kalau kamu betah di terminal, pilih build CLI." },
-      { "h": "Masuk", "p": "GitHub, Google, atau email — ketiganya bisa." },
-      { "h": "Aktifkan dengan kode undangan", "p": "Mirasim berbasis undangan, jadi kode harus ditukar sebelum bisa dipakai. Gunakan <code>{code}</code> (<a href=\"#invite-code\">salin di sini</a>), lalu sambungkan akun modelmu sendiri dan mulai bekerja." }
+      {
+        "h": "Unduh dan pasang",
+        "p": "Ambil paket macOS dari <a href=\"#download\">tabel unduhan</a> lalu seret ke folder Applications. Kalau kamu betah di terminal, pilih build CLI."
+      },
+      {
+        "h": "Masuk",
+        "p": "GitHub, Google, atau email — ketiganya bisa."
+      },
+      {
+        "h": "Aktifkan dengan kode undangan",
+        "p": "Mirasim berbasis undangan, jadi kode harus ditukar sebelum bisa dipakai. Gunakan <code>{code}</code> (<a href=\"#invite-code\">salin di sini</a>), lalu sambungkan akun modelmu sendiri dan mulai bekerja."
+      }
     ]
   },
   "models": {
@@ -94,9 +395,18 @@
     "sub": "Ajak orang yang benar-benar memakai Mirasim, dan tim menanggung satu bulan penuh paket berbayar untukmu.",
     "unit": "orang",
     "rewards": {
-      "basic": { "plan": "Satu bulan Basic", "worth": "senilai $29" },
-      "pro":   { "plan": "Satu bulan Pro", "worth": "senilai $89" },
-      "max":   { "plan": "Satu bulan Max", "worth": "senilai $199" }
+      "basic": {
+        "plan": "Satu bulan Basic",
+        "worth": "senilai $29"
+      },
+      "pro": {
+        "plan": "Satu bulan Pro",
+        "worth": "senilai $89"
+      },
+      "max": {
+        "plan": "Satu bulan Max",
+        "worth": "senilai $199"
+      }
     },
     "body": "Aturan yang menentukan: <b>pendaftaran saja tidak dihitung</b>. Orang yang kamu ajak harus benar-benar memakai Mirasim — masuk, membuka sesi, mengerjakan pekerjaan nyata — dan tim memeriksanya. Setelah terdaftar, kode undanganmu sendiri ada di <code>Settings → Account</code>; kalau habis, Discord resmi membagikan lagi.",
     "callout": "Bisa mulai hari ini: aktifkan akunmu dengan kode wiki ini <b>{code}</b> (<a href=\"#invite-code\">salin di bagian atas</a>), lalu bagikan kode yang kamu terima. Lima pengguna sungguhan berarti Pro gratis satu bulan — $89 itu dibayar tim, bukan kamu."
@@ -104,11 +414,26 @@
   "pricing": {
     "title": "Paket berbayar sekilas",
     "sub": "Credits membayar pemanggilan model di cloud resmi, termasuk computer use dan pengguna simulasi. Kalau habis, kamu bisa balik ke akunmu sendiri dan lanjut bekerja.",
-    "th": { "plan": "Paket", "price": "Per bulan", "credits": "Credits", "usage": "Kira-kira", "invite": "Atau ajak" },
+    "th": {
+      "plan": "Paket",
+      "price": "Per bulan",
+      "credits": "Credits",
+      "usage": "Kira-kira",
+      "invite": "Atau ajak"
+    },
     "rows": {
-      "basic": { "usage": "≈50 juta token · 200–400 pesan", "invite": "3 orang = satu bulan" },
-      "pro":   { "usage": "≈250 juta token · 1.000–2.000 pesan", "invite": "5 orang = satu bulan" },
-      "max":   { "usage": "≈1.000 juta token · 4.000–8.000 pesan", "invite": "10 orang = satu bulan" }
+      "basic": {
+        "usage": "≈50 juta token · 200–400 pesan",
+        "invite": "3 orang = satu bulan"
+      },
+      "pro": {
+        "usage": "≈250 juta token · 1.000–2.000 pesan",
+        "invite": "5 orang = satu bulan"
+      },
+      "max": {
+        "usage": "≈1.000 juta token · 4.000–8.000 pesan",
+        "invite": "10 orang = satu bulan"
+      }
     },
     "callout": "Perbandingan versi resmi: pemakaian yang sama menghabiskan sekitar $40–$400 per bulan di tempat lain (satu langganan Claude Code dan satu Codex). Tarif credits per model dipublikasikan. Rinciannya di <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>."
   },
@@ -122,12 +447,30 @@
     "title": "Tanya jawab",
     "sub": "Yang paling sering ditanyakan.",
     "items": [
-      { "q": "Apakah Mirasim gratis?", "a": "Ya — dengan kode undangan tidak berbiaya, karena berjalan di atas akun modelmu sendiri (langganan Claude Code atau Codex, atau sebuah API key). Hanya computer use dan pengguna simulasi yang butuh credits berbayar atau key milikmu." },
-      { "q": "Bisa mendaftar tanpa kode undangan?", "a": "Tidak, untuk sekarang Mirasim hanya lewat undangan. Pakai kode wiki ini <code>{code}</code> untuk mengaktifkan akun. Begitu masuk, kamu punya kode sendiri, dan Discord resmi membagikan lagi kalau kamu perlu." },
-      { "q": "Platform apa yang didukung?", "a": "Desktop macOS (Apple Silicon, macOS 13+), build baris perintah untuk macOS, APK Android yang dipasang sendiri, dan ekstensi VS Code. iOS ada di TestFlight, undangan publik belum dibuka. Tidak ada build untuk Intel Mac maupun Windows." },
-      { "q": "Bagaimana cara benar-benar mendapat Pro gratis satu bulan?", "a": "Ajak 5 pengembang yang sungguh-sungguh memakai Mirasim. Disebut tegas bahwa pendaftaran saja tidak dihitung — mereka harus masuk, membuka sesi, dan mengerjakan pekerjaan nyata, dan tim memverifikasi sebelum memberikan bulan itu. Dengan skema yang sama, 3 orang berarti satu bulan Basic dan 10 orang satu bulan Max." },
-      { "q": "Bagaimana memastikan unduhan tidak diubah?", "a": "SHA-256 setiap berkas tercantum di tabel unduhan (klik untuk menyalin), atau ambil SHA256SUMS resmi lalu jalankan shasum -a 256 -c SHA256SUMS --ignore-missing. Semua tautan menuju CDN resmi (cdn-assets.mirasim.ai); wiki ini tidak menyimpan paket apa pun." },
-      { "q": "Apakah ini situs resmi Mirasim?", "a": "Bukan. Ini wiki yang dijalankan komunitas, tanpa afiliasi dengan Mirasim. Nomor versi, tautan unduhan, dan catatan diambil otomatis dari situs resmi; mirasim.ai selalu menjadi acuan. Kode undangan di halaman ini milik orang yang mengelola wiki." }
+      {
+        "q": "Apakah Mirasim gratis?",
+        "a": "Ya — dengan kode undangan tidak berbiaya, karena berjalan di atas akun modelmu sendiri (langganan Claude Code atau Codex, atau sebuah API key). Hanya computer use dan pengguna simulasi yang butuh credits berbayar atau key milikmu."
+      },
+      {
+        "q": "Bisa mendaftar tanpa kode undangan?",
+        "a": "Tidak, untuk sekarang Mirasim hanya lewat undangan. Pakai kode wiki ini <code>{code}</code> untuk mengaktifkan akun. Begitu masuk, kamu punya kode sendiri, dan Discord resmi membagikan lagi kalau kamu perlu."
+      },
+      {
+        "q": "Platform apa yang didukung?",
+        "a": "Desktop macOS (Apple Silicon, macOS 13+), build baris perintah untuk macOS, APK Android yang dipasang sendiri, dan ekstensi VS Code. iOS ada di TestFlight, undangan publik belum dibuka. Tidak ada build untuk Intel Mac maupun Windows."
+      },
+      {
+        "q": "Bagaimana cara benar-benar mendapat Pro gratis satu bulan?",
+        "a": "Ajak 5 pengembang yang sungguh-sungguh memakai Mirasim. Disebut tegas bahwa pendaftaran saja tidak dihitung — mereka harus masuk, membuka sesi, dan mengerjakan pekerjaan nyata, dan tim memverifikasi sebelum memberikan bulan itu. Dengan skema yang sama, 3 orang berarti satu bulan Basic dan 10 orang satu bulan Max."
+      },
+      {
+        "q": "Bagaimana memastikan unduhan tidak diubah?",
+        "a": "SHA-256 setiap berkas tercantum di tabel unduhan (klik untuk menyalin), atau ambil SHA256SUMS resmi lalu jalankan shasum -a 256 -c SHA256SUMS --ignore-missing. Semua tautan menuju CDN resmi (cdn-assets.mirasim.ai); wiki ini tidak menyimpan paket apa pun."
+      },
+      {
+        "q": "Apakah ini situs resmi Mirasim?",
+        "a": "Bukan. Ini wiki yang dijalankan komunitas, tanpa afiliasi dengan Mirasim. Nomor versi, tautan unduhan, dan catatan diambil otomatis dari situs resmi; mirasim.ai selalu menjadi acuan. Kode undangan di halaman ini milik orang yang mengelola wiki."
+      }
     ]
   },
   "footer": {

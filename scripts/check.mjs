@@ -4,7 +4,7 @@
 import { readFile, access } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
-import { LANGS, SITE, INVITE_CODE } from "./config.mjs";
+import { LANGS, SITE, INVITE_CODE, PAGES } from "./config.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
@@ -18,15 +18,16 @@ const textOf = (html) => {
   return body.replace(/<[^>]+>/g, " ").replace(/&[a-z]+;|&#x?\d+;/gi, " ").replace(/\s+/g, " ").trim();
 };
 
-for (const L of LANGS) {
-  const file = path.join(DIST, L.path, "index.html");
+for (const L of LANGS) for (const P of PAGES) {
+  const slug = `${L.path}${P.path}`;
+  const file = path.join(DIST, slug, "index.html");
   let html;
-  try { html = await readFile(file, "utf8"); } catch { fail(`[${L.id}] 缺少页面 ${L.path}index.html`); continue; }
-  const tag = `[${L.id}]`;
+  try { html = await readFile(file, "utf8"); } catch { fail(`[${L.id}/${P.id}] 缺少页面 ${slug}index.html`); continue; }
+  const tag = `[${L.id}/${P.id}]`;
 
   // --- 必需的 SEO 标签 ---
   const canonical = html.match(/<link rel="canonical" href="([^"]+)">/)?.[1];
-  if (canonical !== `${SITE}/${L.path}`) fail(`${tag} canonical 应为 ${SITE}/${L.path}，实际 ${canonical}`);
+  if (canonical !== `${SITE}/${slug}`) fail(`${tag} canonical 应为 ${SITE}/${slug}，实际 ${canonical}`);
   if (!new RegExp(`<html lang="${L.htmlLang}"`).test(html)) fail(`${tag} html lang 不是 ${L.htmlLang}`);
 
   const title = html.match(/<title>([^<]*)<\/title>/)?.[1] ?? "";
@@ -49,25 +50,34 @@ for (const L of LANGS) {
   const hreflangs = [...html.matchAll(/<link rel="alternate" hreflang="([^"]+)" href="([^"]+)">/g)];
   const map = new Map(hreflangs.map((m) => [m[1], m[2]]));
   for (const o of LANGS) {
-    if (map.get(o.hreflang) !== `${SITE}/${o.path}`) fail(`${tag} hreflang ${o.hreflang} 缺失或指向错误`);
+    if (map.get(o.hreflang) !== `${SITE}/${o.path}${P.path}`) fail(`${tag} hreflang ${o.hreflang} 缺失或指向错误`);
   }
-  if (map.get("x-default") !== `${SITE}/`) fail(`${tag} 缺少正确的 x-default`);
+  if (map.get("x-default") !== `${SITE}/${P.path}`) fail(`${tag} 缺少正确的 x-default`);
 
   // --- JSON-LD 必须是合法 JSON，且含关键类型 ---
   const lds = [...html.matchAll(/<script type="application\/ld\+json">([\s\S]*?)<\/script>/g)];
-  if (lds.length < 3) fail(`${tag} JSON-LD 区块只有 ${lds.length} 个，应为 3 个`);
   const types = [];
   for (const [, raw] of lds) {
     try { types.push(JSON.parse(raw)["@type"]); }
     catch (e) { fail(`${tag} JSON-LD 解析失败: ${e.message}`); }
   }
-  for (const t of ["WebPage", "SoftwareApplication", "FAQPage"]) {
+  for (const t of ["WebPage", "FAQPage"]) {
     if (!types.includes(t)) fail(`${tag} JSON-LD 缺少 ${t}`);
   }
+  if (["home", "download", "windows"].includes(P.id) && !types.includes("SoftwareApplication")) {
+    fail(`${tag} JSON-LD 缺少 SoftwareApplication`);
+  }
+  // 非首页应带面包屑，便于搜索结果显示层级
+  if (P.id !== "home") {
+    const wp = lds.map(([, r]) => { try { return JSON.parse(r); } catch { return {}; } })
+      .find((x) => x["@type"] === "WebPage");
+    if (!wp?.breadcrumb) fail(`${tag} 缺少 BreadcrumbList`);
+  }
 
-  // --- 邀请码务必出现，且模板占位符不得残留 ---
+  // --- 每页都要有可一键复制的邀请码票据，且模板占位符不得残留 ---
   const codeHits = (html.match(new RegExp(INVITE_CODE, "g")) || []).length;
-  if (codeHits < 3) fail(`${tag} 邀请码仅出现 ${codeHits} 次，应在多处醒目展示`);
+  if (!html.includes(`data-copy="${INVITE_CODE}"`)) fail(`${tag} 没有可复制的邀请码票据`);
+  if (codeHits < 2) fail(`${tag} 邀请码仅出现 ${codeHits} 次`);
   if (/\{\{[A-Z_]+\}\}/.test(html)) fail(`${tag} 存在未替换的模板占位符`);
   if (/\{(version|updated|built|count|code|size)\}/.test(html)) fail(`${tag} 存在未替换的文案变量`);
 
@@ -82,18 +92,52 @@ for (const L of LANGS) {
   if (density < 0.5) fail(`${tag} 主关键词密度 ${density.toFixed(2)}% 偏低`);
   if (density > 4) warn(`${tag} 主关键词密度 ${density.toFixed(2)}% 偏高，注意堆砌风险`);
 
-  // --- 语言切换器应指向全部 14 个语言（相对路径） ---
-  const depth = L.path ? L.path.split("/").filter(Boolean).length : 0;
+  // --- 语言切换器应指向全部 14 个语言的同一页面（相对路径） ---
+  const depth = slug.split("/").filter(Boolean).length;
   const up = "../".repeat(depth);
   for (const o of LANGS) {
-    const rel = `${up}${o.path}` || "./";
+    const rel = `${up}${o.path}${P.path}` || "./";
     if (!html.includes(`href="${rel}" hreflang="${o.hreflang}"`)) {
       fail(`${tag} 语言切换器缺少 ${o.id}（期望 href="${rel}"）`);
     }
   }
 
-  // --- 引用的本地资源必须存在 ---
-  const dir = path.join(DIST, L.path);
+  // --- 站内导航必须链接到全部页面，且停在同一语言内 ---
+  // 只在导航区块内比对：英文版位于站点根，全页搜索无法区分「切到英文」和「跨语言泄漏」。
+  // 语言内深度：/zh/windows/ 指向 /zh/download/ 应是 ../download/，不是 ../../download/
+  const upInLang = "../".repeat(P.path ? P.path.split("/").filter(Boolean).length : 0);
+  const navHtml = html.match(/<nav class="sitenav"[^>]*>([\s\S]*?)<\/nav>/)?.[1] ?? "";
+  if (!navHtml) fail(`${tag} 缺少站内导航区块`);
+  for (const o of PAGES) {
+    const rel = `${upInLang}${o.path}` || "./";
+    if (!navHtml.includes(`href="${rel}"`)) {
+      fail(`${tag} 导航缺少指向 ${o.id} 的语言内链接（期望 href="${rel}"）`);
+    }
+    // 语言页的导航里不该出现越过语言目录的路径
+    if (L.path && o.path && navHtml.includes(`href="${up}${o.path}"`)) {
+      fail(`${tag} 导航中 ${o.id} 的链接越过了语言目录，会把访客甩到默认语言`);
+    }
+  }
+  // 当前页应在导航中标记为 aria-current
+  if (!navHtml.includes('aria-current="page"')) fail(`${tag} 导航未标记当前页`);
+
+  // --- 页面底部「继续看」卡片同样必须停在语言内 ---
+  const cardHrefs = [...html.matchAll(/class="nextcard" href="([^"]*)"/g)].map((m) => m[1]);
+  if (cardHrefs.length !== PAGES.length - 1) {
+    fail(`${tag} 「继续看」卡片有 ${cardHrefs.length} 个，应为 ${PAGES.length - 1} 个`);
+  }
+  for (const o of PAGES.filter((x) => x.id !== P.id)) {
+    const rel = `${upInLang}${o.path}` || "./";
+    if (!cardHrefs.includes(rel)) {
+      fail(`${tag} 「继续看」缺少语言内的 ${o.id} 卡片（期望 href="${rel}"，实际 ${cardHrefs.join(" ")}）`);
+    }
+  }
+
+  // --- Plausible 统计脚本应在每页注入 ---
+  if (!html.includes("jk.zxx.im")) fail(`${tag} 缺少 Plausible 统计脚本`);
+
+  // --- 引用的本地资源必须存在（相对路径以页面所在目录为基准） ---
+  const dir = path.join(DIST, slug);
   for (const [, href] of html.matchAll(/(?:src|href)="((?:\.\.\/|\.\/)[^"]+)"/g)) {
     try { await access(path.resolve(dir, href)); }
     catch { fail(`${tag} 引用了不存在的资源 ${href}`); }
@@ -112,8 +156,12 @@ for (const L of LANGS) {
 }
 
 const sitemap = await readFile(path.join(DIST, "sitemap.xml"), "utf8");
-for (const L of LANGS) {
-  if (!sitemap.includes(`<loc>${SITE}/${L.path}</loc>`)) fail(`sitemap 缺少 ${L.id}`);
+for (const L of LANGS) for (const P of PAGES) {
+  if (!sitemap.includes(`<loc>${SITE}/${L.path}${P.path}</loc>`)) fail(`sitemap 缺少 ${L.id}/${P.id}`);
+}
+const locCount = (sitemap.match(/<loc>/g) || []).length;
+if (locCount !== LANGS.length * PAGES.length) {
+  fail(`sitemap 有 ${locCount} 个 URL，应为 ${LANGS.length * PAGES.length} 个`);
 }
 const cname = (await readFile(path.join(DIST, "CNAME"), "utf8")).trim();
 if (cname !== SITE.replace("https://", "")) fail(`CNAME 内容 ${cname} 与站点域名不一致`);
@@ -127,4 +175,4 @@ if (problems.length) {
   for (const p of problems) console.error(`   ${p}`);
   process.exit(1);
 }
-console.log(`✓ 自检通过：${LANGS.length} 个语言页面、SEO 标签、JSON-LD、hreflang、资源引用均完整${warnings.length ? `（${warnings.length} 条提示）` : ""}`);
+console.log(`✓ 自检通过：${LANGS.length * PAGES.length} 个页面（${LANGS.length} 语言 × ${PAGES.length} 页）、SEO 标签、JSON-LD、hreflang、内链、统计脚本、资源引用均完整${warnings.length ? `（${warnings.length} 条提示）` : ""}`);

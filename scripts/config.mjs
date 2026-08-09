@@ -30,3 +30,24 @@ export const PLANS = [
   { plan: "Pro",   price: "$89",  credits: "20,000", invites: 5  },
   { plan: "Max",   price: "$199", credits: "80,000", invites: 10 },
 ];
+
+// 站点页面：每个页面 × 每种语言各自成一个可索引 URL，针对不同搜索意图
+// path 为空表示该语言的首页；nav 决定是否出现在顶栏导航
+export const PAGES = [
+  { id: "home",     path: "",            nav: true },
+  { id: "download", path: "download/",   nav: true },
+  { id: "windows",  path: "windows/",    nav: true },
+  { id: "invite",   path: "invite-code/", nav: true },
+];
+
+// 第三方 Windows 更新器（社区项目，非官方）——页面上必须如实标注性质与风险
+export const WIN_UPDATER = {
+  repo: "https://github.com/Adularia-Z/mirasim-win-updater",
+  releases: "https://github.com/Adularia-Z/mirasim-win-updater/releases/latest",
+  author: "Adularia-Z",
+  license: "MIT",
+};
+
+// 语言 + 页面的组合数，构建后自检用
+export const totalPages = () => LANGS.length * PAGES.length;
+
