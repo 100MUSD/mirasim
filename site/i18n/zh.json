@@ -1,0 +1,142 @@
+{
+  "htmlLang": "zh-Hans",
+  "meta": {
+    "title": "Mirasim 邀请码与下载 — 免费领一个月 Pro",
+    "description": "Mirasim 邀请码 MIRA-EC9V-64BF-BC07：免费加入邀请制 Agent IDE，下载 Mirasim v{version} macOS 与 Android 安装包，并免费领取价值 $89 的一个月 Pro 会员。",
+    "keywords": "Mirasim, Mirasim 邀请码, Mirasim 下载, Mirasim wiki, Mirasim 免费, Mirasim Pro 会员, Agent IDE, One Agent IDE, AI 编程 agent, 模拟用户测试, Claude Code, Codex, macOS Agent IDE",
+    "ogSub": "邀请码 · 安装包下载 · 免费一个月 Pro",
+    "offerFree": "凭邀请码免费进入，Mirasim 跑在你已经付费的模型订阅或 API key 上。"
+  },
+  "ui": {
+    "skip": "跳到正文",
+    "officialSite": "官方网站：",
+    "langLabel": "选择语言",
+    "tocTitle": "目录",
+    "tocInvite": "领取邀请码",
+    "copy": "复制邀请码",
+    "copied": "已复制到剪贴板 ✓",
+    "copiedShort": "已复制 ✓",
+    "download": "下载"
+  },
+  "offer": {
+    "title": "免费领取一个月 Pro 会员 · 价值 $89",
+    "cond": "用邀请码注册，再邀请 5 位真正使用 Mirasim 的开发者即可兑换。",
+    "link": "查看规则 →"
+  },
+  "hero": {
+    "eyebrow": "Mirasim Wiki · 从构建到评测",
+    "h1": "Mirasim：一个 <em>Agent IDE</em>，从构建到评测",
+    "lede": "Mirasim 是一个 One Agent IDE —— 在任何地方运行你的编程 agent，再让模拟用户替你测试构建成果。目前采用邀请制注册，<b>邀请码本身分文不收</b>：Mirasim 直接跑在你已经付费的模型账号上。",
+    "ticketLabel": "邀请码",
+    "ticketTip": "注册后在激活页粘贴，即刻开通",
+    "ticketFoot": "这是<b>本站的邀请码</b>。Mirasim 目前仅限邀请制——没有码就进不去，用它可以免费激活账号；你注册后也会获得自己的邀请码，邀请他人还能<a href=\"#invite\">换取整月付费订阅</a>。",
+    "ctaDownload": "下载 macOS 版 v{version}",
+    "ctaOther": "其他平台与校验值",
+    "ctaNote": "Apple Silicon · macOS 13+"
+  },
+  "toc": [
+    "Mirasim 是什么",
+    "下载安装包",
+    "快速上手",
+    "可用的模型",
+    "邀请奖励",
+    "付费方案",
+    "官方资讯",
+    "常见问题"
+  ],
+  "intro": {
+    "title": "Mirasim 是什么",
+    "sub": "One Agent IDE —— 把写代码的 agent 和替你测试的模拟用户装进同一个工作台。",
+    "body": "传统流程里，你用一个工具写代码，再自己打开页面验证。Mirasim 把这两端接起来：编程 agent 在工作台里并行开工，构建完成后由<b>模拟用户</b>在真实浏览器、真实移动模拟器里实际使用你的产品，把第一手反馈带回来。以下是官网列出的核心能力：",
+    "cards": [
+      { "k": "WORKBENCH", "h": "多项目工作台", "p": "多个项目并列打开，每个项目拥有独立的会话、agent 与模型配置，互不干扰。" },
+      { "k": "SESSIONS", "h": "多会话并行 + 内置编辑器", "p": "同时运行多个 agent 会话，配合类 VS&nbsp;Code 编辑器随手改代码，在手机上也能继续工作。" },
+      { "k": "TUI ⇄ GUI", "h": "终端与图形界面一键切换", "p": "同一套工作流，既可以在 TUI 里键盘流操作，也可以切到 GUI 里点选浏览。" },
+      { "k": "BROWSER", "h": "浏览器自动化：读结构而非截图", "p": "Agent 以文本结构读取页面——官方数据约 184&nbsp;B 对比截图 60&nbsp;KB，传输量差约 330 倍——驱动真实 Chrome 与真实用户配置文件。" },
+      { "k": "MOBILE / MAC", "h": "Mac 应用与移动模拟器", "p": "Mac 应用、iOS 模拟器和 Android 模拟器都以同样方式响应，移动端产品也能被模拟用户测试。" },
+      { "k": "ONE TOOL", "h": "单一工具入口，省上下文", "p": "官方称每轮工具开销约 1k tokens，而挂 30 个工具 schema 约需 53k——把上下文留给真正的工作。" }
+    ],
+    "callout": "Mirasim 目前处于 <b>Alpha 阶段</b>，官方提示「会有毛边」。安装后应用会自动保持更新。"
+  },
+  "download": {
+    "title": "下载 Mirasim",
+    "sub": "当前最新版本 <b>v{version}</b> · 自动抓取自官网，更新于 {updated} · 全部链接直连官方 CDN",
+    "th": { "pkg": "安装包", "file": "文件", "size": "大小", "sha": "SHA-256" },
+    "pkgs": {
+      "dmg":  { "label": "macOS 桌面应用", "req": "macOS 13+ · Apple Silicon" },
+      "cli":  { "label": "命令行版 (CLI)", "req": "macOS · Apple Silicon" },
+      "apk":  { "label": "Android 应用", "req": "Android · 需自行侧载安装" },
+      "vsix": { "label": "VS Code 扩展", "req": "在 VS Code 中手动安装" },
+      "sums": { "label": "校验文件", "req": "用于核对下载完整性" }
+    },
+    "verify": "<b>校验下载：</b>把 <code>SHA256SUMS</code> 和安装包放在同一目录，运行下面的命令；点击表格里的 SHA-256 可复制完整校验值。",
+    "platforms": "<b>iOS</b> 目前仅在 TestFlight 内测，公开邀请尚未开放；<b>Android APK</b> 需自行侧载。桌面版要求 Apple Silicon 芯片与 macOS 13 及以上——没有 Intel Mac 与 Windows 版本。"
+  },
+  "start": {
+    "title": "快速上手",
+    "sub": "三步开始：下载安装 → 登录 → 用邀请码激活。",
+    "steps": [
+      { "h": "下载并安装", "p": "从<a href=\"#download\">上方下载表</a>获取 macOS 安装包，打开后拖入「应用程序」即可；习惯命令行的话可以选 CLI 版。" },
+      { "h": "登录账号", "p": "GitHub、Google 或邮箱三种方式都可以。" },
+      { "h": "用邀请码激活", "p": "Mirasim 是邀请制，登录后需要兑换邀请码才能使用。直接用 <code>{code}</code>（<a href=\"#invite-code\">点此复制</a>），激活后接上自己的模型账号就能开工。" }
+    ]
+  },
+  "models": {
+    "title": "可以免费使用的模型",
+    "sub": "邀请码分文不收，Mirasim 本体跑在你已有的模型账号上。",
+    "p1": "官方的说法是「邀请码分文不收，跑在你自己的模型账号上」：<b>持邀请码使用 Mirasim 是免费的</b>。把你已经付费的 Claude Code、Codex 订阅或 API key 接进来，就能用这些 agent，加上 Mirasim 自有 agent、六窗格工作台、MCP 服务器与插件——Mirasim 不额外收费。",
+    "p2": "如果购买 credits 额度，官方平台可直接调用的模型阵容覆盖各大厂商：",
+    "callout1": "<b>不偷换模型：</b>官方定价页写明「你选什么模型就跑什么模型」。发生 fallback 的回合会在记录中明确标注，官方还公开了指纹方法供你自行验证。",
+    "callout2": "<b>两个例外：</b>computer use（电脑操作）与模拟用户功能消耗云端额度，需要付费方案或自备 API key；其余功能免费账号均可使用。"
+  },
+  "invite": {
+    "title": "邀请奖励：免费领一个月 Pro",
+    "sub": "邀请真正使用 Mirasim 的人，官方就替你付一整个月的付费订阅。",
+    "unit": "人",
+    "rewards": {
+      "basic": { "plan": "一个月 Basic", "worth": "价值 $29" },
+      "pro":   { "plan": "一个月 Pro", "worth": "价值 $89" },
+      "max":   { "plan": "一个月 Max", "worth": "价值 $199" }
+    },
+    "body": "最关键的规则：<b>仅注册不算数</b>。被邀请的人必须真正用起来——登录、开会话、实际干活，官方会核查。你注册后，自己的邀请码在 <code>Settings → Account</code> 里查看；如果码用完了，可以去官方 Discord 索取。",
+    "callout": "现在就能开始：先用本站邀请码 <b>{code}</b>（<a href=\"#invite-code\">回到顶部复制</a>）激活账号，再把你自己的码分享出去。5 位真实用户就是免费一个月 Pro——这 $89 由官方替你付。"
+  },
+  "pricing": {
+    "title": "付费方案速览",
+    "sub": "credits 额度用于调用官方云端模型，含 computer use 与模拟用户功能。额度用完可以切回自己的账号继续工作。",
+    "th": { "plan": "方案", "price": "月费", "credits": "额度", "usage": "约合用量", "invite": "或邀请兑换" },
+    "rows": {
+      "basic": { "usage": "约 5,000 万 tokens · 200–400 条消息", "invite": "3 人 = 一个月" },
+      "pro":   { "usage": "约 2.5 亿 tokens · 1,000–2,000 条消息", "invite": "5 人 = 一个月" },
+      "max":   { "usage": "约 10 亿 tokens · 4,000–8,000 条消息", "invite": "10 人 = 一个月" }
+    },
+    "callout": "官方对比口径：同等用量在别家约需 $40–$400/月（Claude Code 与 Codex 各买一份订阅）。各模型的 credits 费率公开可查。完整定价见 <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>。"
+  },
+  "news": {
+    "title": "官方资讯",
+    "sub": "来自官方 Research notes 的最新 <b>{count}</b> 篇 · 自动同步，更新于 {updated}",
+    "readMore": "阅读原论文",
+    "callout": "官方说明：每篇笔记都是团队从零写成的原创总结——研究是别人的，评论是他们的——并附原论文链接。更多内容见 <a href=\"https://mirasim.ai/blog\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/blog</a>。"
+  },
+  "faq": {
+    "title": "常见问题",
+    "sub": "最常被问到的几件事。",
+    "items": [
+      { "q": "Mirasim 是免费的吗？", "a": "是。持邀请码使用不收费，因为它跑在你自己的模型账号上（Claude Code、Codex 订阅或 API key）。只有 computer use 和模拟用户功能需要付费额度或自备 key。" },
+      { "q": "没有邀请码可以注册吗？", "a": "不能，目前是邀请制。直接用本站的邀请码 <code>{code}</code> 激活即可。注册后你会得到自己的码，用完也可以去官方 Discord 索取。" },
+      { "q": "支持哪些平台？", "a": "macOS 桌面版（Apple Silicon，macOS 13+）、macOS 命令行版、需侧载的 Android APK、VS Code 扩展。iOS 在 TestFlight 内测，公开邀请尚未开放。没有 Intel Mac 与 Windows 版本。" },
+      { "q": "一个月免费 Pro 具体怎么拿？", "a": "邀请 5 位真正使用 Mirasim 的开发者。官方明确「仅注册不算数」——被邀请者必须登录、开会话、实际工作，官方核查后才发放。同一机制下，3 人换一个月 Basic，10 人换一个月 Max。" },
+      { "q": "怎么确认安装包没被篡改？", "a": "下载表里列出了每个文件的 SHA-256（点击可复制），也可以下载官方 SHA256SUMS 后运行 shasum -a 256 -c SHA256SUMS --ignore-missing 校验。所有链接均直连官方 CDN（cdn-assets.mirasim.ai），本站不托管任何安装包。" },
+      { "q": "这是 Mirasim 官方站点吗？", "a": "不是。这是社区自发维护的 wiki，与 Mirasim 官方没有隶属关系。版本号、下载链接与资讯自动抓取自官网，一切以 mirasim.ai 为准。页面上的邀请码属于本站维护者。" }
+    ]
+  },
+  "footer": {
+    "official": "官网",
+    "download": "官方下载页",
+    "pricing": "定价",
+    "guide": "使用指南",
+    "blog": "博客",
+    "disclaimer": "非官方 · 社区维护。本站与 Mirasim 官方无隶属关系，也未获其背书。产品信息、版本号、下载链接与资讯均定期自动抓取自官方网站，可能存在延迟或遗漏——一切以 mirasim.ai 为准。全部安装包由官方 CDN 直接分发，本站不托管、不修改任何文件。页面所示邀请码属于本站维护者。",
+    "meta": "数据更新于 {updated} · Mirasim v{version} · 页面构建于 {built}"
+  }
+}

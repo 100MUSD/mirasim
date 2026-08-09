@@ -1,0 +1,142 @@
+{
+  "htmlLang": "ko",
+  "meta": {
+    "title": "Mirasim 초대 코드와 다운로드 — Pro 1개월 무료",
+    "description": "Mirasim 초대 코드 MIRA-EC9V-64BF-BC07. 초대제 Agent IDE에 무료로 참여하고 Mirasim v{version} macOS·Android 설치 파일을 받으세요. $89 상당 Pro 1개월을 무료로 받을 수 있습니다.",
+    "keywords": "Mirasim, Mirasim 초대 코드, Mirasim 다운로드, Mirasim 위키, Mirasim 무료, Mirasim Pro, Agent IDE, One Agent IDE, AI 코딩 에이전트, 시뮬레이션 사용자, Claude Code, Codex, macOS Agent IDE",
+    "ogSub": "초대 코드 · 다운로드 · Pro 1개월 무료",
+    "offerFree": "초대 코드는 무료이며, Mirasim은 이미 결제해 둔 모델 구독이나 API 키 위에서 실행됩니다."
+  },
+  "ui": {
+    "skip": "본문으로 건너뛰기",
+    "officialSite": "공식 사이트:",
+    "langLabel": "언어 선택",
+    "tocTitle": "목차",
+    "tocInvite": "초대 코드 받기",
+    "copy": "초대 코드 복사",
+    "copied": "복사했습니다 ✓",
+    "copiedShort": "복사 ✓",
+    "download": "다운로드"
+  },
+  "offer": {
+    "title": "Pro 1개월 무료 — $89 상당",
+    "cond": "초대 코드로 가입한 뒤, Mirasim을 실제로 쓰는 개발자 5명을 초대하면 교환할 수 있습니다.",
+    "link": "조건 보기 →"
+  },
+  "hero": {
+    "eyebrow": "Mirasim Wiki · from build to eval",
+    "h1": "Mirasim: 빌드부터 평가까지, 하나의 <em>Agent IDE</em>",
+    "lede": "Mirasim은 One Agent IDE입니다. 어디서든 코딩 에이전트를 돌리고, 만들어진 것을 시뮬레이션 사용자가 대신 테스트합니다. 지금은 초대제 가입이며 <b>초대 코드 자체는 무료</b>입니다. Mirasim은 이미 결제해 둔 모델 계정 위에서 돌아갑니다.",
+    "ticketLabel": "초대 코드",
+    "ticketTip": "가입 후 활성화 화면에 붙여 넣으세요",
+    "ticketFoot": "이것은 <b>이 위키의 초대 코드</b>입니다. Mirasim은 초대제라 코드가 없으면 들어갈 수 없습니다. 이 코드로 계정을 무료로 활성화하세요. 가입하면 본인 코드도 생기고, 다른 사람을 초대하면 <a href=\"#invite\">유료 플랜 1개월과 교환</a>할 수 있습니다.",
+    "ctaDownload": "macOS용 v{version} 다운로드",
+    "ctaOther": "다른 플랫폼과 체크섬",
+    "ctaNote": "Apple Silicon · macOS 13+"
+  },
+  "toc": [
+    "Mirasim이란",
+    "다운로드",
+    "시작하기",
+    "쓸 수 있는 모델",
+    "초대 보상",
+    "유료 플랜",
+    "공식 노트",
+    "자주 묻는 질문"
+  ],
+  "intro": {
+    "title": "Mirasim이란",
+    "sub": "One Agent IDE —— 코드를 쓰는 에이전트와 그것을 테스트하는 시뮬레이션 사용자가 같은 작업대에 있습니다.",
+    "body": "보통은 한 도구로 코드를 쓰고, 직접 페이지를 열어 확인합니다. Mirasim은 이 두 끝을 연결합니다. 코딩 에이전트가 작업대 안에서 병렬로 일하고, 빌드가 준비되면 <b>시뮬레이션 사용자</b>가 실제 Chrome이나 실제 모바일 에뮬레이터에서 제품을 직접 써 보고 1차 피드백을 가져옵니다. 공식 사이트가 밝힌 핵심 기능은 다음과 같습니다.",
+    "cards": [
+      { "k": "WORKBENCH", "h": "다중 프로젝트 작업대", "p": "여러 프로젝트를 나란히 열고, 각각 독립된 세션·에이전트·모델 설정을 가집니다. 서로 섞이지 않습니다." },
+      { "k": "SESSIONS", "h": "병렬 세션과 내장 편집기", "p": "여러 에이전트 세션을 동시에 돌리고, VS&nbsp;Code 같은 편집기로 바로 고칩니다. 모바일에서도 이어집니다." },
+      { "k": "TUI ⇄ GUI", "h": "터미널과 GUI를 키 하나로", "p": "같은 작업 흐름을 TUI에서는 키보드로, GUI에서는 클릭으로 다룹니다." },
+      { "k": "BROWSER", "h": "스크린샷이 아니라 구조를 읽는 자동화", "p": "에이전트는 페이지를 텍스트 구조로 읽습니다(공식 수치로 약 184&nbsp;B 대 스크린샷 60&nbsp;KB, 전송량 약 330배 차이). 실제 Chrome과 실제 사용자 프로필을 구동합니다." },
+      { "k": "MOBILE / MAC", "h": "Mac 앱과 모바일 에뮬레이터", "p": "Mac 앱, iOS 시뮬레이터, Android 에뮬레이터도 같은 방식으로 반응하므로 모바일 제품도 시뮬레이션 사용자가 테스트합니다." },
+      { "k": "ONE TOOL", "h": "입구를 하나로, 컨텍스트 절약", "p": "공식 수치로 턴당 도구 오버헤드가 약 1k tokens, 도구 스키마 30개는 약 53k입니다. 컨텍스트는 일에 남습니다." }
+    ],
+    "callout": "Mirasim은 <b>알파 단계</b>이며, 공식적으로도 \"거친 부분이 있다\"고 밝혀 두었습니다. 설치 후에는 앱이 알아서 최신 상태를 유지합니다."
+  },
+  "download": {
+    "title": "Mirasim 다운로드",
+    "sub": "최신 버전 <b>v{version}</b> · 공식 사이트에서 자동 수집, {updated} 갱신 · 모든 링크는 공식 CDN으로 직결",
+    "th": { "pkg": "패키지", "file": "파일", "size": "크기", "sha": "SHA-256" },
+    "pkgs": {
+      "dmg":  { "label": "macOS 데스크톱 앱", "req": "macOS 13+ · Apple Silicon" },
+      "cli":  { "label": "명령줄 버전 (CLI)", "req": "macOS · Apple Silicon" },
+      "apk":  { "label": "Android 앱", "req": "Android · 직접 사이드로드" },
+      "vsix": { "label": "VS Code 확장", "req": "VS Code에서 수동 설치" },
+      "sums": { "label": "체크섬", "req": "다운로드 무결성 확인용" }
+    },
+    "verify": "<b>다운로드 검증:</b> <code>SHA256SUMS</code>를 패키지와 같은 폴더에 두고 아래 명령을 실행하세요. 표의 SHA-256을 클릭하면 전체 값이 복사됩니다.",
+    "platforms": "<b>iOS</b>는 TestFlight에만 있고 공개 초대는 아직 열리지 않았습니다. <b>Android APK</b>는 직접 사이드로드해야 합니다. 데스크톱 버전은 Apple Silicon과 macOS 13 이상이 필요하며, Intel Mac·Windows 빌드는 없습니다."
+  },
+  "start": {
+    "title": "시작하기",
+    "sub": "세 단계: 설치 → 로그인 → 초대 코드로 활성화.",
+    "steps": [
+      { "h": "다운로드하고 설치", "p": "<a href=\"#download\">위 다운로드 표</a>에서 macOS 패키지를 받아 응용 프로그램 폴더로 끌어다 놓으세요. 터미널을 즐긴다면 CLI 빌드를 쓰면 됩니다." },
+      { "h": "로그인", "p": "GitHub, Google, 이메일 모두 됩니다." },
+      { "h": "초대 코드로 활성화", "p": "Mirasim은 초대제라 쓰기 전에 코드를 등록해야 합니다. <code>{code}</code>를 쓰세요(<a href=\"#invite-code\">여기서 복사</a>). 활성화한 뒤 본인 모델 계정을 연결하면 바로 작업할 수 있습니다." }
+    ]
+  },
+  "models": {
+    "title": "무료로 쓸 수 있는 모델",
+    "sub": "초대 코드는 무료이고, Mirasim 본체는 이미 가진 모델 계정 위에서 돌아갑니다.",
+    "p1": "공식 표현은 \"코드는 무료이며 당신의 모델 계정 위에서 돌아간다\"입니다. <b>초대 코드로 Mirasim을 쓰는 것은 무료</b>입니다. 이미 결제한 Claude Code나 Codex 구독, 또는 API 키를 연결하면 그 에이전트들에 더해 Mirasim 자체 에이전트, 6분할 작업대, MCP 서버와 플러그인까지 쓸 수 있습니다. Mirasim이 그 위에 추가로 청구하지 않습니다.",
+    "p2": "credits를 구매하면 플랫폼이 직접 호출할 수 있는 모델이 주요 진영을 대부분 아우릅니다.",
+    "callout1": "<b>모델을 몰래 바꾸지 않음:</b> 공식 가격 페이지는 \"고른 모델이 그대로 쓰인다\"고 명시합니다. 폴백된 턴은 기록에 표시되며, 직접 확인할 수 있는 지문 방법도 공개돼 있습니다.",
+    "callout2": "<b>두 가지 예외:</b> computer use와 시뮬레이션 사용자는 클라우드 쿼터를 쓰므로 유료 플랜이나 본인 API 키가 필요합니다. 나머지는 무료 계정으로 됩니다."
+  },
+  "invite": {
+    "title": "초대 보상: Pro 1개월 무료",
+    "sub": "Mirasim을 진짜로 쓰는 사람을 초대하면, 유료 플랜 한 달을 공식이 대신 부담합니다.",
+    "unit": "명",
+    "rewards": {
+      "basic": { "plan": "Basic 1개월", "worth": "$29 상당" },
+      "pro":   { "plan": "Pro 1개월", "worth": "$89 상당" },
+      "max":   { "plan": "Max 1개월", "worth": "$199 상당" }
+    },
+    "body": "핵심 규칙: <b>가입만으로는 세지 않습니다</b>. 초대한 사람이 실제로 Mirasim을 써야 합니다 — 로그인하고, 세션을 열고, 실제 작업을 해야 하며, 공식이 확인합니다. 가입하면 본인 초대 코드는 <code>Settings → Account</code>에 있습니다. 다 썼으면 공식 Discord에서 더 받을 수 있습니다.",
+    "callout": "오늘 바로 시작할 수 있습니다. 이 위키의 코드 <b>{code}</b>(<a href=\"#invite-code\">위에서 복사</a>)로 계정을 활성화하고, 받은 본인 코드를 공유하세요. 실제 사용자 5명이면 Pro 1개월 무료 — 그 $89를 공식이 냅니다."
+  },
+  "pricing": {
+    "title": "유료 플랜 한눈에",
+    "sub": "credits는 공식 클라우드 모델 호출에 쓰이며, computer use와 시뮬레이션 사용자도 여기서 소비합니다. 다 쓰면 본인 계정으로 돌아가 계속 작업할 수 있습니다.",
+    "th": { "plan": "플랜", "price": "월 요금", "credits": "크레딧", "usage": "대략", "invite": "초대로 교환" },
+    "rows": {
+      "basic": { "usage": "약 5,000만 tokens · 200–400개 메시지", "invite": "3명 = 1개월" },
+      "pro":   { "usage": "약 2.5억 tokens · 1,000–2,000개 메시지", "invite": "5명 = 1개월" },
+      "max":   { "usage": "약 10억 tokens · 4,000–8,000개 메시지", "invite": "10명 = 1개월" }
+    },
+    "callout": "공식 비교로는 같은 사용량이 다른 곳에서 월 $40–$400 정도입니다(Claude Code와 Codex를 각각 구독한 경우). 모델별 credits 요율은 공개돼 있습니다. 자세한 내용은 <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>."
+  },
+  "news": {
+    "title": "공식 노트",
+    "sub": "공식 블로그 \"Research notes\"의 최신 <b>{count}</b>개 · 자동 동기화, {updated} 갱신",
+    "readMore": "원 논문 읽기",
+    "callout": "공식 설명대로, 각 노트는 처음부터 새로 쓴 요약이며(연구는 다른 사람들의 것, 논평은 그들의 것) 언제나 원 논문으로 링크됩니다. 더 보기: <a href=\"https://mirasim.ai/blog\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/blog</a>."
+  },
+  "faq": {
+    "title": "자주 묻는 질문",
+    "sub": "가장 많이 들어오는 질문들입니다.",
+    "items": [
+      { "q": "Mirasim은 무료인가요?", "a": "네. 초대 코드가 있으면 비용이 없습니다. 본인 모델 계정(Claude Code나 Codex 구독, 또는 API 키) 위에서 돌아가기 때문입니다. 유료 credits나 본인 키가 필요한 것은 computer use와 시뮬레이션 사용자뿐입니다." },
+      { "q": "초대 코드 없이 가입할 수 있나요?", "a": "안 됩니다. 현재는 초대제입니다. 이 위키의 코드 <code>{code}</code>로 활성화하세요. 가입하면 본인 코드가 생기고, 부족하면 공식 Discord에서 더 받을 수 있습니다." },
+      { "q": "어떤 플랫폼을 지원하나요?", "a": "macOS 데스크톱(Apple Silicon, macOS 13+), macOS 명령줄 빌드, 사이드로드용 Android APK, VS Code 확장입니다. iOS는 TestFlight에만 있고 공개 초대는 열리지 않았습니다. Intel Mac·Windows 빌드는 없습니다." },
+      { "q": "Pro 1개월 무료는 실제로 어떻게 받나요?", "a": "Mirasim을 진짜 쓰는 개발자 5명을 초대하면 됩니다. 공식은 \"가입만으로는 세지 않는다\"고 못 박았습니다. 로그인하고 세션을 열고 실제 작업을 해야 하며, 확인 후 지급됩니다. 같은 방식으로 3명은 Basic 1개월, 10명은 Max 1개월입니다." },
+      { "q": "다운로드가 변조되지 않았는지 어떻게 확인하나요?", "a": "다운로드 표에 각 파일의 SHA-256이 있습니다(클릭하면 복사). 공식 SHA256SUMS를 받아 shasum -a 256 -c SHA256SUMS --ignore-missing을 실행해도 됩니다. 모든 링크는 공식 CDN(cdn-assets.mirasim.ai)으로 직결되며, 이 위키는 어떤 패키지도 호스팅하지 않습니다." },
+      { "q": "여기가 Mirasim 공식 사이트인가요?", "a": "아닙니다. 커뮤니티가 운영하는 위키이며 Mirasim과 제휴 관계가 없습니다. 버전 번호·다운로드 링크·노트는 공식 사이트에서 자동으로 가져오며, 기준은 언제나 mirasim.ai입니다. 이 페이지의 초대 코드는 위키 운영자의 것입니다." }
+    ]
+  },
+  "footer": {
+    "official": "공식 사이트",
+    "download": "공식 다운로드",
+    "pricing": "가격",
+    "guide": "가이드",
+    "blog": "블로그",
+    "disclaimer": "비공식 · 커뮤니티 운영. 이 위키는 Mirasim과 제휴 관계가 없고 공인받지도 않았습니다. 제품 정보·버전 번호·다운로드 링크·노트는 공식 웹사이트에서 주기적으로 자동 수집하므로 지연이나 누락이 있을 수 있으며, 기준은 언제나 mirasim.ai입니다. 모든 패키지는 공식 CDN이 직접 제공하고, 여기서 호스팅하거나 수정하지 않습니다. 이 페이지에 표시된 초대 코드는 위키 운영자의 것입니다.",
+    "meta": "데이터 갱신 {updated} · Mirasim v{version} · 페이지 생성 {built}"
+  }
+}

@@ -25,11 +25,24 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 22
+
       # 抓取失败（官网瞬时不可用/结构变化）时退回仓库中已提交的数据，保证页面始终可部署
       - name: Fetch latest data from mirasim.ai
         run: node scripts/fetch-data.mjs || echo "::warning::抓取官网数据失败，使用仓库内已有数据构建"
-      - name: Build wiki page
+
+      - name: Build 14 locales
         run: node scripts/build.mjs
+
+      # OG 卡片与图标需要 headless Chrome 渲染；runner 自带 Chrome
+      - name: Generate icons and OG cards
+        run: node scripts/make-assets.mjs
+        env:
+          CHROME_PATH: /usr/bin/google-chrome
+
+      # SEO / hreflang / JSON-LD / 资源引用自检，不通过则中止部署
+      - name: Verify build
+        run: node scripts/check.mjs
+
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:

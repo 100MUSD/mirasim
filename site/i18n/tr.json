@@ -1,0 +1,142 @@
+{
+  "htmlLang": "tr",
+  "meta": {
+    "title": "Mirasim davet kodu, indirme ve 1 ay ücretsiz Pro",
+    "description": "Mirasim davet kodu MIRA-EC9V-64BF-BC07: Agent IDE'ye ücretsiz katıl, Mirasim v{version} macOS paketini indir, bir ay Pro'yu ücretsiz al.",
+    "keywords": "Mirasim, Mirasim davet kodu, Mirasim indir, Mirasim wiki, Mirasim ücretsiz, Mirasim Pro, Agent IDE, One Agent IDE, yapay zeka kodlama ajanı, simüle kullanıcı, Claude Code, Codex, macOS IDE",
+    "ogSub": "Davet kodu · İndirme · Bir ay ücretsiz Pro",
+    "offerFree": "Davet kodu hiçbir ücret gerektirmez; Mirasim, halihazırda ödediğin model aboneliklerinin ve API anahtarlarının üzerinde çalışır."
+  },
+  "ui": {
+    "skip": "İçeriğe geç",
+    "officialSite": "Resmî site:",
+    "langLabel": "Dil seç",
+    "tocTitle": "İçindekiler",
+    "tocInvite": "Davet kodunu al",
+    "copy": "Davet kodunu kopyala",
+    "copied": "Kopyalandı ✓",
+    "copiedShort": "Kopyalandı ✓",
+    "download": "İndir"
+  },
+  "offer": {
+    "title": "Bir ay ücretsiz Pro — 89 dolar değerinde",
+    "cond": "Bir davet koduyla kaydol, sonra Mirasim'i gerçekten kullanan 5 geliştirici davet et.",
+    "link": "Koşullara bak →"
+  },
+  "hero": {
+    "eyebrow": "Mirasim Wiki · from build to eval",
+    "h1": "Mirasim: tek bir <em>Agent IDE</em>, kurmaktan değerlendirmeye",
+    "lede": "Mirasim bir One Agent IDE: kodlama ajanlarını nereden istersen çalıştır, sonra kurduğun şeyi simüle kullanıcılar test etsin. Kayıt şimdilik davetle ve <b>davet kodu hiçbir ücret gerektirmiyor</b>: Mirasim, halihazırda ödediğin model hesaplarının üzerinde çalışır.",
+    "ticketLabel": "Davet kodu",
+    "ticketTip": "Kaydolduktan sonra etkinleştirme ekranına yapıştır",
+    "ticketFoot": "Bu, <b>bu wiki'nin davet kodu</b>. Mirasim yalnızca davetle çalışıyor — kod olmadan giriş yok. Hesabını bununla ücretsiz etkinleştir; ardından kendi kodun da olur ve başkalarını davet etmek sana <a href=\"#invite\">bir ay ücretli plan</a> kazandırır.",
+    "ctaDownload": "macOS için v{version} indir",
+    "ctaOther": "Diğer platformlar ve sağlama toplamları",
+    "ctaNote": "Apple Silicon · macOS 13+"
+  },
+  "toc": [
+    "Mirasim nedir",
+    "İndirme",
+    "Başlarken",
+    "Kullanılabilir modeller",
+    "Davet ödülleri",
+    "Ücretli planlar",
+    "Resmî notlar",
+    "Sık sorulan sorular"
+  ],
+  "intro": {
+    "title": "Mirasim nedir",
+    "sub": "One Agent IDE — kodu yazan ajan ile onu test eden simüle kullanıcı, aynı tezgâhta.",
+    "body": "Alışılmış akışta kodu bir araçta yazar, sonra sayfayı kendin açıp kontrol edersin. Mirasim bu iki ucu birleştirir: kodlama ajanları tezgâhın içinde paralel çalışır ve bir sürüm hazır olduğunda <b>simüle kullanıcılar</b> ürününü gerçek bir Chrome'da ya da gerçek bir mobil emülatörde bizzat kullanıp geri bildirimi ilk elden getirir. Resmî sitede sayılan temel yetenekler şunlar:",
+    "cards": [
+      { "k": "WORKBENCH", "h": "Çok projeli tezgâh", "p": "Birden çok proje yan yana; her birinin kendi oturumları, ajanları ve model yapılandırması var. Hiçbiri diğerine karışmıyor." },
+      { "k": "SESSIONS", "h": "Paralel oturumlar ve gömülü düzenleyici", "p": "Aynı anda birçok ajan oturumu, hızlı düzeltmeler için VS&nbsp;Code benzeri bir düzenleyici. Mobilden de sürdürülebiliyor." },
+      { "k": "TUI ⇄ GUI", "h": "Terminal ile arayüz arasında tek tuş", "p": "Aynı iş akışı iki biçimde: TUI'de klavyeyle, GUI'de tıklayıp gezerek." },
+      { "k": "BROWSER", "h": "Ekran görüntüsü değil yapı okuyan otomasyon", "p": "Ajan sayfaları metin yapısı olarak okur: ekran görüntüsünün 60&nbsp;KB'ına karşı yaklaşık 184&nbsp;B, yani aktarımda kabaca 330 kat fark — hem de gerçek bir kullanıcı profiliyle gerçek Chrome'u sürerek." },
+      { "k": "MOBILE / MAC", "h": "Mac uygulamaları ve mobil emülatörler", "p": "Mac uygulamaları, iOS Simulator ve Android emülatörü de aynı şekilde yanıt verir; böylece mobil ürünleri de simüle kullanıcılar test eder." },
+      { "k": "ONE TOOL", "h": "Tek araç girişi bağlamdan tasarruf ettirir", "p": "Resmî sayı: tur başına yaklaşık 1k token araç yükü; otuz araç şeması ise yaklaşık 53k. Bağlam işe kalır." }
+    ],
+    "callout": "Mirasim <b>Alpha</b> aşamasında; resmî ifadeyle \"pürüzler bekleyin\". Kurulumdan sonra uygulama kendini güncel tutuyor."
+  },
+  "download": {
+    "title": "Mirasim'i indir",
+    "sub": "En son sürüm <b>v{version}</b> · resmî siteden otomatik çekiliyor, güncelleme {updated} · bütün bağlantılar doğrudan resmî CDN'e gider",
+    "th": { "pkg": "Paket", "file": "Dosya", "size": "Boyut", "sha": "SHA-256" },
+    "pkgs": {
+      "dmg":  { "label": "macOS masaüstü uygulaması", "req": "macOS 13+ · Apple Silicon" },
+      "cli":  { "label": "Komut satırı (CLI)", "req": "macOS · Apple Silicon" },
+      "apk":  { "label": "Android uygulaması", "req": "Android · elle kurulum" },
+      "vsix": { "label": "VS Code eklentisi", "req": "VS Code'a elle kurulur" },
+      "sums": { "label": "Sağlama toplamları", "req": "İndirmenin bütünlüğünü doğrulamak için" }
+    },
+    "verify": "<b>İndirmeyi doğrula:</b> <code>SHA256SUMS</code> dosyasını paketle aynı klasöre koy ve aşağıdaki komutu çalıştır. Tablodaki bir SHA-256 değerine tıklamak onu tam olarak kopyalar.",
+    "platforms": "<b>iOS</b> yalnızca TestFlight'ta; herkese açık davetler henüz açılmadı. <b>Android APK</b>'yı kendin kurman gerekiyor. Masaüstü sürüm Apple Silicon ve macOS 13 ya da üstünü ister — Intel Mac ve Windows derlemesi yok."
+  },
+  "start": {
+    "title": "Başlarken",
+    "sub": "Üç adım: kur, giriş yap, davet koduyla etkinleştir.",
+    "steps": [
+      { "h": "İndir ve kur", "p": "macOS paketini <a href=\"#download\">indirme tablosundan</a> al ve Uygulamalar klasörüne sürükle. Terminalde yaşıyorsan CLI sürümünü seç." },
+      { "h": "Giriş yap", "p": "GitHub, Google veya e-posta — üçü de çalışıyor." },
+      { "h": "Davet koduyla etkinleştir", "p": "Mirasim davetle çalıştığı için kullanmadan önce bir kodun girilmesi gerekiyor. <code>{code}</code> kodunu kullan (<a href=\"#invite-code\">buradan kopyala</a>), sonra kendi model hesabını bağlayıp işe koyul." }
+    ]
+  },
+  "models": {
+    "title": "Ücretsiz kullanabileceğin modeller",
+    "sub": "Davet kodu bedava; Mirasim'in kendisi elindeki model hesaplarının üzerinde çalışıyor.",
+    "p1": "Resmî ifade şöyle: \"kod hiçbir ücret gerektirmez ve kendi model hesaplarının üzerinde çalışır.\" <b>Davet koduyla Mirasim kullanmak ücretsizdir.</b> Halihazırda ödediğin Claude Code ya da Codex aboneliğini, veya bir API anahtarını bağla; o ajanların yanı sıra Mirasim'in kendi ajanı, altı bölmeli tezgâh, MCP sunucuları ve eklentiler de senin olur. Mirasim bunların üzerine bir ücret eklemiyor.",
+    "p2": "Credits satın alırsan platformun doğrudan çağırabildiği modeller alanın büyük bölümünü kapsıyor:",
+    "callout1": "<b>Sessizce model değişimi yok:</b> resmî fiyat sayfası \"seçtiğin modeli alırsın\" diyor. Yedeğe düşen turlar kayıtta işaretleniyor ve kendin doğrulayabilmen için bir parmak izi yöntemi yayımlanmış durumda.",
+    "callout2": "<b>İki istisna:</b> computer use ve simüle kullanıcılar bulut kotasını harcar; bu yüzden ücretli bir plan veya kendine ait bir API anahtarı gerekir. Geri kalan her şey ücretsiz hesapla çalışır."
+  },
+  "invite": {
+    "title": "Davet ödülleri: bir ay ücretsiz Pro",
+    "sub": "Mirasim'i gerçekten kullanan kişileri davet et; ekip senin için ücretli bir planın tam bir ayını karşılıyor.",
+    "unit": "kişi",
+    "rewards": {
+      "basic": { "plan": "Bir ay Basic", "worth": "29 dolar değerinde" },
+      "pro":   { "plan": "Bir ay Pro", "worth": "89 dolar değerinde" },
+      "max":   { "plan": "Bir ay Max", "worth": "199 dolar değerinde" }
+    },
+    "body": "Önemli kural: <b>yalnızca kaydolmak saymıyor</b>. Davet ettiğin kişilerin Mirasim'i gerçekten kullanması gerekiyor — giriş yapmak, oturum açmak, gerçek iş yapmak — ve ekip bunu denetliyor. Kaydolduktan sonra kendi davet kodun <code>Settings → Account</code> altında olur; tükendiyse resmî Discord'da yenisi veriliyor.",
+    "callout": "Bugün başlayabilirsin: hesabını bu wiki'nin kodu <b>{code}</b> ile etkinleştir (<a href=\"#invite-code\">yukarıdan kopyala</a>), sonra sana verilen kodu paylaş. Gerçekten kullanan beş kişi, bir ay ücretsiz Pro demek — o 89 doları senin yerine ekip ödüyor."
+  },
+  "pricing": {
+    "title": "Ücretli planlara kısa bakış",
+    "sub": "Credits, resmî buluttaki model çağrılarını karşılar; computer use ve simüle kullanıcılar da buradan harcar. Bitince kendi hesabına dönüp çalışmayı sürdürebilirsin.",
+    "th": { "plan": "Plan", "price": "Aylık", "credits": "Credits", "usage": "Yaklaşık", "invite": "Ya da davet et" },
+    "rows": {
+      "basic": { "usage": "≈50M token · 200–400 mesaj", "invite": "3 kişi = bir ay" },
+      "pro":   { "usage": "≈250M token · 1.000–2.000 mesaj", "invite": "5 kişi = bir ay" },
+      "max":   { "usage": "≈1.000M token · 4.000–8.000 mesaj", "invite": "10 kişi = bir ay" }
+    },
+    "callout": "Resmî karşılaştırma: aynı kullanım başka yerlerde ayda yaklaşık 40–400 dolar tutuyor (bir Claude Code ve bir Codex aboneliği). Model başına credits oranları yayımlanmış durumda. Ayrıntılar: <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>."
+  },
+  "news": {
+    "title": "Resmî notlar",
+    "sub": "Resmî \"Research notes\" blogundan en yeni <b>{count}</b> kayıt · otomatik eşitleniyor, güncelleme {updated}",
+    "readMore": "Özgün makaleyi oku",
+    "callout": "Ekibin deyişiyle her not sıfırdan yazılmış bir özet — araştırma başkalarının, yorum onların — ve her biri özgün makaleye bağlanıyor. Dahası: <a href=\"https://mirasim.ai/blog\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/blog</a>."
+  },
+  "faq": {
+    "title": "Sık sorulan sorular",
+    "sub": "En çok gelen sorular.",
+    "items": [
+      { "q": "Mirasim ücretsiz mi?", "a": "Evet — davet koduyla hiçbir ücret gerektirmiyor, çünkü kendi model hesaplarının üzerinde çalışıyor (Claude Code ya da Codex aboneliği veya bir API anahtarı). Yalnızca computer use ve simüle kullanıcılar ücretli credits ya da kendine ait bir anahtar ister." },
+      { "q": "Davet kodu olmadan kaydolabilir miyim?", "a": "Hayır, Mirasim şimdilik yalnızca davetle. Hesabını bu wiki'nin kodu <code>{code}</code> ile etkinleştir. İçeri girdikten sonra kendi kodun olur; gerekirse resmî Discord'da yenileri dağıtılıyor." },
+      { "q": "Hangi platformlar destekleniyor?", "a": "macOS masaüstü (Apple Silicon, macOS 13+), macOS için komut satırı sürümü, elle kurulan bir Android APK ve bir VS Code eklentisi. iOS TestFlight'ta; herkese açık davetler kapalı. Intel Mac ve Windows derlemesi yok." },
+      { "q": "Bir ay ücretsiz Pro'yu gerçekte nasıl alırım?", "a": "Mirasim'i gerçekten kullanan 5 geliştirici davet ederek. Yalnızca kaydolmanın saymadığı açıkça belirtiliyor — giriş yapmaları, oturum açmaları ve gerçek iş yapmaları gerekiyor; ekip ayı vermeden önce doğruluyor. Aynı düzenek 3 kişi için bir ay Basic, 10 kişi için bir ay Max veriyor." },
+      { "q": "İndirdiğim dosyanın değiştirilmediğini nasıl doğrularım?", "a": "Her dosyanın SHA-256 değeri indirme tablosunda var (kopyalamak için tıkla); ya da resmî SHA256SUMS dosyasını alıp shasum -a 256 -c SHA256SUMS --ignore-missing komutunu çalıştır. Bütün bağlantılar resmî CDN'e (cdn-assets.mirasim.ai) gider; bu wiki hiçbir paketi barındırmıyor." },
+      { "q": "Bu, Mirasim'in resmî sitesi mi?", "a": "Değil. Topluluk tarafından yürütülen bir wiki; Mirasim ile bağı yok. Sürüm numaraları, indirme bağlantıları ve notlar resmî siteden otomatik çekiliyor; ölçüt her zaman mirasim.ai. Bu sayfadaki davet kodu, wiki'yi yürüten kişiye ait." }
+    ]
+  },
+  "footer": {
+    "official": "Resmî site",
+    "download": "Resmî indirmeler",
+    "pricing": "Fiyatlandırma",
+    "guide": "Kılavuz",
+    "blog": "Blog",
+    "disclaimer": "Resmî değil · toplulukça yürütülüyor. Bu wiki'nin Mirasim ile bir bağı yoktur ve onlar tarafından onaylanmamıştır. Ürün bilgileri, sürüm numaraları, indirme bağlantıları ve notlar resmî siteden düzenli olarak otomatik çekilir; gecikebilir veya eksik kalabilir — ölçüt her zaman mirasim.ai'dir. Bütün paketler doğrudan resmî CDN tarafından sunulur; burada hiçbir şey barındırılmaz ya da değiştirilmez. Bu sayfada görünen davet kodu, wiki'yi yürüten kişiye aittir.",
+    "meta": "Veriler {updated} güncellendi · Mirasim v{version} · sayfa {built} tarihinde üretildi"
+  }
+}

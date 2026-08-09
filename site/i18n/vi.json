@@ -1,0 +1,142 @@
+{
+  "htmlLang": "vi",
+  "meta": {
+    "title": "Mirasim: mã mời, tải về và 1 tháng Pro miễn phí",
+    "description": "Mã mời Mirasim MIRA-EC9V-64BF-BC07: vào Agent IDE theo lời mời miễn phí, tải Mirasim v{version} cho macOS và Android, đồng thời nhận một tháng Pro miễn phí trị giá 89 đô.",
+    "keywords": "Mirasim, mã mời Mirasim, tải Mirasim, Mirasim wiki, Mirasim miễn phí, Mirasim Pro, Agent IDE, One Agent IDE, agent lập trình AI, người dùng mô phỏng, Claude Code, Codex, IDE cho macOS",
+    "ogSub": "Mã mời · Tải về · Một tháng Pro miễn phí",
+    "offerFree": "Mã mời không mất phí, và Mirasim chạy trên các gói đăng ký mô hình hoặc API key mà bạn đã trả tiền."
+  },
+  "ui": {
+    "skip": "Chuyển đến nội dung",
+    "officialSite": "Trang chính thức:",
+    "langLabel": "Chọn ngôn ngữ",
+    "tocTitle": "Mục lục",
+    "tocInvite": "Lấy mã mời",
+    "copy": "Sao chép mã mời",
+    "copied": "Đã sao chép ✓",
+    "copiedShort": "Đã sao chép ✓",
+    "download": "Tải về"
+  },
+  "offer": {
+    "title": "Nhận một tháng Pro miễn phí — trị giá 89 đô",
+    "cond": "Đăng ký bằng mã mời, rồi mời 5 người thực sự dùng Mirasim.",
+    "link": "Xem điều kiện →"
+  },
+  "hero": {
+    "eyebrow": "Mirasim Wiki · from build to eval",
+    "h1": "Mirasim: một <em>Agent IDE</em>, từ xây dựng đến đánh giá",
+    "lede": "Mirasim là một One Agent IDE: chạy agent lập trình của bạn từ bất cứ đâu, rồi để người dùng mô phỏng kiểm thử thứ bạn vừa dựng. Hiện tại chỉ đăng ký được theo lời mời, và <b>mã mời không mất phí</b>: Mirasim chạy trên tài khoản mô hình bạn đã trả tiền.",
+    "ticketLabel": "Mã mời",
+    "ticketTip": "Dán vào trang kích hoạt sau khi đăng ký",
+    "ticketFoot": "Đây là <b>mã mời của wiki này</b>. Mirasim chỉ mở theo lời mời — không có mã thì không vào được. Dùng nó để kích hoạt tài khoản miễn phí; sau đó bạn sẽ có mã riêng, và mời người khác còn <a href=\"#invite\">đổi được một tháng gói trả phí</a>.",
+    "ctaDownload": "Tải cho macOS v{version}",
+    "ctaOther": "Nền tảng khác và mã kiểm tra",
+    "ctaNote": "Apple Silicon · macOS 13+"
+  },
+  "toc": [
+    "Mirasim là gì",
+    "Tải về",
+    "Bắt đầu",
+    "Các mô hình dùng được",
+    "Thưởng khi mời",
+    "Gói trả phí",
+    "Ghi chú chính thức",
+    "Câu hỏi thường gặp"
+  ],
+  "intro": {
+    "title": "Mirasim là gì",
+    "sub": "One Agent IDE — agent viết code và người dùng mô phỏng kiểm thử nó, trong cùng một bàn làm việc.",
+    "body": "Thông thường bạn viết code trong một công cụ, rồi tự mở trang lên kiểm tra. Mirasim nối hai đầu đó lại: các agent lập trình làm việc song song trong bàn làm việc, và khi bản dựng xong, <b>người dùng mô phỏng</b> thực sự sử dụng sản phẩm của bạn trên Chrome thật hoặc emulator di động thật rồi mang phản hồi trực tiếp trở về. Đây là những khả năng cốt lõi mà trang chính thức nêu ra:",
+    "cards": [
+      { "k": "WORKBENCH", "h": "Bàn làm việc nhiều dự án", "p": "Nhiều dự án mở cạnh nhau, mỗi dự án có phiên, agent và cấu hình mô hình riêng. Không thứ gì lẫn sang nhau." },
+      { "k": "SESSIONS", "h": "Phiên song song và trình sửa tích hợp", "p": "Chạy nhiều phiên agent cùng lúc, kèm trình sửa kiểu VS&nbsp;Code để chỉnh nhanh. Trên điện thoại vẫn làm tiếp được." },
+      { "k": "TUI ⇄ GUI", "h": "Terminal và giao diện đồ họa cách nhau một phím", "p": "Cùng một luồng làm việc theo hai cách: bàn phím trong TUI, trỏ và chọn trong GUI." },
+      { "k": "BROWSER", "h": "Tự động hóa đọc cấu trúc, không phải ảnh chụp", "p": "Agent đọc trang dưới dạng cấu trúc văn bản: khoảng 184&nbsp;B so với 60&nbsp;KB của một ảnh chụp, tức chênh chừng 330 lần lượng dữ liệu — trong khi vẫn điều khiển Chrome thật với hồ sơ người dùng thật." },
+      { "k": "MOBILE / MAC", "h": "Ứng dụng Mac và emulator di động", "p": "Ứng dụng Mac, iOS Simulator và Android emulator đều phản hồi theo cùng một cách, nên sản phẩm di động cũng được người dùng mô phỏng kiểm thử." },
+      { "k": "ONE TOOL", "h": "Một cửa vào công cụ, tiết kiệm ngữ cảnh", "p": "Con số chính thức: khoảng 1k tokens chi phí công cụ mỗi lượt, so với chừng 53k khi gắn ba mươi schema công cụ. Ngữ cảnh để dành cho công việc." }
+    ],
+    "callout": "Mirasim đang ở giai đoạn <b>Alpha</b>; trang chính thức nói thẳng: \"sẽ có chỗ chưa mượt\". Sau khi cài, ứng dụng tự cập nhật."
+  },
+  "download": {
+    "title": "Tải Mirasim",
+    "sub": "Phiên bản mới nhất <b>v{version}</b> · lấy tự động từ trang chính thức, cập nhật {updated} · mọi liên kết trỏ thẳng tới CDN chính thức",
+    "th": { "pkg": "Gói", "file": "Tệp", "size": "Kích thước", "sha": "SHA-256" },
+    "pkgs": {
+      "dmg":  { "label": "Ứng dụng macOS", "req": "macOS 13+ · Apple Silicon" },
+      "cli":  { "label": "Dòng lệnh (CLI)", "req": "macOS · Apple Silicon" },
+      "apk":  { "label": "Ứng dụng Android", "req": "Android · tự cài thủ công" },
+      "vsix": { "label": "Tiện ích VS Code", "req": "Cài thủ công trong VS Code" },
+      "sums": { "label": "Mã kiểm tra", "req": "Để kiểm tra tính toàn vẹn" }
+    },
+    "verify": "<b>Kiểm tra tệp tải về:</b> đặt <code>SHA256SUMS</code> cùng thư mục với gói cài rồi chạy lệnh bên dưới. Bấm vào giá trị SHA-256 trong bảng sẽ sao chép đầy đủ.",
+    "platforms": "<b>iOS</b> chỉ có trên TestFlight; lời mời công khai chưa mở. <b>APK Android</b> phải tự cài. Bản desktop cần Apple Silicon và macOS 13 trở lên — không có bản cho Intel Mac hay Windows."
+  },
+  "start": {
+    "title": "Bắt đầu",
+    "sub": "Ba bước: cài đặt, đăng nhập, kích hoạt bằng mã mời.",
+    "steps": [
+      { "h": "Tải và cài đặt", "p": "Lấy gói macOS từ <a href=\"#download\">bảng tải về</a> rồi kéo vào thư mục Applications. Nếu bạn quen terminal thì chọn bản CLI." },
+      { "h": "Đăng nhập", "p": "GitHub, Google hoặc email — cả ba đều được." },
+      { "h": "Kích hoạt bằng mã mời", "p": "Mirasim mở theo lời mời nên phải nhập mã trước khi dùng. Dùng <code>{code}</code> (<a href=\"#invite-code\">sao chép tại đây</a>), rồi kết nối tài khoản mô hình của bạn và bắt tay vào việc." }
+    ]
+  },
+  "models": {
+    "title": "Những mô hình dùng miễn phí",
+    "sub": "Mã mời không mất phí, và bản thân Mirasim chạy trên tài khoản mô hình bạn đã có.",
+    "p1": "Nguyên văn phía chính thức: \"mã không mất phí và chạy trên tài khoản mô hình của chính bạn\". <b>Dùng Mirasim với mã mời là miễn phí</b>. Cắm gói Claude Code hay Codex bạn đã trả tiền, hoặc một API key, là bạn có những agent đó cộng thêm agent riêng của Mirasim, bàn làm việc sáu khung, các máy chủ MCP và plugin — Mirasim không thu thêm khoản nào.",
+    "p2": "Nếu mua credits, danh sách mô hình mà nền tảng gọi trực tiếp phủ gần hết các nhà lớn:",
+    "callout1": "<b>Không âm thầm đổi mô hình:</b> trang giá chính thức ghi rõ \"bạn nhận đúng mô hình bạn đã chọn\". Lượt nào phải dùng phương án dự phòng đều được ghi dấu trong bản lưu, và họ công bố cả cách lấy dấu vân tay để bạn tự kiểm.",
+    "callout2": "<b>Hai ngoại lệ:</b> computer use và người dùng mô phỏng tiêu hạn mức trên cloud, nên cần gói trả phí hoặc API key của riêng bạn. Mọi thứ còn lại chạy được với tài khoản miễn phí."
+  },
+  "invite": {
+    "title": "Thưởng khi mời: một tháng Pro miễn phí",
+    "sub": "Mời những người thực sự dùng Mirasim, và đội ngũ sẽ trả thay bạn trọn một tháng gói trả phí.",
+    "unit": "người",
+    "rewards": {
+      "basic": { "plan": "Một tháng Basic", "worth": "trị giá 29 đô" },
+      "pro":   { "plan": "Một tháng Pro", "worth": "trị giá 89 đô" },
+      "max":   { "plan": "Một tháng Max", "worth": "trị giá 199 đô" }
+    },
+    "body": "Quy tắc quan trọng nhất: <b>chỉ đăng ký thì không tính</b>. Người bạn mời phải thực sự dùng Mirasim — đăng nhập, mở phiên, làm việc thật — và đội ngũ sẽ kiểm tra. Sau khi đăng ký, mã mời của riêng bạn nằm ở <code>Settings → Account</code>; nếu hết mã thì Discord chính thức có phát thêm.",
+    "callout": "Bắt đầu được ngay hôm nay: kích hoạt tài khoản bằng mã của wiki này <b>{code}</b> (<a href=\"#invite-code\">sao chép ở đầu trang</a>), rồi chia sẻ mã bạn nhận được. Năm người dùng thật là một tháng Pro miễn phí — 89 đô đó do đội ngũ trả, không phải bạn."
+  },
+  "pricing": {
+    "title": "Các gói trả phí trong một cái nhìn",
+    "sub": "Credits dùng để gọi mô hình trên cloud chính thức, gồm cả computer use và người dùng mô phỏng. Hết credits thì chuyển về tài khoản của bạn và làm tiếp.",
+    "th": { "plan": "Gói", "price": "Mỗi tháng", "credits": "Credits", "usage": "Khoảng", "invite": "Hoặc mời" },
+    "rows": {
+      "basic": { "usage": "≈50 triệu tokens · 200–400 tin nhắn", "invite": "3 người = một tháng" },
+      "pro":   { "usage": "≈250 triệu tokens · 1.000–2.000 tin nhắn", "invite": "5 người = một tháng" },
+      "max":   { "usage": "≈1.000 triệu tokens · 4.000–8.000 tin nhắn", "invite": "10 người = một tháng" }
+    },
+    "callout": "So sánh của phía chính thức: cùng mức dùng đó ở nơi khác tốn khoảng 40–400 đô mỗi tháng (một gói Claude Code và một gói Codex). Mức credits theo từng mô hình đều được công bố. Chi tiết tại <a href=\"https://mirasim.ai/pricing\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/pricing</a>."
+  },
+  "news": {
+    "title": "Ghi chú chính thức",
+    "sub": "<b>{count}</b> mục mới nhất từ blog \"Research notes\" chính thức · đồng bộ tự động, cập nhật {updated}",
+    "readMore": "Đọc bài báo gốc",
+    "callout": "Như đội ngũ nói, mỗi ghi chú là bản tóm tắt viết lại từ đầu — nghiên cứu là của người khác, phần bình luận là của họ — và luôn dẫn tới bài báo gốc. Xem thêm tại <a href=\"https://mirasim.ai/blog\" target=\"_blank\" rel=\"noopener nofollow\">mirasim.ai/blog</a>."
+  },
+  "faq": {
+    "title": "Câu hỏi thường gặp",
+    "sub": "Những điều được hỏi nhiều nhất.",
+    "items": [
+      { "q": "Mirasim có miễn phí không?", "a": "Có — với mã mời thì không mất phí, vì nó chạy trên tài khoản mô hình của chính bạn (gói Claude Code hoặc Codex, hoặc một API key). Chỉ computer use và người dùng mô phỏng mới cần credits trả phí hoặc key riêng của bạn." },
+      { "q": "Không có mã mời thì đăng ký được không?", "a": "Không, hiện Mirasim chỉ mở theo lời mời. Hãy dùng mã của wiki này <code>{code}</code> để kích hoạt. Vào rồi bạn sẽ có mã riêng, và Discord chính thức phát thêm nếu bạn cần." },
+      { "q": "Hỗ trợ những nền tảng nào?", "a": "Desktop macOS (Apple Silicon, macOS 13+), bản dòng lệnh cho macOS, APK Android cài thủ công và tiện ích VS Code. iOS đang ở TestFlight, lời mời công khai chưa mở. Không có bản cho Intel Mac hay Windows." },
+      { "q": "Làm sao để thực sự nhận một tháng Pro miễn phí?", "a": "Mời 5 người thực sự dùng Mirasim. Phía chính thức nói rõ chỉ đăng ký thì không tính — họ phải đăng nhập, mở phiên và làm việc thật, và đội ngũ xác minh trước khi cấp tháng đó. Cùng cơ chế này, 3 người được một tháng Basic và 10 người được một tháng Max." },
+      { "q": "Làm sao biết tệp tải về không bị sửa?", "a": "SHA-256 của từng tệp có trong bảng tải về (bấm để sao chép), hoặc tải SHA256SUMS chính thức rồi chạy shasum -a 256 -c SHA256SUMS --ignore-missing. Mọi liên kết đều trỏ tới CDN chính thức (cdn-assets.mirasim.ai); wiki này không lưu bất kỳ gói cài nào." },
+      { "q": "Đây có phải trang chính thức của Mirasim không?", "a": "Không. Đây là wiki do cộng đồng duy trì, không liên kết với Mirasim. Số phiên bản, liên kết tải về và ghi chú được lấy tự động từ trang chính thức; mirasim.ai luôn là căn cứ. Mã mời trên trang này thuộc về người duy trì wiki." }
+    ]
+  },
+  "footer": {
+    "official": "Trang chính thức",
+    "download": "Trang tải chính thức",
+    "pricing": "Giá",
+    "guide": "Hướng dẫn",
+    "blog": "Blog",
+    "disclaimer": "Không chính thức · do cộng đồng duy trì. Wiki này không liên kết với Mirasim và không được họ bảo chứng. Thông tin sản phẩm, số phiên bản, liên kết tải về và ghi chú được lấy tự động từ trang chính thức theo định kỳ nên có thể chậm hoặc thiếu — mirasim.ai luôn là căn cứ. Mọi gói cài do CDN chính thức phân phối trực tiếp; ở đây không lưu và không sửa tệp nào. Mã mời hiển thị trên trang này thuộc về người duy trì wiki.",
+    "meta": "Dữ liệu cập nhật {updated} · Mirasim v{version} · trang dựng lúc {built}"
+  }
+}

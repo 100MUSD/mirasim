@@ -52,12 +52,13 @@ async function fetchDownloads() {
     } catch { /* 校验文件拉取失败不阻塞主流程 */ }
   }
 
+  // 包类型识别；显示用的名称与系统要求由 site/i18n/*.json 按 id 提供
   const CATALOG = [
-    { test: /-arm64\.dmg$/,        id: "dmg",  label: "macOS 桌面应用", format: "DMG",     req: "macOS 13+ · Apple Silicon" },
-    { test: /darwin-arm64\.tar\.xz$/, id: "cli", label: "命令行版 (CLI)", format: "tar.xz", req: "macOS · Apple Silicon" },
-    { test: /\.apk$/,              id: "apk",  label: "Android 应用",   format: "APK",     req: "Android · 需手动侧载安装" },
-    { test: /\.vsix$/,             id: "vsix", label: "VS Code 扩展",   format: "VSIX",    req: "VS Code 手动安装扩展" },
-    { test: /SHA256SUMS$/,         id: "sums", label: "校验文件",       format: "SHA256",  req: "用于核对下载完整性" },
+    { test: /-arm64\.dmg$/,           id: "dmg"  },
+    { test: /darwin-arm64\.tar\.xz$/, id: "cli"  },
+    { test: /\.apk$/,                 id: "apk"  },
+    { test: /\.vsix$/,                id: "vsix" },
+    { test: /SHA256SUMS$/,            id: "sums" },
   ];
 
   const downloads = [];
@@ -71,7 +72,7 @@ async function fetchDownloads() {
       const len = head.headers.get("content-length");
       if (head.ok && len) size = Number(len);
     } catch { /* 大小获取失败则留空 */ }
-    downloads.push({ id: spec.id, label: spec.label, format: spec.format, req: spec.req, file, url, size, sha256: sums[file] ?? null });
+    downloads.push({ id: spec.id, file, url, size, sha256: sums[file] ?? null });
   }
   return { version, downloads };
 }

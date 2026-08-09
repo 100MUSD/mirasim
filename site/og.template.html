@@ -1,0 +1,67 @@
+<!doctype html>
+<!-- OG 卡片模板：由 scripts/make-assets.mjs 用 headless Chrome 截图为 1200×630 PNG。
+     占位符 {{OG_SUB}} / {{INVITE_CODE}} / {{VERSION}} 在截图前注入。 -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html, body { width: 1200px; height: 630px; }
+  body {
+    background: #0C1512;
+    color: #E6EDE8;
+    font-family: "PingFang SC", "Hiragino Sans GB", "Noto Sans CJK SC", system-ui, -apple-system, "Segoe UI", sans-serif;
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    padding: 0 84px;
+    position: relative;
+    overflow: hidden;
+  }
+  /* 背景：镜面地平线 */
+  body::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background:
+      radial-gradient(900px 420px at 78% 42%, rgba(17,153,127,.30), transparent 70%),
+      linear-gradient(180deg, transparent 0 49.6%, rgba(76,197,172,.42) 49.6% 50.4%, transparent 50.4%);
+  }
+  .mark { position: relative; flex: none; width: 208px; height: 208px; }
+  .mark svg { width: 100%; height: 100%; display: block; border-radius: 46px; }
+  .copy { position: relative; min-width: 0; }
+  .eyebrow {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 21px; letter-spacing: .3em; color: #4CC5AC; margin-bottom: 20px;
+  }
+  h1 {
+    font-family: Palatino, "Palatino Linotype", "Songti SC", "Noto Serif CJK SC", serif;
+    font-size: 82px; line-height: 1.02; font-weight: 700; letter-spacing: -.015em;
+  }
+  h1 em { font-style: italic; color: #4CC5AC; }
+  .sub { font-size: 29px; line-height: 1.4; color: #A8BAB0; margin-top: 22px; max-width: 21ch; }
+  .code-row { display: flex; align-items: center; gap: 16px; margin-top: 34px; }
+  .code {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 31px; font-weight: 700; letter-spacing: .07em; color: #F0B678;
+    border: 2px dashed #4A3820; border-radius: 8px; padding: 11px 22px; background: #221A11;
+  }
+  .ver {
+    font-family: ui-monospace, "SF Mono", Menlo, monospace;
+    font-size: 21px; color: #7E9187;
+  }
+</style>
+</head>
+<body>
+  <div class="mark">{{ICON_SVG}}</div>
+  <div class="copy">
+    <div class="eyebrow">MIRASIM.WIKI</div>
+    <h1>Mirasim <em>Wiki</em></h1>
+    <div class="sub">{{OG_SUB}}</div>
+    <div class="code-row">
+      <span class="code">{{INVITE_CODE}}</span>
+      <span class="ver">v{{VERSION}}</span>
+    </div>
+  </div>
+</body>
+</html>
