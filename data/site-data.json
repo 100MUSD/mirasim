@@ -23,6 +23,13 @@
       "sha256": "7cfdfbcc65067e34b289f420126712f46bc7e498a7f6c81302515e7d3e3cd397"
     },
     {
+      "id": "vsix",
+      "file": "mirasim-0.0.149.vsix",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.149/mirasim-0.0.149.vsix",
+      "size": null,
+      "sha256": null
+    },
+    {
       "id": "sums",
       "file": "SHA256SUMS",
       "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.149/SHA256SUMS",
@@ -51,5 +58,5 @@
     }
   ],
   "source": "https://mirasim.ai",
-  "fetchedAt": "2026-08-09T10:52:08.195Z"
+  "fetchedAt": "2026-08-09T11:44:55.518Z"
 }
