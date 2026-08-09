@@ -1,53 +1,38 @@
 {
-  "version": "0.0.148",
+  "version": "0.0.149",
   "downloads": [
     {
       "id": "dmg",
-      "label": "macOS 桌面应用",
-      "format": "DMG",
-      "req": "macOS 13+ · Apple Silicon",
-      "file": "Mirasim-0.0.148-arm64.dmg",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/Mirasim-0.0.148-arm64.dmg",
-      "size": 115096941,
-      "sha256": "7462656d0ff2886c6ad7383f0d0b7f13a7baaa297df259764b4dbd049f8afee9"
+      "file": "Mirasim-0.0.149-arm64.dmg",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.149/Mirasim-0.0.149-arm64.dmg",
+      "size": 115085109,
+      "sha256": "b530985426316ea7c86f12da05014c708d495fe4991609ad68dfec6aa1ed65e0"
     },
     {
       "id": "cli",
-      "label": "命令行版 (CLI)",
-      "format": "tar.xz",
-      "req": "macOS · Apple Silicon",
       "file": "mirasim-darwin-arm64.tar.xz",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/mirasim-darwin-arm64.tar.xz",
-      "size": 55998964,
-      "sha256": "f075bf5a1f221e6ee8abbc112eb06eca3055026d51b4ba858d9cb9a5149b71c4"
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.149/mirasim-darwin-arm64.tar.xz",
+      "size": 55981496,
+      "sha256": "c523b9862e2cf309f058b36e06b96123fad44ffb1d4254bf4cf0ff14bcb09821"
     },
     {
       "id": "apk",
-      "label": "Android 应用",
-      "format": "APK",
-      "req": "Android · 需手动侧载安装",
-      "file": "mirasim-0.0.148.apk",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/mirasim-0.0.148.apk",
+      "file": "mirasim-0.0.149.apk",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.149/mirasim-0.0.149.apk",
       "size": 35995579,
-      "sha256": "6166031d8d69c1dafabe3b494992e34970b84d6d415f53f8b60726a6e5747377"
+      "sha256": "7cfdfbcc65067e34b289f420126712f46bc7e498a7f6c81302515e7d3e3cd397"
     },
     {
       "id": "vsix",
-      "label": "VS Code 扩展",
-      "format": "VSIX",
-      "req": "VS Code 手动安装扩展",
-      "file": "mirasim-0.0.148.vsix",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/mirasim-0.0.148.vsix",
+      "file": "mirasim-0.0.149.vsix",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.149/mirasim-0.0.149.vsix",
       "size": null,
       "sha256": null
     },
     {
       "id": "sums",
-      "label": "校验文件",
-      "format": "SHA256",
-      "req": "用于核对下载完整性",
       "file": "SHA256SUMS",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/SHA256SUMS",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.149/SHA256SUMS",
       "size": 986,
       "sha256": null
     }
@@ -73,5 +58,5 @@
     }
   ],
   "source": "https://mirasim.ai",
-  "fetchedAt": "2026-08-09T06:39:41.923Z"
+  "fetchedAt": "2026-08-09T08:32:36.901Z"
 }
