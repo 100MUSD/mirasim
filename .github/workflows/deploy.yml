@@ -33,11 +33,32 @@ jobs:
       - name: Build 14 locales
         run: node scripts/build.mjs
 
-      # OG 卡片与图标需要 headless Chrome 渲染；runner 自带 Chrome
+      # OG 卡片与图标需要 headless Chrome 渲染；runner 自带 Chrome，
+      # 但默认字体不覆盖中日韩与泰文，缺字体会渲染成豆腐块
+      - name: Install CJK and Thai fonts
+        run: |
+          sudo apt-get update -qq
+          sudo apt-get install -y -qq --no-install-recommends \
+            fonts-noto-cjk fonts-noto-core fonts-noto-unhinted
+          fc-cache -f
+
       - name: Generate icons and OG cards
         run: node scripts/make-assets.mjs
         env:
           CHROME_PATH: /usr/bin/google-chrome
+
+      # 抽查非拉丁语系 OG 卡片，便于确认字体渲染正常
+      - name: Upload OG cards for inspection
+        uses: actions/upload-artifact@v4
+        with:
+          name: og-sample
+          path: |
+            dist/assets/og-zh.png
+            dist/assets/og-ja.png
+            dist/assets/og-th.png
+            dist/assets/og-ru.png
+          retention-days: 3
+          if-no-files-found: error
 
       # SEO / hreflang / JSON-LD / 资源引用自检，不通过则中止部署
       - name: Verify build
