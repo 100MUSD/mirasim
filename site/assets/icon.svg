@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Mirasim Wiki">
+  <title>Mirasim Wiki</title>
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#11997F"/>
+      <stop offset="1" stop-color="#065445"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="116" fill="url(#bg)"/>
+  <!-- 上半：实体 M —— 你构建的东西 -->
+  <path d="M130 290 L130 150 L256 240 L382 150 L382 290"
+        fill="none" stroke="#F6F7F5" stroke-width="44" stroke-linejoin="miter"/>
+  <!-- 镜面：mira = 镜 -->
+  <path d="M118 318 H394" stroke="#F6F7F5" stroke-width="9" stroke-linecap="round"
+        stroke-dasharray="2 15" opacity="0.6"/>
+  <!-- 下半：镜像 M —— 模拟用户里的同一个东西 -->
+  <g transform="translate(0 636) scale(1 -1)" opacity="0.34">
+    <path d="M130 290 L130 150 L256 240 L382 150 L382 290"
+          fill="none" stroke="#F6F7F5" stroke-width="44" stroke-linejoin="miter"/>
+  </g>
+</svg>

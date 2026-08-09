@@ -1,6 +1,8 @@
 #!/usr/bin/env node
-// 生成站点图标与各语言 OG 卡片：headless Chrome 把 SVG / HTML 截成 PNG，再手工封装 favicon.ico。
-// 输出到 dist/assets/。产物随构建提交前请先跑 build.mjs（本脚本只依赖 site/ 与 data/）。
+// 生成站点图标与各语言 OG 卡片，输出到 site/assets/ 并随仓库提交。
+// 产物是静态的（不含版本号等易变信息），因此只需在图标源或 OG 文案变更后手动重跑：
+//   node scripts/make-assets.mjs
+// 这样 build 阶段不依赖 Chrome，Vercel 等无 Chrome 的构建环境也能部署。
 import { readFile, writeFile, mkdir, rm } from "node:fs/promises";
 import { execFile } from "node:child_process";
 import { promisify } from "node:util";
@@ -11,7 +13,7 @@ import { INVITE_CODE, LANGS } from "./config.mjs";
 
 const exec = promisify(execFile);
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
-const OUT = path.join(ROOT, "dist", "assets");
+const OUT = path.join(ROOT, "site", "assets");
 
 const CHROME_CANDIDATES = [
   "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome",
@@ -111,11 +113,10 @@ const icoParts = [];
 for (const size of [16, 32, 48]) {
   icoParts.push({ size, buf: await readFile(path.join(OUT, `favicon-${size}.png`)) });
 }
-await writeFile(path.join(ROOT, "dist", "favicon.ico"), pngToIco(icoParts));
+await writeFile(path.join(OUT, "favicon.ico"), pngToIco(icoParts));
 console.log("icon favicon.ico");
 
 // ---- 各语言 OG 卡片 ----
-const data = JSON.parse(await readFile(path.join(ROOT, "data", "site-data.json"), "utf8"));
 const ogTpl = await readFile(path.join(ROOT, "site", "og.template.html"), "utf8");
 
 for (const L of LANGS) {
@@ -126,7 +127,6 @@ for (const L of LANGS) {
     // 分隔符前用不换行空格，断行时「·」留在行末而不会跑到下一行开头
     .replaceAll("{{OG_SUB}}", t.meta.ogSub.replace(/ · /g, " · "))
     .replaceAll("{{INVITE_CODE}}", INVITE_CODE)
-    .replaceAll("{{VERSION}}", data.version)
     .replace('<html lang="en">', `<html lang="${t.htmlLang}">`);
   const htmlPath = path.join(TMP, `og-${lang}.html`);
   await writeFile(htmlPath, html);

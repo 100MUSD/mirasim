@@ -1,13 +1,14 @@
 #!/usr/bin/env node
 // 由 data/site-data.json + site/i18n/*.json + site/template.html 生成多语言静态站到 dist/。
 // 产物：14 个语言页面、sitemap.xml、robots.txt、site.webmanifest、CNAME。
-import { readFile, writeFile, mkdir } from "node:fs/promises";
+import { readFile, writeFile, mkdir, cp, access } from "node:fs/promises";
 import { fileURLToPath } from "node:url";
 import path from "node:path";
 import { SITE, SITE_NAME, INVITE_CODE, LANGS, MODELS, PLANS } from "./config.mjs";
 
 const ROOT = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 const DIST = path.join(ROOT, "dist");
+const ASSET_SRC = path.join(ROOT, "site", "assets");
 
 const esc = (s) => String(s ?? "")
   .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
@@ -297,6 +298,18 @@ ${n.summary ? `<p class="n-sum" lang="en">${esc(n.summary)}</p>` : ""}
 
 // ---------- 输出 ----------
 await mkdir(DIST, { recursive: true });
+
+// 图标与 OG 卡片是入库的静态产物（由 scripts/make-assets.mjs 生成），
+// 构建阶段只做复制，因此无需 Chrome —— Vercel 等构建环境同样能跑。
+try {
+  await access(ASSET_SRC);
+} catch {
+  throw new Error("缺少 site/assets/，请先运行 node scripts/make-assets.mjs（需要 Chrome）");
+}
+await cp(ASSET_SRC, path.join(DIST, "assets"), { recursive: true });
+// favicon.ico 放站点根，浏览器会默认探测 /favicon.ico
+await cp(path.join(ASSET_SRC, "favicon.ico"), path.join(DIST, "favicon.ico"));
+
 // ONLY_LANGS=en,zh 可只构建部分语言，便于开发时快速迭代
 const only = process.env.ONLY_LANGS?.split(",").map((s) => s.trim()).filter(Boolean);
 const targets = only?.length ? LANGS.filter((L) => only.includes(L.id)) : LANGS;

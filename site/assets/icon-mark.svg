@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512" role="img" aria-label="Mirasim Wiki">
+  <title>Mirasim Wiki</title>
+  <defs>
+    <linearGradient id="bgm" x1="0" y1="0" x2="0.35" y2="1">
+      <stop offset="0" stop-color="#11997F"/>
+      <stop offset="1" stop-color="#065445"/>
+    </linearGradient>
+  </defs>
+  <rect width="512" height="512" rx="104" fill="url(#bgm)"/>
+  <!-- 小尺寸专用：单个大 M，去掉倒影以保证 16px 下可辨识 -->
+  <path d="M108 372 L108 140 L256 285 L404 140 L404 372"
+        fill="none" stroke="#F6F7F5" stroke-width="64" stroke-linejoin="miter"/>
+</svg>
