@@ -1,0 +1,77 @@
+{
+  "version": "0.0.148",
+  "downloads": [
+    {
+      "id": "dmg",
+      "label": "macOS 桌面应用",
+      "format": "DMG",
+      "req": "macOS 13+ · Apple Silicon",
+      "file": "Mirasim-0.0.148-arm64.dmg",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/Mirasim-0.0.148-arm64.dmg",
+      "size": 115096941,
+      "sha256": "7462656d0ff2886c6ad7383f0d0b7f13a7baaa297df259764b4dbd049f8afee9"
+    },
+    {
+      "id": "cli",
+      "label": "命令行版 (CLI)",
+      "format": "tar.xz",
+      "req": "macOS · Apple Silicon",
+      "file": "mirasim-darwin-arm64.tar.xz",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/mirasim-darwin-arm64.tar.xz",
+      "size": 55998964,
+      "sha256": "f075bf5a1f221e6ee8abbc112eb06eca3055026d51b4ba858d9cb9a5149b71c4"
+    },
+    {
+      "id": "apk",
+      "label": "Android 应用",
+      "format": "APK",
+      "req": "Android · 需手动侧载安装",
+      "file": "mirasim-0.0.148.apk",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/mirasim-0.0.148.apk",
+      "size": 35995579,
+      "sha256": "6166031d8d69c1dafabe3b494992e34970b84d6d415f53f8b60726a6e5747377"
+    },
+    {
+      "id": "vsix",
+      "label": "VS Code 扩展",
+      "format": "VSIX",
+      "req": "VS Code 手动安装扩展",
+      "file": "mirasim-0.0.148.vsix",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/mirasim-0.0.148.vsix",
+      "size": null,
+      "sha256": null
+    },
+    {
+      "id": "sums",
+      "label": "校验文件",
+      "format": "SHA256",
+      "req": "用于核对下载完整性",
+      "file": "SHA256SUMS",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.148/SHA256SUMS",
+      "size": 986,
+      "sha256": null
+    }
+  ],
+  "news": [
+    {
+      "kind": "Reader's note",
+      "tag": "User simulation",
+      "title": "Generative Agents: Interactive Simulacra of Human Behavior",
+      "by": "Park et al. · Stanford University and Google Research · arXiv:2304.03442 (2023)",
+      "summary": "Twenty-five language-model characters live in a small sandbox town with memory, reflection and planning wired together. The interesting result is that plausible social behaviour emerges from fairly simple machinery: remember what happened, reflect on it, plan accordingly.",
+      "why": "It is the clearest published argument that a simulated person is worth taking seriously as an evaluation instrument, and it is honest about the failure modes: memory retrieval that pulls the wrong thing, and behaviour that drifts toward the polite and agreeable. Both are exactly the failures we watch for in our own personas.",
+      "url": "https://arxiv.org/abs/2304.03442"
+    },
+    {
+      "kind": "Reader's note",
+      "tag": "Self-improving agents",
+      "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
+      "by": "Wang et al. · NVIDIA, Caltech, UT Austin, Stanford and Arizona State University · arXiv:2305.16291 (2023)",
+      "summary": "An agent plays Minecraft with no human in the loop and no fine-tuning. It sets its own next goal, writes a program to reach it, checks the result, and keeps the programs that worked in a growing skill library it can call later. The library is the mechanism that matters: capability accumulates as reusable code rather than as a longer prompt.",
+      "why": "It is the same shape as the loop we care about: attempt, verify, keep what worked, reuse it next round. The paper is candid that progress depends almost entirely on the quality of the feedback, which is the reason evaluation comes before autonomy.",
+      "url": "https://arxiv.org/abs/2305.16291"
+    }
+  ],
+  "source": "https://mirasim.ai",
+  "fetchedAt": "2026-08-09T06:39:41.923Z"
+}

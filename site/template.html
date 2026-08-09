@@ -1,0 +1,542 @@
+<title>Mirasim 非官方 Wiki — 介绍 · 下载 · 邀请码</title>
+<meta name="description" content="Mirasim（One Agent IDE）非官方中文 Wiki：产品介绍、最新安装包下载、免费使用各大模型的方式与邀请升级高级订阅的规则。">
+<style>
+  :root {
+    --paper: #F6F7F5;
+    --card: #FFFFFF;
+    --ink: #182622;
+    --ink-soft: #46564F;
+    --line: #D8DED9;
+    --teal: #0B7A66;
+    --teal-ink: #085A4C;
+    --amber: #B25E12;
+    --amber-deep: #8F4A0C;
+    --amber-wash: #F8ECDB;
+    --amber-line: #E3C9A4;
+    --code-bg: #EBEFEC;
+    --shadow: 0 1px 2px rgba(24, 38, 34, .06), 0 8px 24px rgba(24, 38, 34, .05);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      --paper: #101815;
+      --card: #17221D;
+      --ink: #E6EDE8;
+      --ink-soft: #9FB0A7;
+      --line: #2A3630;
+      --teal: #4CC5AC;
+      --teal-ink: #7BD6C2;
+      --amber: #E8A254;
+      --amber-deep: #F0B678;
+      --amber-wash: #2A2015;
+      --amber-line: #4A3820;
+      --code-bg: #1D2924;
+      --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+    }
+  }
+  :root[data-theme="dark"] {
+    --paper: #101815;
+    --card: #17221D;
+    --ink: #E6EDE8;
+    --ink-soft: #9FB0A7;
+    --line: #2A3630;
+    --teal: #4CC5AC;
+    --teal-ink: #7BD6C2;
+    --amber: #E8A254;
+    --amber-deep: #F0B678;
+    --amber-wash: #2A2015;
+    --amber-line: #4A3820;
+    --code-bg: #1D2924;
+    --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
+  }
+
+  * { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 76px; }
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    * { transition: none !important; }
+  }
+  body {
+    margin: 0;
+    background: var(--paper);
+    color: var(--ink);
+    font-family: "PingFang SC", "Hiragino Sans GB", "Source Han Sans SC", "Noto Sans CJK SC", "Microsoft YaHei", system-ui, sans-serif;
+    font-size: 16px;
+    line-height: 1.78;
+  }
+  .serif { font-family: Palatino, "Palatino Linotype", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif; }
+  .mono, code, .code {
+    font-family: ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+    font-variant-numeric: tabular-nums;
+  }
+  a { color: var(--teal); text-decoration: none; }
+  a:hover { text-decoration: underline; text-underline-offset: 3px; }
+  a:focus-visible, button:focus-visible { outline: 2px solid var(--teal); outline-offset: 2px; border-radius: 2px; }
+  ::selection { background: var(--teal); color: var(--paper); }
+
+  /* ---------- 顶栏 ---------- */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: var(--paper);
+    border-bottom: 1px solid var(--line);
+  }
+  .topbar-in {
+    max-width: 1080px; margin: 0 auto; padding: 12px 24px;
+    display: flex; align-items: center; gap: 12px;
+  }
+  .brand { font-size: 17px; font-weight: 700; letter-spacing: .04em; color: var(--ink); }
+  .brand:hover { text-decoration: none; }
+  .brand em { font-style: normal; color: var(--teal); }
+  .badge-unofficial {
+    font-size: 11px; letter-spacing: .14em; padding: 3px 8px;
+    border: 1px solid var(--amber-line); color: var(--amber);
+    border-radius: 2px; white-space: nowrap;
+  }
+  .topbar .spacer { flex: 1; }
+  .top-official { font-size: 13px; color: var(--ink-soft); white-space: nowrap; }
+  .top-official a { color: var(--teal); }
+
+  /* ---------- 布局 ---------- */
+  .shell { max-width: 1080px; margin: 0 auto; padding: 0 24px 64px; display: flex; gap: 48px; }
+  .toc {
+    width: 208px; flex: none;
+    position: sticky; top: 76px; align-self: flex-start;
+    padding-top: 40px; font-size: 13.5px;
+  }
+  .toc .toc-title { font-size: 11px; letter-spacing: .18em; color: var(--ink-soft); margin: 0 0 10px; }
+  .toc ol { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 2px; }
+  .toc a {
+    display: flex; gap: 10px; padding: 5px 8px; color: var(--ink-soft);
+    border-left: 2px solid transparent; border-radius: 0 3px 3px 0;
+  }
+  .toc a:hover { color: var(--ink); background: var(--code-bg); text-decoration: none; }
+  .toc a .no { color: var(--teal); font-size: 12px; padding-top: 1px; }
+  .toc .toc-invite { margin-top: 14px; padding-top: 12px; border-top: 1px dashed var(--line); }
+  .toc .toc-invite a { color: var(--amber); border-left-color: var(--amber); }
+  main { flex: 1; min-width: 0; max-width: 760px; }
+  section { padding-top: 48px; }
+
+  /* ---------- 章节标题 ---------- */
+  .sec-head { display: flex; align-items: baseline; gap: 14px; margin: 0 0 6px; }
+  .sec-head .no { color: var(--teal); font-size: 15px; letter-spacing: .06em; }
+  .sec-head h2 {
+    margin: 0; font-size: 26px; font-weight: 700; text-wrap: balance;
+    font-family: Palatino, "Palatino Linotype", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  }
+  .sec-sub { margin: 0 0 22px; color: var(--ink-soft); font-size: 14.5px; }
+  .stamp { font-size: 12.5px; color: var(--ink-soft); }
+  .stamp b { color: var(--teal); font-weight: 600; }
+
+  /* ---------- Hero ---------- */
+  .hero { padding: 52px 0 8px; }
+  .hero .eyebrow { font-size: 12px; letter-spacing: .22em; color: var(--teal); margin: 0 0 14px; }
+  .hero h1 {
+    margin: 0 0 14px; font-size: clamp(30px, 5vw, 44px); line-height: 1.22;
+    font-weight: 700; text-wrap: balance;
+    font-family: Palatino, "Palatino Linotype", "Songti SC", "Noto Serif CJK SC", "Source Han Serif SC", serif;
+  }
+  .hero h1 em { font-style: italic; color: var(--teal); }
+  .hero .lede { margin: 0; max-width: 62ch; color: var(--ink-soft); font-size: 16.5px; }
+  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; margin: 24px 0 8px; align-items: center; }
+  .btn {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 10px 18px; border-radius: 3px; font-size: 14.5px; font-weight: 600;
+    border: 1px solid var(--teal); cursor: pointer; line-height: 1.4;
+  }
+  .btn-solid { background: var(--teal); color: var(--paper); }
+  .btn-solid:hover { text-decoration: none; filter: brightness(1.08); }
+  .btn-ghost { color: var(--teal); background: transparent; }
+  .btn-ghost:hover { text-decoration: none; background: var(--code-bg); }
+  .hero-note { font-size: 12.5px; color: var(--ink-soft); }
+
+  /* ---------- 邀请票据 ---------- */
+  .ticket {
+    margin: 30px 0 8px; position: relative;
+    background: var(--amber-wash);
+    border: 1px dashed var(--amber-line);
+    border-radius: 6px;
+    padding: 22px 26px;
+    box-shadow: var(--shadow);
+  }
+  .ticket::before, .ticket::after {
+    content: ""; position: absolute; top: 50%; width: 18px; height: 18px;
+    border-radius: 50%; background: var(--paper); border: 1px dashed var(--amber-line);
+    transform: translateY(-50%);
+  }
+  .ticket::before { left: -10px; }
+  .ticket::after { right: -10px; }
+  .ticket-head { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
+  .ticket-head .t-label { font-size: 12px; letter-spacing: .2em; color: var(--amber); font-weight: 600; }
+  .ticket-head .t-tip { font-size: 12.5px; color: var(--ink-soft); }
+  .ticket-row { display: flex; align-items: center; gap: 16px; flex-wrap: wrap; }
+  .ticket-code {
+    font-size: clamp(19px, 3.4vw, 27px); letter-spacing: .08em; font-weight: 700;
+    color: var(--amber-deep); user-select: all; word-break: break-all;
+  }
+  .btn-copy {
+    padding: 8px 16px; border-radius: 3px; font-size: 13.5px; font-weight: 600;
+    background: var(--amber); color: var(--paper); border: none; cursor: pointer;
+  }
+  .btn-copy:hover { filter: brightness(1.08); }
+  .btn-copy.ok { background: var(--teal); }
+  .ticket-foot { margin: 10px 0 0; font-size: 13px; color: var(--ink-soft); }
+  .ticket-foot b { color: var(--amber); font-weight: 600; }
+
+  /* ---------- 通用卡片 / 表格 ---------- */
+  .grid2 { display: grid; grid-template-columns: repeat(2, 1fr); gap: 14px; }
+  .card {
+    background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+    padding: 16px 18px;
+  }
+  .card h3 { margin: 0 0 6px; font-size: 15.5px; font-weight: 700; }
+  .card p { margin: 0; font-size: 14px; color: var(--ink-soft); line-height: 1.7; }
+  .card .k { color: var(--teal); font-size: 12px; letter-spacing: .1em; display: block; margin-bottom: 6px; }
+  .tablewrap { overflow-x: auto; border: 1px solid var(--line); border-radius: 4px; background: var(--card); }
+  table { border-collapse: collapse; width: 100%; font-size: 14px; }
+  th, td { text-align: left; padding: 11px 14px; border-top: 1px solid var(--line); vertical-align: top; }
+  thead th {
+    border-top: none; font-size: 12px; letter-spacing: .1em; color: var(--ink-soft);
+    font-weight: 600; background: var(--code-bg); white-space: nowrap;
+  }
+  td.num { text-align: right; white-space: nowrap; }
+  .file { font-size: 13px; word-break: break-all; }
+  .dl-label { font-weight: 600; white-space: nowrap; }
+  .dl-req { display: block; font-size: 12px; color: var(--ink-soft); font-weight: 400; margin-top: 2px; white-space: normal; }
+  .sha-btn {
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 3px;
+    padding: 2px 8px; font-size: 12px; color: var(--ink-soft); cursor: pointer;
+  }
+  .sha-btn:hover { color: var(--ink); }
+  .sha-btn.ok { color: var(--teal); border-color: var(--teal); }
+  a.dl-link { font-weight: 600; white-space: nowrap; }
+
+  .callout {
+    border: 1px solid var(--line); border-left: 3px solid var(--teal);
+    background: var(--card); border-radius: 0 4px 4px 0;
+    padding: 12px 16px; font-size: 14px; color: var(--ink-soft); margin: 16px 0 0;
+  }
+  .callout.warn { border-left-color: var(--amber); }
+  .callout b { color: var(--ink); }
+  pre.code {
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 4px;
+    padding: 12px 16px; font-size: 13px; overflow-x: auto; margin: 12px 0 0; line-height: 1.6;
+  }
+
+  /* ---------- 步骤 ---------- */
+  .steps { display: flex; flex-direction: column; gap: 0; counter-reset: step; margin-top: 4px; }
+  .step { display: flex; gap: 18px; padding: 16px 0; border-bottom: 1px dashed var(--line); }
+  .step:last-child { border-bottom: none; }
+  .step .s-no {
+    counter-increment: step; flex: none; width: 34px; height: 34px; border-radius: 50%;
+    border: 1px solid var(--teal); color: var(--teal);
+    display: flex; align-items: center; justify-content: center; font-size: 14px; margin-top: 2px;
+  }
+  .step .s-no::before { content: counter(step); }
+  .step h3 { margin: 0 0 4px; font-size: 15.5px; }
+  .step p { margin: 0; font-size: 14px; color: var(--ink-soft); }
+  .inline-code {
+    background: var(--code-bg); border: 1px solid var(--line); border-radius: 3px;
+    padding: 1px 7px; font-size: .92em; color: var(--amber-deep); white-space: nowrap;
+  }
+
+  /* ---------- 模型 chips ---------- */
+  .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 14px 0 0; }
+  .chip {
+    font-size: 13px; padding: 5px 12px; border: 1px solid var(--line);
+    border-radius: 999px; background: var(--card); color: var(--ink);
+  }
+
+  /* ---------- 邀请奖励 ---------- */
+  .reward-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; margin-top: 4px; }
+  .reward {
+    background: var(--card); border: 1px solid var(--line); border-radius: 4px;
+    padding: 18px; text-align: center;
+  }
+  .reward .r-n { font-size: 30px; font-weight: 700; color: var(--teal); line-height: 1.2; }
+  .reward .r-n small { font-size: 14px; font-weight: 400; color: var(--ink-soft); }
+  .reward .r-plan { font-size: 15px; font-weight: 700; margin-top: 6px; }
+  .reward .r-worth { font-size: 12.5px; color: var(--ink-soft); margin-top: 2px; }
+
+  /* ---------- 定价 ---------- */
+  .price-hl { color: var(--teal); font-weight: 700; white-space: nowrap; }
+
+  /* ---------- 资讯 ---------- */
+  .news-list { display: flex; flex-direction: column; gap: 14px; }
+  .news {
+    background: var(--card); border: 1px solid var(--line); border-radius: 4px; padding: 18px 20px;
+  }
+  .news .n-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 6px; }
+  .news .n-kind { font-size: 11.5px; letter-spacing: .12em; color: var(--teal); }
+  .news .n-tag {
+    font-size: 11.5px; padding: 2px 9px; border: 1px solid var(--line);
+    border-radius: 999px; color: var(--ink-soft);
+  }
+  .news h3 { margin: 0 0 4px; font-size: 16.5px; line-height: 1.45; text-wrap: balance; }
+  .news .n-by { font-size: 12.5px; color: var(--ink-soft); margin: 0 0 8px; }
+  .news p.n-sum { margin: 0 0 10px; font-size: 14px; color: var(--ink-soft); }
+  .news a.n-src { font-size: 13.5px; font-weight: 600; }
+
+  /* ---------- FAQ ---------- */
+  .faq details {
+    border: 1px solid var(--line); border-radius: 4px; background: var(--card);
+    padding: 0 18px; margin-bottom: 10px;
+  }
+  .faq summary {
+    cursor: pointer; font-weight: 600; font-size: 14.5px; padding: 13px 0;
+    list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 12px;
+  }
+  .faq summary::-webkit-details-marker { display: none; }
+  .faq summary::after { content: "+"; color: var(--teal); font-size: 18px; flex: none; }
+  .faq details[open] summary::after { content: "−"; }
+  .faq details > p { margin: 0; padding: 0 0 14px; font-size: 14px; color: var(--ink-soft); }
+
+  /* ---------- 页脚 ---------- */
+  footer { border-top: 1px solid var(--line); margin-top: 56px; }
+  .foot-in { max-width: 1080px; margin: 0 auto; padding: 28px 24px 40px; font-size: 13px; color: var(--ink-soft); }
+  .foot-links { display: flex; flex-wrap: wrap; gap: 6px 18px; margin: 0 0 14px; padding: 0; list-style: none; }
+  .foot-links a { color: var(--teal); }
+  .disclaim { max-width: 76ch; margin: 0 0 8px; }
+  .foot-meta { font-size: 12px; }
+
+  /* ---------- 响应式 ---------- */
+  @media (max-width: 900px) {
+    .shell { flex-direction: column; gap: 0; }
+    .toc {
+      position: static; width: auto; padding: 16px 0 0;
+      border-bottom: 1px solid var(--line); padding-bottom: 12px;
+    }
+    .toc ol { flex-direction: row; overflow-x: auto; gap: 6px; padding-bottom: 4px; }
+    .toc a { border-left: none; border: 1px solid var(--line); border-radius: 999px; padding: 4px 12px; white-space: nowrap; }
+    .toc .toc-invite { margin: 8px 0 0; padding: 0; border: none; }
+    .toc .toc-invite a { border-color: var(--amber-line); }
+    .grid2, .reward-grid { grid-template-columns: 1fr; }
+    .ticket::before, .ticket::after { display: none; }
+  }
+</style>
+
+<header class="topbar">
+  <div class="topbar-in">
+    <a class="brand serif" href="#top">MIRASIM <em>WIKI</em></a>
+    <span class="badge-unofficial">非官方 · 社区维护</span>
+    <span class="spacer"></span>
+    <span class="top-official">官方网站：<a href="https://mirasim.ai/" target="_blank" rel="noopener noreferrer">mirasim.ai</a></span>
+  </div>
+</header>
+
+<div class="shell" id="top">
+  <nav class="toc" aria-label="目录">
+    <p class="toc-title">目 录</p>
+    <ol>
+      <li><a href="#intro"><span class="no mono">01</span>Mirasim 是什么</a></li>
+      <li><a href="#download"><span class="no mono">02</span>下载最新版</a></li>
+      <li><a href="#start"><span class="no mono">03</span>快速上手</a></li>
+      <li><a href="#models"><span class="no mono">04</span>免费使用各大模型</a></li>
+      <li><a href="#invite"><span class="no mono">05</span>邀请奖励</a></li>
+      <li><a href="#pricing"><span class="no mono">06</span>付费方案速览</a></li>
+      <li><a href="#news"><span class="no mono">07</span>官方资讯</a></li>
+      <li><a href="#faq"><span class="no mono">08</span>常见问题</a></li>
+    </ol>
+    <p class="toc-invite"><a href="#invite-code">🎟 领取邀请码</a></p>
+  </nav>
+
+  <main>
+    <!-- ====== HERO ====== -->
+    <section class="hero" id="hero">
+      <p class="eyebrow mono">UNOFFICIAL WIKI · FROM BUILD TO EVAL</p>
+      <h1 class="serif">Mirasim：一个 <em>Agent IDE</em>，从构建到评测</h1>
+      <p class="lede">Mirasim 是一个 "One Agent IDE"——在任何地方运行你的编程 agent，再让模拟用户替你测试构建成果。目前采用邀请制，<b>凭邀请码即可免费使用</b>，直接跑在你自己的模型账号上。</p>
+
+      <div class="ticket" id="invite-code">
+        <div class="ticket-head">
+          <span class="t-label mono">INVITE CODE · 邀请码</span>
+          <span class="t-tip">注册后在激活页输入，即刻开通</span>
+        </div>
+        <div class="ticket-row">
+          <span class="ticket-code mono" id="codeText">{{INVITE_CODE}}</span>
+          <button class="btn-copy" type="button" data-copy="{{INVITE_CODE}}">复制邀请码</button>
+        </div>
+        <p class="ticket-foot">这是<b>本站站长的邀请码</b>。Mirasim 目前仅限邀请制注册——没有码就进不去，用它可以直接激活；你注册后也会获得自己的邀请码，邀请他人还能<a href="#invite">免费换取高级订阅</a>。</p>
+      </div>
+
+      <div class="hero-cta">
+        <a class="btn btn-solid" href="{{HERO_DMG_URL}}">⬇ 下载 macOS 版 v{{VERSION}}</a>
+        <a class="btn btn-ghost" href="#download">其他平台与校验</a>
+        <span class="hero-note mono">{{HERO_DMG_SIZE}} · Apple Silicon · macOS 13+</span>
+      </div>
+    </section>
+
+    <!-- ====== 01 介绍 ====== -->
+    <section id="intro">
+      <div class="sec-head"><span class="no mono">01</span><h2>Mirasim 是什么</h2></div>
+      <p class="sec-sub">One Agent IDE —— 把「写代码的 agent」和「替你测试的模拟用户」装进同一个工作台。</p>
+      <p>传统流程里，你用一个工具写代码、再手动点开页面验证。Mirasim 的思路是把这两端接起来：编程 agent 在工作台里并行开工，构建完成后由<b>模拟用户</b>在真实浏览器、真实移动模拟器里实际使用你的产品，把第一手反馈带回来。以下是官方主页列出的核心能力：</p>
+      <div class="grid2" style="margin-top:18px">
+        <div class="card"><span class="k mono">WORKBENCH</span><h3>多项目工作台</h3><p>多个项目并列打开，每个项目拥有独立的会话、agent 与模型配置，互不干扰。</p></div>
+        <div class="card"><span class="k mono">SESSIONS</span><h3>多会话并行 + 内置编辑器</h3><p>同时运行多个 agent 会话，配合类 VS Code 编辑器随手改代码，移动端也能继续工作。</p></div>
+        <div class="card"><span class="k mono">TUI ⇄ GUI</span><h3>终端与图形界面一键切换</h3><p>同一套工作流，既可以在 TUI 里键盘流操作，也可以切到 GUI 里点选浏览。</p></div>
+        <div class="card"><span class="k mono">BROWSER</span><h3>浏览器自动化：读结构而非截图</h3><p>Agent 以文本结构读取页面（官方数据：约 184 B 对比截图 60 KB，传输量差约 330 倍），驱动真实 Chrome 与真实用户配置文件。</p></div>
+        <div class="card"><span class="k mono">MOBILE / MAC</span><h3>Mac 应用与移动模拟器</h3><p>用同样的方式驱动 Mac 应用、iOS 模拟器和 Android 模拟器——移动端产品也能被模拟用户测试。</p></div>
+        <div class="card"><span class="k mono">ONE TOOL</span><h3>单一工具入口，省上下文</h3><p>官方称每轮工具开销约 1k tokens（对比挂 30 个工具 schema 约 53k tokens），把上下文留给真正的工作。</p></div>
+      </div>
+      <p class="callout">产品目前处于 <b>Alpha 阶段</b>，官方提示 "Expect rough edges"（会有毛边）。安装后应用会自动保持更新。</p>
+    </section>
+
+    <!-- ====== 02 下载 ====== -->
+    <section id="download">
+      <div class="sec-head"><span class="no mono">02</span><h2>下载最新版</h2></div>
+      <p class="sec-sub stamp">当前最新版本 <b class="mono">v{{VERSION}}</b> · 本站数据自动抓取自官网，更新于 <span class="mono">{{UPDATED_AT}}</span> · 全部链接直连官方 CDN</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>安装包</th><th>文件</th><th style="text-align:right">大小</th><th>SHA-256</th><th></th></tr></thead>
+          <tbody>
+{{DOWNLOAD_ROWS}}
+          </tbody>
+        </table>
+      </div>
+      <p class="callout"><b>校验下载：</b>把 <span class="inline-code mono">SHA256SUMS</span> 和安装包放同一目录，运行下面的命令核对完整性（表中的 SHA-256 列点击即可复制完整校验值）：</p>
+      <pre class="code">shasum -a 256 -c SHA256SUMS --ignore-missing</pre>
+      <p class="callout warn"><b>iOS：</b>目前仅在 TestFlight 内测，公开邀请尚未开放；<b>Android APK</b> 需自行侧载安装。桌面版要求 Apple Silicon（M 系列芯片）+ macOS 13 及以上。</p>
+    </section>
+
+    <!-- ====== 03 快速上手 ====== -->
+    <section id="start">
+      <div class="sec-head"><span class="no mono">03</span><h2>快速上手</h2></div>
+      <p class="sec-sub">三步开始：下载安装 → 登录 → 用邀请码激活。</p>
+      <div class="steps">
+        <div class="step"><span class="s-no mono"></span><div><h3>下载并安装</h3><p>从<a href="#download">上方下载区</a>获取 macOS 安装包（DMG），打开后拖入「应用程序」即可；命令行党可以选 CLI 版。</p></div></div>
+        <div class="step"><span class="s-no mono"></span><div><h3>登录账号</h3><p>支持 GitHub、Google 或邮箱三种方式登录。</p></div></div>
+        <div class="step"><span class="s-no mono"></span><div><h3>输入邀请码激活</h3><p>Mirasim 目前是邀请制，登录后需要兑换邀请码才能激活使用——直接用本站的 <span class="inline-code mono">{{INVITE_CODE}}</span>（<a href="#invite-code">点此复制</a>），激活后接上你自己的模型账号就能开工。</p></div></div>
+      </div>
+    </section>
+
+    <!-- ====== 04 免费模型 ====== -->
+    <section id="models">
+      <div class="sec-head"><span class="no mono">04</span><h2>免费使用各大模型</h2></div>
+      <p class="sec-sub">邀请码分文不收，Mirasim 本体跑在你自己的模型账号上。</p>
+      <p>官方的说法是 "A code costs nothing and runs on your own model accounts"：<b>持邀请码使用 Mirasim 免费</b>。你把已有的 Claude Code、Codex 订阅或 API key 接进来，就能在 Mirasim 的工作台里免费使用这些 agent，以及 Mirasim 自有 agent、六窗格工作区、MCP 服务器与插件——Mirasim 对此不额外收费。</p>
+      <p>若使用付费额度（credits），官方平台可直接调用的模型阵容覆盖各大厂商：</p>
+      <div class="chips">
+        <span class="chip">Claude</span><span class="chip">Codex / GPT</span><span class="chip">Gemini</span><span class="chip">Grok</span><span class="chip">DeepSeek</span><span class="chip">Kimi</span><span class="chip">Qwen</span><span class="chip">GLM</span><span class="chip">Doubao</span><span class="chip">MiniMax</span><span class="chip">Mistral</span><span class="chip">Llama</span>
+      </div>
+      <p class="callout"><b>不偷换模型的承诺：</b>官方定价页写明 "You get the model you picked"——你选什么模型就跑什么模型，发生 fallback 的回合会在记录中明确标注，并提供指纹方法供你自行验证。</p>
+      <p class="callout warn"><b>两个例外：</b>computer use（电脑操作）与模拟用户功能消耗云端额度，需要付费计划或自备对应的 API key，其余功能免费账号均可使用。</p>
+    </section>
+
+    <!-- ====== 05 邀请奖励 ====== -->
+    <section id="invite">
+      <div class="sec-head"><span class="no mono">05</span><h2>邀请奖励：免费升级高级订阅</h2></div>
+      <p class="sec-sub">邀请真正使用 Mirasim 的朋友，官方直接送你整月付费订阅。</p>
+      <div class="reward-grid">
+        <div class="reward"><div class="r-n">3 <small>人</small></div><div class="r-plan">1 个月 Basic</div><div class="r-worth mono">价值 $29</div></div>
+        <div class="reward"><div class="r-n">5 <small>人</small></div><div class="r-plan">1 个月 Pro</div><div class="r-worth mono">价值 $89</div></div>
+        <div class="reward"><div class="r-n">10 <small>人</small></div><div class="r-plan">1 个月 Max</div><div class="r-worth mono">价值 $199</div></div>
+      </div>
+      <p style="margin-top:18px">规则要点：<b>仅注册不算数</b>——被邀请的人必须真正用起来（登录、开会话、实际干活），官方会核查使用情况。你注册后，自己的邀请码在 <span class="inline-code">Settings → Account</span> 里查看和分发；如果手上没有码，也可以去官方 Discord 索取。</p>
+      <p class="callout">现在就可以行动：先用本站邀请码 <b class="mono">{{INVITE_CODE}}</b>（<a href="#invite-code">回到顶部复制</a>）激活自己的账号，再把你自己的码分享给朋友——攒够 3 / 5 / 10 个真实用户，官方替你付一个月订阅。</p>
+    </section>
+
+    <!-- ====== 06 定价 ====== -->
+    <section id="pricing">
+      <div class="sec-head"><span class="no mono">06</span><h2>付费方案速览</h2></div>
+      <p class="sec-sub">付费额度用于官方云端模型调用（含 computer use 与模拟用户）；额度耗尽可随时切回自己的账号继续工作。</p>
+      <div class="tablewrap">
+        <table>
+          <thead><tr><th>方案</th><th>月费</th><th>额度</th><th>约合用量</th><th>邀请可兑换</th></tr></thead>
+          <tbody>
+            <tr><td><b>Basic</b></td><td class="price-hl mono">$29</td><td class="mono">4,000 credits</td><td>约 5,000 万 tokens · 200–400 条消息</td><td>邀请 3 人 = 1 个月</td></tr>
+            <tr><td><b>Pro</b></td><td class="price-hl mono">$89</td><td class="mono">20,000 credits</td><td>约 2.5 亿 tokens · 1,000–2,000 条消息</td><td>邀请 5 人 = 1 个月</td></tr>
+            <tr><td><b>Max</b></td><td class="price-hl mono">$199</td><td class="mono">80,000 credits</td><td>约 10 亿 tokens · 4,000–8,000 条消息</td><td>邀请 10 人 = 1 个月</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="callout">官方对比口径：同等用量在别家约需 $40–$400/月（如 Claude Code 与 Codex 各买一份订阅）。各模型的 credits 费率官方公开可查。完整定价见 <a href="https://mirasim.ai/pricing" target="_blank" rel="noopener noreferrer">mirasim.ai/pricing</a>。</p>
+    </section>
+
+    <!-- ====== 07 资讯 ====== -->
+    <section id="news">
+      <div class="sec-head"><span class="no mono">07</span><h2>官方资讯</h2></div>
+      <p class="sec-sub stamp">来自官方博客「Research notes」的 <b>{{NEWS_COUNT}}</b> 篇最新内容 · 本站自动同步，更新于 <span class="mono">{{UPDATED_AT}}</span></p>
+      <div class="news-list">
+{{NEWS_ITEMS}}
+      </div>
+      <p class="callout">官方说明：每篇笔记都是团队从零写成的原创总结（研究是别人的，评论是他们的），并附原论文链接。更多内容见 <a href="https://mirasim.ai/blog" target="_blank" rel="noopener noreferrer">mirasim.ai/blog</a>。</p>
+    </section>
+
+    <!-- ====== 08 FAQ ====== -->
+    <section id="faq" class="faq">
+      <div class="sec-head"><span class="no mono">08</span><h2>常见问题</h2></div>
+      <p class="sec-sub">最常被问到的几件事。</p>
+      <details open>
+        <summary>Mirasim 是免费的吗？</summary>
+        <p>是——持邀请码使用免费，产品跑在你自己的模型账号（Claude Code、Codex 等订阅或 API key）上，Mirasim 不额外收费。只有 computer use 和模拟用户这两类功能需要付费额度或自备 key。</p>
+      </details>
+      <details>
+        <summary>没有邀请码能用吗？</summary>
+        <p>不能，目前是邀请制。直接用本站站长的邀请码 <span class="inline-code mono">{{INVITE_CODE}}</span> 即可激活；注册后你会得到自己的码，也可以去官方 Discord 索取。</p>
+      </details>
+      <details>
+        <summary>支持哪些平台？</summary>
+        <p>macOS 桌面版（Apple Silicon，macOS 13+）、macOS 命令行版、Android APK（侧载）、VS Code 扩展。iOS 在 TestFlight 内测中，公开邀请尚未开放。暂无 Intel Mac 与 Windows 版本。</p>
+      </details>
+      <details>
+        <summary>「邀请 3 人送一个月 Basic」怎么核算？</summary>
+        <p>被邀请者必须真实使用 Mirasim——官方明确「仅注册不算数」，需要登录、开会话、实际工作，官方会核查后按 3 / 5 / 10 人分别兑换 1 个月 Basic / Pro / Max。</p>
+      </details>
+      <details>
+        <summary>如何确认安装包没被篡改？</summary>
+        <p>本站下载表已列出每个文件的 SHA-256（点击可复制），也可下载官方 <span class="inline-code mono">SHA256SUMS</span> 文件后运行 <span class="inline-code mono">shasum -a 256 -c SHA256SUMS --ignore-missing</span> 校验。所有下载链接均直连官方 CDN（cdn-assets.mirasim.ai），本站不托管任何安装包。</p>
+      </details>
+      <details>
+        <summary>本站和官方是什么关系？</summary>
+        <p>没有关系——这是社区自发维护的非官方 Wiki。版本号、下载链接与资讯定期自动抓取自官网，一切信息以 <a href="https://mirasim.ai/" target="_blank" rel="noopener noreferrer">mirasim.ai</a> 为准。页面上的邀请码是站长本人的。</p>
+      </details>
+    </section>
+  </main>
+</div>
+
+<footer>
+  <div class="foot-in">
+    <ul class="foot-links">
+      <li><a href="https://mirasim.ai/" target="_blank" rel="noopener noreferrer">官网</a></li>
+      <li><a href="https://mirasim.ai/download" target="_blank" rel="noopener noreferrer">官方下载页</a></li>
+      <li><a href="https://mirasim.ai/pricing" target="_blank" rel="noopener noreferrer">定价</a></li>
+      <li><a href="https://mirasim.ai/guide" target="_blank" rel="noopener noreferrer">使用指南</a></li>
+      <li><a href="https://mirasim.ai/blog" target="_blank" rel="noopener noreferrer">博客</a></li>
+      <li><a href="https://discord.gg/jppBSg8Re" target="_blank" rel="noopener noreferrer">Discord</a></li>
+      <li><a href="https://x.com/Mirasim_ADE" target="_blank" rel="noopener noreferrer">X @Mirasim_ADE</a></li>
+      <li><a href="mailto:support@mirasim.ai">support@mirasim.ai</a></li>
+    </ul>
+    <p class="disclaim">本站为社区自发维护的<b>非官方</b> Mirasim Wiki，与 Mirasim 官方无隶属或授权关系。产品信息、版本号、下载链接与资讯均定期自动抓取自官方网站，可能存在延迟或遗漏，一切以官方页面为准；全部安装包由官方 CDN 直接分发，本站不托管、不修改任何文件。页面所示邀请码为站长个人邀请码。</p>
+    <p class="foot-meta mono">数据更新于 {{UPDATED_AT}} · 当前版本 v{{VERSION}} · 页面构建于 {{BUILT_AT}}</p>
+  </div>
+</footer>
+
+<script>
+  (function () {
+    function flash(btn, okText) {
+      var original = btn.textContent;
+      btn.textContent = okText;
+      btn.classList.add("ok");
+      setTimeout(function () { btn.textContent = original; btn.classList.remove("ok"); }, 1600);
+    }
+    function copyText(text, btn, okText) {
+      function done() { flash(btn, okText); }
+      if (navigator.clipboard && navigator.clipboard.writeText) {
+        navigator.clipboard.writeText(text).then(done, function () { fallback(); });
+      } else { fallback(); }
+      function fallback() {
+        var ta = document.createElement("textarea");
+        ta.value = text;
+        ta.style.position = "fixed"; ta.style.opacity = "0";
+        document.body.appendChild(ta);
+        ta.select();
+        try { document.execCommand("copy"); done(); } catch (e) {}
+        document.body.removeChild(ta);
+      }
+    }
+    document.querySelectorAll("[data-copy]").forEach(function (btn) {
+      btn.addEventListener("click", function () {
+        copyText(btn.getAttribute("data-copy"), btn, btn.classList.contains("sha-btn") ? "已复制 ✓" : "已复制到剪贴板 ✓");
+      });
+    });
+  })();
+</script>

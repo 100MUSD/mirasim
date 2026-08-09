@@ -1,0 +1,46 @@
+name: build-and-deploy-wiki
+
+on:
+  push:
+    branches: [main]
+  schedule:
+    # 每 30 分钟抓取一次官网最新版本与资讯并重新部署（避开整点减少排队延迟）
+    - cron: "17,47 * * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      # 抓取失败（官网瞬时不可用/结构变化）时退回仓库中已提交的数据，保证页面始终可部署
+      - name: Fetch latest data from mirasim.ai
+        run: node scripts/fetch-data.mjs || echo "::warning::抓取官网数据失败，使用仓库内已有数据构建"
+      - name: Build wiki page
+        run: node scripts/build.mjs
+      - uses: actions/configure-pages@v5
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  deploy:
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4
