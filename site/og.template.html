@@ -41,7 +41,11 @@
     font-size: 82px; line-height: 1.02; font-weight: 700; letter-spacing: -.015em;
   }
   h1 em { font-style: italic; color: #4CC5AC; }
-  .sub { font-size: 29px; line-height: 1.4; color: #A8BAB0; margin-top: 22px; max-width: 21ch; }
+  .sub {
+    font-size: 29px; line-height: 1.4; color: #A8BAB0; margin-top: 22px; max-width: 22ch;
+    /* CJK 默认允许字内断行，会把「ダウンロード」拆开；keep-all 让断行只发生在分隔符处 */
+    word-break: keep-all;
+  }
   .code-row { display: flex; align-items: center; gap: 16px; margin-top: 34px; }
   .code {
     font-family: ui-monospace, "SF Mono", Menlo, monospace;

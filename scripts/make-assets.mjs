@@ -123,7 +123,8 @@ for (const L of LANGS) {
   const t = JSON.parse(await readFile(path.join(ROOT, "site", "i18n", `${lang}.json`), "utf8"));
   const html = ogTpl
     .replaceAll("{{ICON_SVG}}", svg)
-    .replaceAll("{{OG_SUB}}", t.meta.ogSub)
+    // 分隔符前用不换行空格，断行时「·」留在行末而不会跑到下一行开头
+    .replaceAll("{{OG_SUB}}", t.meta.ogSub.replace(/ · /g, " · "))
     .replaceAll("{{INVITE_CODE}}", INVITE_CODE)
     .replaceAll("{{VERSION}}", data.version)
     .replace('<html lang="en">', `<html lang="${t.htmlLang}">`);
