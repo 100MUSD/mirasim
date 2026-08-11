@@ -25,7 +25,7 @@
   ],
   "news": [
     {
-      "kind": "Reader's note",
+      "kind": "",
       "tag": "User simulation",
       "title": "Generative Agents: Interactive Simulacra of Human Behavior",
       "by": "Park et al. · Stanford University and Google Research · arXiv:2304.03442 (2023)",
@@ -34,7 +34,7 @@
       "url": "https://arxiv.org/abs/2304.03442"
     },
     {
-      "kind": "Reader's note",
+      "kind": "",
       "tag": "Self-improving agents",
       "title": "Voyager: An Open-Ended Embodied Agent with Large Language Models",
       "by": "Wang et al. · NVIDIA, Caltech, UT Austin, Stanford and Arizona State University · arXiv:2305.16291 (2023)",
@@ -44,5 +44,5 @@
     }
   ],
   "source": "https://mirasim.ai",
-  "fetchedAt": "2026-08-11T07:55:05.018Z"
+  "fetchedAt": "2026-08-11T09:13:41.870Z"
 }
