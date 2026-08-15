@@ -1,24 +1,24 @@
 {
-  "version": "0.0.187",
+  "version": "0.0.190",
   "downloads": [
     {
       "id": "dmg",
-      "file": "Mirasim-0.0.187-arm64.dmg",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.187/Mirasim-0.0.187-arm64.dmg",
-      "size": 116215083,
-      "sha256": "6cb8a1e9df9efcd8890de092af7f197f23431c72402572f73ad0b06b11a843b0"
+      "file": "Mirasim-0.0.190-arm64.dmg",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.190/Mirasim-0.0.190-arm64.dmg",
+      "size": 116218433,
+      "sha256": "5ee6bdc030b859c810a8ef86e3272e9fda4d78275d1ddb9662ff2bfb162ce9cb"
     },
     {
       "id": "apk",
-      "file": "mirasim-0.0.187.apk",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.187/mirasim-0.0.187.apk",
-      "size": 36569202,
-      "sha256": "fcdbfd6185f648e25adac532a1ffbcd0d6bf792b6baf40df35a79644b40f02b4"
+      "file": "mirasim-0.0.190.apk",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.190/mirasim-0.0.190.apk",
+      "size": 36569954,
+      "sha256": "9aa9c9f1f3908eb029ad18b0eba2fb0e4ea1f0830836def61597ac32d33e4af3"
     },
     {
       "id": "sums",
       "file": "SHA256SUMS",
-      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.187/SHA256SUMS",
+      "url": "https://cdn-assets.mirasim.ai/mirasim/releases/v0.0.190/SHA256SUMS",
       "size": 986,
       "sha256": null
     }
@@ -44,5 +44,5 @@
     }
   ],
   "source": "https://mirasim.ai",
-  "fetchedAt": "2026-08-15T04:46:37.338Z"
+  "fetchedAt": "2026-08-15T05:06:38.208Z"
 }
