@@ -31,7 +31,7 @@
       "by": "Park et al. · Stanford University and Google Research · arXiv:2304.03442 (2023)",
       "summary": "Twenty-five language-model characters live in a small sandbox town with memory, reflection and planning wired together. The interesting result is that plausible social behaviour emerges from fairly simple machinery: remember what happened, reflect on it, plan accordingly.",
       "why": "It is the clearest published argument that a simulated person is worth taking seriously as an evaluation instrument, and it is honest about the failure modes: memory retrieval that pulls the wrong thing, and behaviour that drifts toward the polite and agreeable. Both are exactly the failures we watch for in our own personas.",
-      "url": "https://arxiv.org/abs/2304.03442"
+      "url": ""
     },
     {
       "kind": "",
@@ -40,9 +40,9 @@
       "by": "Wang et al. · NVIDIA, Caltech, UT Austin, Stanford and Arizona State University · arXiv:2305.16291 (2023)",
       "summary": "An agent plays Minecraft with no human in the loop and no fine-tuning. It sets its own next goal, writes a program to reach it, checks the result, and keeps the programs that worked in a growing skill library it can call later. The library is the mechanism that matters: capability accumulates as reusable code rather than as a longer prompt.",
       "why": "It is the same shape as the loop we care about: attempt, verify, keep what worked, reuse it next round. The paper is candid that progress depends almost entirely on the quality of the feedback, which is the reason evaluation comes before autonomy.",
-      "url": "https://arxiv.org/abs/2305.16291"
+      "url": ""
     }
   ],
   "source": "https://mirasim.ai",
-  "fetchedAt": "2026-08-21T12:01:46.806Z"
+  "fetchedAt": "2026-08-21T13:10:15.351Z"
 }
