@@ -1,0 +1,23 @@
+---
+// src/components/SiteWideAds.astro —— 全站级广告脚本(Social Bar / Popunder)· 独立版
+//
+// 与主版的差别:不依赖 src/config/ads.ts,直接读 env。给没有 config 层的站用
+// (2026-08-30 实测:部分站的 AdSlot 直接读 import.meta.env,没有 config 目录)。
+//
+// 分层门禁(与 config 版同义):
+//   - 有 PUBLIC_ADSENSE_CLIENT → 一律不渲染(AdSense 政策禁止同页弹窗浮层)
+//   - tier1 → 不渲染;tier2 → 只 Social Bar;tier3 → Social Bar + Popunder
+const env = import.meta.env;
+const enabled = env.PUBLIC_ADS_ENABLED === 'true';
+const tier = String(env.PUBLIC_AD_TIER ?? 'tier1');
+const hasAdsense = !!env.PUBLIC_ADSENSE_CLIENT;
+const aggressive = enabled && !hasAdsense && (tier === 'tier2' || tier === 'tier3');
+const socialBar = aggressive ? (env.PUBLIC_AD_SOCIALBAR_SCRIPT ?? '') : '';
+const popunder = aggressive && tier === 'tier3' ? (env.PUBLIC_AD_POPUNDER_SCRIPT ?? '') : '';
+---
+{socialBar && (
+  <script is:inline async data-cfasync="false" data-ad-sitewide="socialbar" src={socialBar}></script>
+)}
+{popunder && (
+  <script is:inline async data-cfasync="false" data-ad-sitewide="popunder" src={popunder}></script>
+)}
